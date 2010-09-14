@@ -1,4 +1,5 @@
 h1. Nexus quick start guide
+
 (a wiki version of the Nexus README)
 
 h2. Nexus Quickstart
@@ -68,4 +69,5 @@ h2. Logging Information
  * Nexus also writes the stdout for master and slave to the NEXUS_HOME/work directory
 
 h2. Unit Tests
+
 Nexus uses [http://code.google.com/p/googletest/ GoogleTest]. The tests are located in src/tests. They get built into a binary called alltests, which you can run to execute them. You can also run alltests -v to see log output on stderr (normally it only gets placed in a log file in /tmp)

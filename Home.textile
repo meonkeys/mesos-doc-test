@@ -1,14 +1,18 @@
-h2. Nexus Quickstart Guide
+h1. Nexus Quickstart Guide
 
-(a wiki version of the Nexus README)
-
-For now, you can run Nexus in linux or Solaris. Those who develop on OS X are currently using a linux virtual machine for development.
+For now, you can run Nexus in Linux or Solaris. Those who develop on OS X are currently using a Linux virtual machine for development.
 
 h2. Configure Nexus settings (NOT IMPLEMENTED)
 
 # The pre-release alpha version Nexus does not currently use configuration files beyond the customary UNIX  configure/make process, but we plan on adding this, where one can specify things such as:
 ## log file locations
- ## specify pluggable components (such as allocation module, isolation module, etc.)
+## specify pluggable components (such as allocation module, isolation module, etc.)
+
+h2. Prerequisites
+
+* Python 2.6 (Web UI uses python bottle package)
+* g++
+* (Not built or tested on Windows)
 
 h2. Getting Nexus
 
@@ -50,18 +54,19 @@ h2. Start a Framework
 
 # There should be a readme in each framework directory that explains how to use that framework
 # You will have to have run `./configure` with the correct parameters to use frameworks written in languages other than C/C++, e.g. --with-java-home=...
-## See the [http://nexus.berkeley.edu/git?p=nexus_public;a=blob_plain;f=README.swig;hb=HEAD README.swig] file for more information about this
+## See the "README.swig":https://github.com/nexusproject/nexus/blob/master/README.swig file for more information about this
 
 Example:
+
 pre. ./test-framework 1@127.0.1.1:53511
 ./test-framework local  #A framework can also be run without a dedicated master
                         #by passing it the "local" flag instead of the master PID
 
 h2. Logging Information
 
- * Nexus uses [Google Log http://code.google.com/p/google-glog] and writes logs to /tmp by default
+ * Nexus uses "Google Log":http://code.google.com/p/google-glog and writes logs to /tmp by default
  * Nexus also writes the stdout for master and slave to the NEXUS_HOME/work directory
 
 h2. Unit Tests
 
-Nexus uses [http://code.google.com/p/googletest/ GoogleTest]. The tests are located in src/tests. They get built into a binary called alltests, which you can run to execute them. You can also run alltests -v to see log output on stderr (normally it only gets placed in a log file in /tmp)
+Nexus uses "GoogleTest":http://code.google.com/p/googletest/. The tests are located in src/tests. They get built into a binary called alltests, which you can run to execute them. You can also run alltests -v to see log output on stderr (normally it only gets placed in a log file in /tmp)

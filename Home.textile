@@ -37,7 +37,7 @@ The Git repository contains configure template scripts with the right paths for 
 
 After you have run @configure@, you can build Mesos with @make@.
 
-_Note: @configure@ currently prints a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested @configure@ scripts that we call, so it doesn't mean that your options were ignored._
+_Note: @configure@ prints a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested @configure@ scripts that we call, so it doesn't mean that your options were ignored._
 
 h1. Testing the Build
 

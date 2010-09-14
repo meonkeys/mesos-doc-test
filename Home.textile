@@ -33,7 +33,7 @@ Mesos uses the standard GNU build tools. You should configure it using the @conf
 
 The Git repository contains sample configure scripts for Mac OS X and several recent Linux distributions, with the correct paths for each platform. These still assume that you have installed the correct packages (e.g. @python-dev@ and the JDK on Linux).
 
-h1. Testing the build
+h1. Testing the Build
 
 After you build Mesos, you can run its unit tests using the @alltests@ program located in @src@. Note that a few tests for specific platforms are disabled by default. You can run @alltests@ with @--help@ for help about its options.
 
@@ -45,23 +45,17 @@ You can also set up a small Mesos cluster and run a job on it as follows:
 # Launch a slave by typing @./mesos-slave --url=[URL of master]@. The slave will show up on the web UI if you refresh it.
 # Run the C++ test framework (a sample application which just executes five tasks on the cluster) using @./cpp-test-framework [URL of master]@. It should successfully finish after running five tasks.
 
-h1. Logging
-
-Mesos uses "Google Logging":http://code.google.com/p/google-glog and writes logs to @MESOS_HOME/logs@ by default, where @MESOS_HOME@ is the location where Mesos is installed. The log directory can be [[configured|Configuration]] using the @log_dir@ parameter.
-
-Frameworks that run on Mesos have their output stored to a "work" directory on each machine. By default, this is @MESOS_HOME/work@. Within this directory, a framework's output is placed in files called @stdout@ and @stderr@ in a directory of the form @slave-X/fw-Y/Z@, where X is the slave ID, Y is the framework ID, and multiple subdirectories Z are created for each attempt to run an executor for the framework. These files can also be accessed via the web UI of the slave daemon.
-
-Finally, structured logs of cluster activity can be written to a tab-separated text file or a SQLite database using the [[event history]] system.
-
 h1. Where to go from here
 
 * [[Framework development guide]] -- learn how to build applications on Mesos.
-* [[Mesos architecture]] -- an explanation of Mesos internals.
+* [[Mesos architecture]] -- an overview of Mesos concepts.
+* [[Mesos internals]] -- an overview of the codebase and internal organization.
 * [[Mesos configuration|Configuration]]
+* [[Logging and Debugging]] -- viewing Mesos and framework logs.
 * Framework guides:
 ** [[Running Hadoop on Mesos]]
 ** [[Running MPI on Mesos]]
 ** [[Running Spark on Mesos]]
-* [[Using ZooKeeper]]
-* [[Using Linux Containers]]
+* [[Using ZooKeeper]] for master fault-tolerance
+* [[Using Linux Containers]] for resource isolation on slaves
 * [[Mesos development roadmap]]

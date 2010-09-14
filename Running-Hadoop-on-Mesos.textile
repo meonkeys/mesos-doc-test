@@ -8,6 +8,7 @@ To run Hadoop on Mesos, you need to take the following steps:
 <li> Build Hadoop using @ant@.</li>
 <li> Set up Hadoop's configuration as you would usually do with a new install of Hadoop, following the "instructions on the Hadoop website":http://hadoop.apache.org/common/docs/r0.20.2/index.html (at the very least, you need to set @JAVA_HOME@ in Hadoop's @conf/hadoop-env.sh@).</li>
 <li> Add the following parameters to Hadoop's @conf/mapred-site.xml@:
+
 <pre>
 &lt;property&gt;
   &lt;name&gt;mapred.jobtracker.taskScheduler&lt;/name&gt;
@@ -18,6 +19,7 @@ To run Hadoop on Mesos, you need to take the following steps:
   &lt;value&gt;[URL of Mesos master]&lt;/value&gt;
 &lt;/property&gt;
 </pre>
+
 </li>
 <li> Launch a JobTracker with @bin/hadoop jobtracker@ (_do not_ use @bin/start-mapred.sh@). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
 <li> Submit jobs to your JobTracker as usual.</li>

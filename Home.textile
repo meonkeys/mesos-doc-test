@@ -81,4 +81,4 @@ Mesos uses "GoogleTest":http://code.google.com/p/googletest/. The tests are loca
 
 h2. Developing using "local" 
 
-To ease some of the pain of framework development, instead of running a master plus a slave daemon and then hunting down stdout, stderr, etc. you can simply run your framework scheduler passing it "local" or "localquiet".
+To ease framework development, instead of running a master plus a slave daemon and then hunting down stdout, stderr, etc. you can simply run your framework scheduler passing it "local" or "localquiet".

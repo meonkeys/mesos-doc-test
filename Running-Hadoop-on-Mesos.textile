@@ -4,19 +4,27 @@ The ported version of Hadoop is included in the Mesos directory tree under @fram
 
 To run Hadoop on Mesos, you need to take the following steps:
 <ol>
-<li> Set up Hadoop's configuration as you would usually do with a new install of Hadoop, following the "instructions on the Hadoop website":http://hadoop.apache.org/common/docs/r0.20.2/index.html (at the very least, you will need to set @JAVA_HOME@ in Hadoop's @conf/hadoop-env.sh@).
+<li> Build Hadoop using @ant@.</li>
+<li> Set up Hadoop's configuration as you would usually do with a new install of Hadoop, following the "instructions on the Hadoop website":http://hadoop.apache.org/common/docs/r0.20.2/index.html (at the very least, you will need to set @JAVA_HOME@ in Hadoop's @conf/hadoop-env.sh@).</li>
 <li> Add the following parameters to Hadoop's @conf/mapred-site.xml@:
 <pre>
- <property>
-   <name>mapred.jobtracker.taskScheduler</name>
-   <value>org.apache.hadoop.mapred.MesosScheduler</value>
- </property>
+<property>
+  <name>mapred.jobtracker.taskScheduler</name>
+  <value>org.apache.hadoop.mapred.MesosScheduler</value>
+</property>
 
- <property>
-   <name>mapred.mesos.master</name>
-   <value>[URL of Mesos master]</value>
- </property>
+<property>
+  <name>mapred.mesos.master</name>
+  <value>[URL of Mesos master]</value>
+</property>
 </pre>
-<li> Launch a JobTracker with @bin/hadoop jobtracker@ (_do not_ use @bin/start-mapred.sh@). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.
-<li> Submit jobs to your JobTracker as usual.
+</li>
+<li> Launch a JobTracker with @bin/hadoop jobtracker@ (_do not_ use @bin/start-mapred.sh@). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
+<li> Submit jobs to your JobTracker as usual.</li>
 </ol>
+
+Note that when you run on a cluster, Hadoop expects to be located on the same path on all nodes (as does Mesos).
+
+If you wish to run multiple JobTrackers, the easiest way is to give each one a different port by using a different Hadoop @conf@ directory for each one and passing the @--conf@ flag to @bin/hadoop@ to specify which config directory to use. You can copy Hadoop's existing @conf@ directory to a new location and modify it to achieve this.
+
+Finally, if you run your own patched version of Hadoop instead of the one included in Mesos, you will need to take an additional step before building and running Hadoop: you must set the @MESOS_HOME@ environment variable to the location where Mesos is found. You need to do this both in your shell environment when you run @ant@, and in Hadoop's @hadoop-env.sh@.

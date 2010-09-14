@@ -49,7 +49,7 @@ h1. Where to Go From Here
 
 * [[Framework development guide]] -- learn how to build applications on Mesos.
 * [[Mesos architecture]] -- an overview of Mesos concepts.
-* [[Mesos configuration|Configuration]]
+* [[Configuring Mesos|Configuration]]
 * Framework guides:
 ** [[Running Hadoop on Mesos]]
 ** [[Running MPI on Mesos]]

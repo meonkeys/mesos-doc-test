@@ -25,7 +25,7 @@ To run Hadoop on Mesos, you need to take the following steps:
 <li> Submit jobs to your JobTracker as usual.</li>
 </ol>
 
-Note that when you run on a cluster, Hadoop expects to be located on the same path on all nodes (as does Mesos).
+Note that when you run on a cluster, Hadoop (and Mesos) should be located on the same path on all nodes.
 
 If you wish to run multiple JobTrackers, the easiest way is to give each one a different port by using a different Hadoop @conf@ directory for each one and passing the @--conf@ flag to @bin/hadoop@ to specify which config directory to use. You can copy Hadoop's existing @conf@ directory to a new location and modify it to achieve this.
 

@@ -14,7 +14,7 @@ Mesos's features include:
 
 This guide explains how to set up and test Mesos, and links to further documentation on other topics.
 
-_*Please note that Mesos is still in alpha. This release is only intended for early testing.*_
+_*Please note that Mesos is still in alpha. The current version is only intended for early testing.*_
 
 h1. System Requirements
 

@@ -1,42 +1,43 @@
-h1. Mesos Documentation
+Mesos is a _"cluster operating system"_ that manages cluster resources and efficiently shares them among multiple distributed applications, or _frameworks_. The current implementation supports "Hadoop"http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team with support for low-latency interactive use and iterative jobs). Mesos can also be used as a platform upon which to build new cluster computing frameworks, with the powerful advantage that your frameworks will be able to share resources with Hadoop, MPI, etc and can therefore easily be adopted by those communities.
 
-For now, you can run Mesos in Linux, Solaris, or OS X.
+You can use Mesos in several ways:
+* To run Hadoop, MPI, Spark and other applications on a shared pool of machines.
+* To run multiple instances of Hadoop on the same cluster -- say separate instances for production and experimental jobs -- or even multiple versions of Hadoop (to test out a new version).
+* To build new cluster applications without having to reinvent low-level facilities for farming out tasks to different nodes, monitoring them, etc.
 
-h2. Requirements
+This guide explains how to set up and test Mesos, and links to further documentation on other topics.
 
-Mesos currently runs on Linux or Mac OS X. It has also previously been tested on OpenSolaris.
+h1. Prerequisites
+
+Mesos currently runs on Linux or Mac OS X, and has previously been tested on OpenSolaris. You will need the following packages to run it:
 
 * g++ 4.1 or higher
 * SWIG 1.3.40 or higher
 * Python 2.6 (for the Mesos web UI)
 * Java 1.6 or higher (to run Java frameworks including Hadoop and "Spark":http://github.com/mesos/spark)
 
-h2. Getting Mesos
+h1. Getting Mesos
 
-The alpha release of mesos is available via github at github http://github.com/mesos/mesos.git
+You can download the alpha release of Mesos from GitHub at http://github.com/mesos/mesos.git.
 
-h2. Building Mesos
+h1. Building Mesos
 
-Mesos uses the standard GNU set of build tools for C++.
+Mesos uses the standard GNU build tools. You should configure it using the @configure@ script in the root directory. This script accepts the following arguments to enable various options:
+* @--with-python-headers=DIR@: Find Python header files in @DIR@ (to turn on Python support). Recommended.
+* @--with-webui@: Enable the Mesos web UI (which requires Python 2.6). Recommended.
+* @--with-java-home=DIR@: Enable Java framework support with a given installation of Java. Required for Hadoop and Spark.
+* @--with-zookeeper=DIR@ or @--with-included-zookeeper@: Enable master fault-tolerance using either an existing ZooKeeper installation or the version of ZooKeeper bundled with Mesos. For more help, see [[using ZooKeeper]].
 
-h3. Configuring mesos
-## In linux or solaris, in the `NEXUS_HOME` directory, if you are using a 64bit ubuntu VM, type `./configure.OURS.ubuntu64`
-## our premade config commands require you to have python-dev, ruby-dev, sun-java6-jdk, and swig (to get these in ubuntu, type apt-get X, where X is those three things in turn)
-# Type `make`
+The Git repository contains sample configure scripts for Mac OS X and several recent Linux distributions, with the correct paths for each platform. These still assume that you have installed the correct packages (e.g. @python-dev@ and the JDK on Linux).
 
-h2. Configure Mesos settings
+h1. Testing the build
 
- * Mesos configuration settings can be set via:
- ** Environment variables
- ** Command line arguments
- ** A text file
+After you build Mesos, you can run its unit tests using the @alltests@ program located in @src@. Note that a few tests for specific platforms are disabled by default. You can run @alltests@ with @--help@ for help about its options.
 
- * Configuration can be used to specify:
- ** log file locations
- ** master and slave daemon port numbers (for communicating with each other)
- ** master and slave webui port numbers
+You can also set up a small Mesos cluster as follows:
 
 h2. Running the Master
+
 
 h3. Fault Tolerant Mesos (using Zookeeper)
 # Make sure Zookeeper is running
@@ -67,6 +68,20 @@ h2. Running the Slave
 # type `./mesos-slave` without arguments to see the required and optional arguments
 # You should be able to see the slave show up on the master's webui
 
+
+h2. Configure Mesos settings
+
+ * Mesos configuration settings can be set via:
+ ** Environment variables
+ ** Command line arguments
+ ** A text file
+
+ * Configuration can be used to specify:
+ ** log file locations
+ ** master and slave daemon port numbers (for communicating with each other)
+ ** master and slave webui port numbers
+
+
 h2. Start a Framework
 
 # There should be a readme in each framework directory that explains how to use that framework
@@ -84,10 +99,6 @@ h2. Logging Information
  * Mesos uses "Google Log":http://code.google.com/p/google-glog and writes logs to /tmp by default
  * Mesos also writes the stdout for master and slave to the NEXUS_HOME/work directory
  * 
-
-h2. Unit Tests
-
-Mesos uses "GoogleTest":http://code.google.com/p/googletest/. The tests are located in src/tests. They get built into a binary called alltests, which you can run to execute them. You can also run alltests -v to see log output on stderr (normally it only gets placed in a log file in /tmp)
 
 h2. Developing using "local" 
 

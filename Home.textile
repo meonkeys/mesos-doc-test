@@ -49,7 +49,7 @@ You can also set up a small Mesos cluster and run a job on it as follows:
 # Launch a slave by typing @bin/mesos-slave --url=[URL of master]@. The slave will show up on the web UI if you refresh it.
 # Run the C++ test framework (a sample that just runs five tasks on the cluster) using @bin/examples/cpp-test-framework [URL of master]@. It should successfully exit after running five tasks.
 
-Once you have run these basic tests, you can use Mesos's [[deploy scripts]] to set up a cluster on a set of nodes, or its [[EC2 scripts]] to launch a cluster on Amazon EC2.
+Once you have run these basic tests, you can use Mesos's [[deploy scripts]] to launch a cluster on a set of nodes, or its [[EC2 scripts]] to launch a cluster on Amazon EC2.
 
 h1. Where to Go From Here
 

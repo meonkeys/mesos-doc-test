@@ -9,7 +9,7 @@ Mesos's features include:
 * Fault-tolerant replicated master node (using "Apache ZooKeeper":http://hadoop.apache.org/zookeeper/).
 * Support for isolating frameworks on each machine using Linux Containers.
 * Web UI for viewing cluster state.
-* Efficient fine-grained resource sharing mechanism ("resource offers") that allows data-intensive frameworks like Hadoop to achieve high data locality.
+* Efficient fine-grained resource sharing mechanism ("[[resource offers|Mesos architecture]]") that allows data-intensive frameworks like Hadoop to achieve high data locality.
 * Multi-resource scheduling (memory and CPU aware).
 
 This guide explains how to set up and test Mesos, and links to further documentation on other topics.

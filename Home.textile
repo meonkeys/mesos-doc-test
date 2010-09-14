@@ -7,7 +7,7 @@ You can use Mesos in several ways:
 
 Mesos's features include:
 * Fault-tolerant replicated master node (using "ZooKeeper":http://hadoop.apache.org/zookeeper/).
-* Support for isolating frameworks on each machine using Linux Containers.
+* Support for isolating frameworks on each machine using "Linux Containers":http://lxc.sourceforge.net/.
 * Web UI for viewing cluster state.
 * Efficient fine-grained resource sharing mechanism ("resource offers") that allows data-intensive frameworks like Hadoop to achieve high data locality.
 * Multi-resource scheduling (memory and CPU aware).

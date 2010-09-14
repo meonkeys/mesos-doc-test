@@ -70,3 +70,7 @@ h2. Logging Information
 h2. Unit Tests
 
 Nexus uses "GoogleTest":http://code.google.com/p/googletest/. The tests are located in src/tests. They get built into a binary called alltests, which you can run to execute them. You can also run alltests -v to see log output on stderr (normally it only gets placed in a log file in /tmp)
+
+h2. Developing using "local" 
+
+To ease some of the pain of framework development, instead of running a master plus a slave daemon and then hunting down stdout, stderr, etc. you can simply run your framework scheduler passing it "local" or "localquiet".

@@ -49,13 +49,13 @@ h1. Where to Go From Here
 
 * [[Framework development guide]] -- learn how to build applications on Mesos.
 * [[Mesos architecture]] -- an overview of Mesos concepts.
-* [[Mesos internals]] -- an overview of the codebase and internal organization.
 * [[Mesos configuration|Configuration]]
-* [[Logging and Debugging]] -- viewing Mesos and framework logs.
 * Framework guides:
 ** [[Running Hadoop on Mesos]]
 ** [[Running MPI on Mesos]]
 ** [[Running Spark on Mesos]]
+* [[Logging and Debugging]] -- viewing Mesos and framework logs.
 * [[Using ZooKeeper]] for master fault-tolerance
 * [[Using Linux Containers]] for resource isolation on slaves
-* [[Mesos development roadmap]]
+* [[Mesos internals]] -- an overview of the codebase and internal organization.
+* [[Mesos development roadmap|Roadmap]]

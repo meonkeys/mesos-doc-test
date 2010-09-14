@@ -1,4 +1,4 @@
-Mesos is a _"cluster operating system"_ that manages cluster resources and efficiently shares them among multiple distributed applications, or _frameworks_. The current implementation supports "Hadoop"http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team with support for low-latency interactive use and iterative jobs). Mesos can also be used as a platform upon which to build new cluster computing frameworks, with the powerful advantage that your frameworks will be able to share resources with Hadoop, MPI, etc and can therefore easily be adopted by those communities.
+Mesos is a cluster resource manager that efficiently shares and isolates resources among multiple distributed applications, or _frameworks_. The current implementation supports "Hadoop"http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team with support for low-latency interactive use and iterative jobs). Mesos can also serve as a platform upon which to build new cluster computing frameworks, with the powerful advantage that your frameworks will be able to share resources with Hadoop, MPI, etc and can therefore easily be adopted by those communities.
 
 You can use Mesos in several ways:
 * To run Hadoop, MPI, Spark and other applications on a shared pool of machines.
@@ -16,7 +16,7 @@ Mesos currently runs on Linux or Mac OS X, and has previously been tested on Ope
 * Python 2.6 (for the Mesos web UI)
 * Java 1.6 or higher (to run Java frameworks including Hadoop and "Spark":http://github.com/mesos/spark)
 
-h1. Getting Mesos
+h1. Downloading Mesos
 
 You can download the alpha release of Mesos from GitHub at http://github.com/mesos/mesos.git.
 
@@ -36,70 +36,31 @@ After you build Mesos, you can run its unit tests using the @alltests@ program l
 
 You can also set up a small Mesos cluster as follows:
 
-h2. Running the Master
+# Go into the @src@ directory of your installation.
+# Type @./mesos-master@ to launch the master.
+# Take note of the master identifier that is printed to stdout, which will look like @mesos://1@192.168.0.1:5050@.
+# View the master's web UI at @http://[hostname of master]:8080@.
+# Launch a slave by typing @./mesos-slave --url=[URL of master]@. The slave will show up on the web UI if you refresh it.
+# Run the C++ test framework (a sample application which just executes five tasks on the cluster) using @./cpp-test-framework [URL of master]@. It should successfully finish after running five tasks.
 
+h1. Logging and Debugging
 
-h3. Fault Tolerant Mesos (using Zookeeper)
-# Make sure Zookeeper is running
-# 
+Mesos uses "Google Log":http://code.google.com/p/google-glog and writes logs to @MESOS_HOME/logs@ by default, where @MESOS_HOME@ is the location where Mesos is installed. The log directory can be [[ Configuration|configured ]] using the @log_dir@ parameter.
 
-h4. Non Fault-Tolerant Mesos
-#  type `./mesos-master`. See the sample output below. 
-# take note of the libprocess PID identifier that is printed to stdout (or the log file if you have redirected log output), it will be something like: `1@127.0.1.1:41210`
-# access the webui at `http://[ip addr of master]:8080`
+Frameworks that run on Mesos have their output stored to a "work" directory on each machine. By default, this is @MESOS_HOME/work@. Within this directory, a framework's output is placed in files called @stdout@ and @stderr@ in a directory of the form @slave-X/fw-Y/Z@, where X is the slave ID, Y is the framework ID, and multiple subdirectories Z are created for each attempt to run an executor for the framework. These files can also be accessed via the web UI of the slave daemon (which is linked from the master web UI).
 
-pre. ubuntu:~/mesos/src$ ./mesos-master 
-I1229 15:50:36.042454 27343 master_main.cpp:51] Build: 2009-12-29 15:35:23 by andyk
-I1229 15:50:36.043526 27343 master_main.cpp:52] Starting Mesos master
-I1229 15:50:36.044958 27344 master.cpp:228] Master started at 1@127.0.1.1:41210
-I1229 15:50:36.045361 27343 master_webui.cpp:42] Starting master web UI
-I1229 15:50:36.046046 27346 master_webui.cpp:25] Web UI thread started
-I1229 15:50:36.105986 27346 master_webui.cpp:32] Loading webui/master/webui.py
-Bottle server starting up (using WSGIRefServer (0.0.0.0:8080))...
-Listening on http://0.0.0.0:8080/
-Use Ctrl-C to quit.
-I1229 15:50:37.050211 27344 master.cpp:527] Allocator timer tick
-I1229 15:50:37.050480 27344 simple_allocator.cpp:148] Running makeNewOffers...
-I1229 15:50:38.059840 27344 master.cpp:527] Allocator timer tick
-...
+Finally, structured logs of cluster activity can be written to a tab-separated text file or a SQLite database using the [[event history]] system.
 
-h2. Running the Slave
+h1. Developing using "local" 
 
-# type `./mesos-slave` without arguments to see the required and optional arguments
-# You should be able to see the slave show up on the master's webui
+To ease framework development and testing, instead of running a master plus a slave daemon and then hunting down @stdout@, @stderr@, etc, you can pass @local@ as the master URL argument to your framework scheduler, which will run a single master and slave in the same process and write all output to the standard output and error streams. By default, Mesos logs will also be written to these streams. You can disable these logs by using @localquiet@ as the URL.
 
+h1. Where to go from here
 
-h2. Configure Mesos settings
-
- * Mesos configuration settings can be set via:
- ** Environment variables
- ** Command line arguments
- ** A text file
-
- * Configuration can be used to specify:
- ** log file locations
- ** master and slave daemon port numbers (for communicating with each other)
- ** master and slave webui port numbers
-
-
-h2. Start a Framework
-
-# There should be a readme in each framework directory that explains how to use that framework
-# You will have to have run `./configure` with the correct parameters to use frameworks written in languages other than C/C++, e.g. --with-java-home=...
-## See the "README.swig":https://github.com/mesosproject/mesos/blob/master/README.swig file for more information about this
-
-Example:
-
-pre. ./test-framework 1@127.0.1.1:53511
-./test-framework local  #A framework can also be run without a dedicated master
-                        #by passing it the "local" flag instead of the master PID
-
-h2. Logging Information
-
- * Mesos uses "Google Log":http://code.google.com/p/google-glog and writes logs to /tmp by default
- * Mesos also writes the stdout for master and slave to the NEXUS_HOME/work directory
- * 
-
-h2. Developing using "local" 
-
-To ease framework development, instead of running a master plus a slave daemon and then hunting down stdout, stderr, etc. you can simply run your framework scheduler passing it "local" or "localquiet".
+* [[Framework development guide]]
+* [[ Configuration|Mesos configuration ]]
+* [[Running Hadoop on Mesos]]
+* [[Running MPI on Mesos]]
+* [[Running Spark on Mesos]]
+* [[Mesos internal architecture]]
+* [[Mesos development roadmap]]

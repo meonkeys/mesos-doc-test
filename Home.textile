@@ -54,8 +54,9 @@ h1. Where to Go From Here
 ** [[Running Hadoop on Mesos]]
 ** [[Running MPI on Mesos]]
 ** [[Running Spark on Mesos]]
-* [[Logging and Debugging]] -- viewing Mesos and framework logs.
-* [[Using ZooKeeper]] for master fault-tolerance
-* [[Using Linux Containers]] for resource isolation on slaves
+* Feature guides:
+** [[Logging and Debugging]] -- viewing Mesos and framework logs.
+** [[Using ZooKeeper]] for master fault-tolerance.
+** [[Using Linux Containers]] for resource isolation on slaves.
 * [[Mesos internals]] -- an overview of the codebase and internal organization.
 * [[Mesos development roadmap|Roadmap]]

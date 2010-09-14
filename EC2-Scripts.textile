@@ -23,7 +23,7 @@ You can also run @./mesos-ec2 --help@ to see more usage options. In particular, 
 
 h1. Running Jobs
 
-* Go into the @mesos/ec2@ directory in the release of Mesos you downloaded.
+* Go into the @ec2@ directory in the release of Mesos you downloaded.
 * Run @./mesos-ec2 -k <keypair> -i <key-file> login <cluster-name>@ to SSH into the cluster, where @<keypair>@ and @<key-file>@ are as above. (This is just for convenience; you could also use Elasticfox or the EC2 console.)
 * Copy your code to all the nodes. To do this, you can use the provided script @~/mesos-ec2/copy-dir@, which, given a directory path, RSYNCs it to the same location on all the slaves.
 * If your job needs to access large datasets, the fastest way to do that is to load them from Amazon S3 or an Amazon EBS device into an instance of the Hadoop Distributed File System (HDFS) on your nodes. The @mesos-ec2@ script already sets up a HDFS instance for you. It's installed in @/root/hadoop-0.20.2@, and can be accessed using the @bin/hadoop@ script in that directory.

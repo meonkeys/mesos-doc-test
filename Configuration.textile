@@ -25,7 +25,7 @@ The following options are commonly configured for the slave:
 |@cpus@                 | How many CPU cores to report to the master for running tasks. |
 |@mem@                 | How much memory to report to the master for running tasks (in MB). |
 |@work_dir@         | Directory for slaves to place framework's output files in. It is recommended to use a local disk for each slave. |
-|@isolation@            | Isolation module to use for isolating tasks. The default is @process@, which performs no isolation other than running each framework as its own user, but @lxc@ can be used on systems that support Linux Containers. See [[using Linux containers]] for details. |
+|@isolation@            | Isolation module to use for isolating tasks. The default is @process@, which performs no isolation other than running each framework as its user, but @lxc@ can be used on systems that support Linux Containers. See [[using Linux containers]] for details. |
 |@hadoop_home@ | Location of Hadoop, if you wish to use the Hadoop Distributed File System for distributing framework binaries across the cluster. |
 
 The following options are commonly configured for the master:

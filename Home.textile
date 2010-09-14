@@ -39,7 +39,7 @@ After you have run @configure@, you can build Mesos with @make@.
 
 h1. Testing the Build
 
-After you build Mesos, you can run its unit tests using the @alltests@ program located in @src@. Note that a few tests for specific platforms are disabled by default. You can run @alltests@ with @--help@ for help about its options.
+After you build Mesos, you can run its unit tests using the @alltests@ program located in @bin/tests@. Note that a few tests for specific platforms are disabled by default. You can run @alltests@ with @--help@ to view its options.
 
 You can also set up a small Mesos cluster and run a job on it as follows:
 # Go into the @src@ directory of your installation.

@@ -1,4 +1,4 @@
-h1. Nexus Quickstart Guide
+h1. Nexus Documentation
 
 For now, you can run Nexus in Linux or Solaris. Those who develop on OS X are currently using a Linux virtual machine for development.
 

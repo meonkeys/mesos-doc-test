@@ -43,7 +43,7 @@ You can also set up a small Mesos cluster and run a job on it as follows:
 # Take note of the master identifier that is printed to stdout, which will look like @mesos://1@192.168.0.1:5050@.
 # View the master's web UI at @http://[hostname of master]:8080@.
 # Launch a slave by typing @./mesos-slave --url=[URL of master]@. The slave will show up on the web UI if you refresh it.
-# Run the C++ test framework (a sample application which just executes five tasks on the cluster) using @./cpp-test-framework [URL of master]@. It should successfully finish after running five tasks.
+# Run the C++ test framework (a sample application that just executes five tasks on the cluster) using @./cpp-test-framework [URL of master]@. It should successfully finish after running five tasks.
 
 h1. Where to Go From Here
 

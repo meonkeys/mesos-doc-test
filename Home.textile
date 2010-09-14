@@ -40,7 +40,7 @@ After you build Mesos, you can run its unit tests using the @alltests@ program l
 You can also set up a small Mesos cluster and run a job on it as follows:
 # Go into the @src@ directory of your installation.
 # Type @./mesos-master@ to launch the master.
-# Take note of the master identifier that is printed to stdout, which will look like _mesos://1@192.168.0.1:5050_.
+# Take note of the master identifier that is printed to stdout, which will look like <code>mesos://1@192.168.0.1:5050</code>.
 # View the master's web UI at @http://[hostname of master]:8080@.
 # Launch a slave by typing @./mesos-slave --url=[URL of master]@. The slave will show up on the web UI if you refresh it.
 # Run the C++ test framework (a sample application that just executes five tasks on the cluster) using @./cpp-test-framework [URL of master]@. It should successfully finish after running five tasks.

@@ -16,7 +16,7 @@ The following options are commonly configured for both the master and slave:
 |@webui_port@     | Port to bind to for user-viewable web UI. |
 |@log_dir@             | Directory to place logs into, including [[event history]] logs. It is recommended to use a local disk for each node. |
 |@quiet@                | Disable logging to standard error. |
-|@conf@                | Specifies a given config directory to use instead of the default one. |
+|@conf@                | Specifies a config directory to use instead of the default one. |
 
 The following options are commonly configured for the slave:
 

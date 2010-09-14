@@ -37,7 +37,7 @@ The Git repository contains configure templates for Mac OS X and several Linux d
 
 After you have run @configure@, you can build Mesos with @make@.
 
-_Note: the @configure@ script currently prints a warning at the end about "unrecognized options: --with-java-home, --with-python headers, ...". This is actually from one of the nested @configure@ scripts that we call, so it does not mean that your options weren't used._
+_Note: @configure@ currently prints a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested @configure@ scripts that we call, so it does not mean that your options weren't used._
 
 h1. Testing the Build
 

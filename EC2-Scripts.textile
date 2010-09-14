@@ -12,7 +12,6 @@ h1. Before You Start
 h1. Launching a Cluster
 
 * Go into the @ec2@ directory in the release of Mesos you downloaded.
-* Run @./mesos-ec2 --help@ to see a full list of options for the script.
 * Run @./mesos-ec2 -k <keypair> -i <key-file> -s <num-slaves> launch <cluster-name>@, where @<keypair>@ is the name of your EC2 key pair (that you gave it when you created it), @<key-file>@ is the private key file for your key pair, @<num-slaves>@ is the number of slave nodes to launch (try 1 at first), and @<cluster-name>@ is the name to give to your cluster.
 * After everything launches, check that Mesos is up and sees all the slaves by going to the Mesos Web UI link printed at the end of the script (@http://<master-hostname>:8080@).
 

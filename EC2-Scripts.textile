@@ -28,7 +28,7 @@ h1. Running Jobs
 * Copy your code to all the nodes. To do this, you can use the provided script @~/mesos-ec2/copy-dir@, which, given a directory path, RSYNCs it to the same location on all the slaves.
 * If your job needs to access large datasets, the fastest way to do that is to load them from Amazon S3 or an Amazon EBS device into an instance of the Hadoop Distributed File System (HDFS) on your nodes. The @mesos-ec2@ script already sets up a HDFS instance for you. It's installed in @/root/hadoop-0.20.2@, and can be accessed using the @bin/hadoop@ script in that directory.
 
-If you get an "Executor on slave X disconnected" error when running your framework, you probably haven't copied your classes to all the slaves. Use the @~/mesos-ec2/copy-dir@ script to do that. If you keep getting the error, though, look at the slave's logs for that framework using the Mesos web UI. Please see [[logging and debugging]] for details.
+If you get an "Executor on slave X disconnected" error when running your framework, you probably haven't copied your code the slaves. Use the @~/mesos-ec2/copy-dir@ script to do that. If you keep getting the error, though, look at the slave's logs for that framework using the Mesos web UI. Please see [[logging and debugging]] for details.
 
 h1. Stopping a Cluster
 

@@ -14,6 +14,8 @@ Mesos's features include:
 
 This guide explains how to set up and test Mesos, and links to further documentation on other topics.
 
+_*Please note that Mesos is still in alpha. This release is intended for early testing only.*_
+
 h1. System Requirements
 
 Mesos runs on Linux and Mac OS X, and has previously also been tested on OpenSolaris. You will need the following packages to run it:

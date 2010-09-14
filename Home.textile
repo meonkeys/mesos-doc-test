@@ -1,6 +1,6 @@
 h1. Mesos Documentation
 
-For now, you can run Mesos in Linux or Solaris. Those who develop on OS X are currently using a Linux virtual machine for development.
+For now, you can run Mesos in Linux, Solaris, or OS X.
 
 h2. Configure Mesos settings
 

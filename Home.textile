@@ -31,7 +31,7 @@ Mesos uses the standard GNU build tools. You should configure it using the @conf
 * @--with-python-headers=DIR@: Find Python header files in @DIR@ (to turn on Python support). Recommended.
 * @--with-webui@: Enable the Mesos web UI (which requires Python 2.6). Recommended.
 * @--with-java-home=DIR@: Enable Java framework support with a given installation of Java. Required for Hadoop and Spark.
-* @--with-zookeeper=DIR@ or @--with-included-zookeeper@: Enable master fault-tolerance using an existing ZooKeeper installation or the version of ZooKeeper bundled with Mesos. For details, see "running Mesos with ZooKeeper":https://github.com/mesos/mesos/wikis/running-mesos-with-zookeeper.
+* @--with-zookeeper=DIR@ or @--with-included-zookeeper@: Enable master fault-tolerance using an existing ZooKeeper installation or the version of ZooKeeper bundled with Mesos. For details, see [[using ZooKeeper]].
 
 The Git repository contains configure scripts for Mac OS X and several Linux distributions with the right paths for each platform. These assume that you have installed the correct packages (e.g. @python-dev@ and the JDK).
 

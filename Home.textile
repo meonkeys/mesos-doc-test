@@ -3,7 +3,7 @@ Mesos is a cluster resource manager that efficiently shares and isolates resourc
 You can use Mesos in several ways:
 * To run Hadoop, MPI, Spark and other frameworks on a shared pool of machines.
 * To run multiple instances of Hadoop on the same cluster -- say separate instances for production and experimental jobs -- or even multiple versions of Hadoop (to test out a new version).
-* To build new cluster applications without having to reinvent low-level facilities for farming out tasks to different nodes, monitoring them, etc, and have them coexist with existing frameworks.
+* To build new cluster applications without having to reinvent low-level facilities for farming out tasks to different nodes, monitoring them, etc, and have your frameworks coexist with existing ones.
 
 Mesos's features include:
 * Fault-tolerant replicated master node (using "ZooKeeper":http://hadoop.apache.org/zookeeper/).

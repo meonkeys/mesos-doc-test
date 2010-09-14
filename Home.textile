@@ -33,7 +33,7 @@ Mesos uses the standard GNU build tools. You should configure it using the @conf
 * @--with-java-home=DIR@: Enable Java framework support with a given installation of Java. Required for Hadoop and Spark.
 * @--with-zookeeper=DIR@ or @--with-included-zookeeper@: Enable master fault-tolerance using an existing ZooKeeper installation or the version of ZooKeeper bundled with Mesos. For details, see [[using ZooKeeper]].
 
-The Git repository contains configure templates for Mac OS X and several Linux distributions with the right paths for set (e.g. @configure.template.macosx@). These still assume that you have installed the correct packages (e.g. @python-dev@ and the JDK).
+The Git repository contains configure templates with the right paths for OS X and several Linux distributions (e.g. @configure.template.macosx@). These still assume that you have installed the correct packages (e.g. @python-dev@ and the JDK).
 
 After you have run @configure@, you can build Mesos with @make@.
 

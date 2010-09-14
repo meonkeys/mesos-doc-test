@@ -2,11 +2,17 @@ h1. Mesos Documentation
 
 For now, you can run Mesos in Linux or Solaris. Those who develop on OS X are currently using a Linux virtual machine for development.
 
-h2. Configure Mesos settings (NOT IMPLEMENTED)
+h2. Configure Mesos settings
 
-# The pre-release alpha version Mesos does not currently use configuration files beyond the customary UNIX  configure/make process, but we plan on adding this, where one can specify things such as:
-## log file locations
-## specify pluggable components (such as allocation module, isolation module, etc.)
+ * Mesos configuration settings can be set via:
+ ** Environment variables
+ ** Command line arguments
+ ** A text file
+
+ * Configuration can be used to specify:
+ ** log file locations
+ ** master and slave daemon port numbers (for communicating with each other)
+ ** master and slave webui port numbers
 
 h2. Prerequisites
 
@@ -67,6 +73,7 @@ h2. Logging Information
 
  * Mesos uses "Google Log":http://code.google.com/p/google-glog and writes logs to /tmp by default
  * Mesos also writes the stdout for master and slave to the NEXUS_HOME/work directory
+ * 
 
 h2. Unit Tests
 

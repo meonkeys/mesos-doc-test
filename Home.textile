@@ -11,8 +11,9 @@ h2. Configure Nexus settings (NOT IMPLEMENTED)
 h2. Prerequisites
 
 * Python 2.6 (Web UI uses python bottle package)
-* g++
-* (Not built or tested on Windows)
+* g++ 4.1 or higher
+* SWIG 1.3.40 or higher
+* Does not build on Windows
 
 h2. Getting Nexus
 

@@ -7,7 +7,7 @@ You can use Mesos in several ways:
 
 This guide explains how to set up and test Mesos, and links to further documentation on other topics.
 
-h1. Prerequisites
+h1. System Requirements
 
 Mesos currently runs on Linux or Mac OS X, and has previously been tested on OpenSolaris. You will need the following packages to run it:
 
@@ -15,10 +15,6 @@ Mesos currently runs on Linux or Mac OS X, and has previously been tested on Ope
 * SWIG 1.3.40 or higher
 * Python 2.6 (for the Mesos web UI)
 * Java 1.6 or higher (to run Java frameworks including Hadoop and "Spark":http://github.com/mesos/spark)
-
-h1. Downloading Mesos
-
-You can download the alpha release of Mesos from GitHub at http://github.com/mesos/mesos.git.
 
 h1. Building Mesos
 
@@ -43,7 +39,7 @@ You can also set up a small Mesos cluster as follows:
 # Launch a slave by typing @./mesos-slave --url=[URL of master]@. The slave will show up on the web UI if you refresh it.
 # Run the C++ test framework (a sample application which just executes five tasks on the cluster) using @./cpp-test-framework [URL of master]@. It should successfully finish after running five tasks.
 
-h1. Logging and Debugging
+h1. Logging information
 
 Mesos uses "Google Log":http://code.google.com/p/google-glog and writes logs to @MESOS_HOME/logs@ by default, where @MESOS_HOME@ is the location where Mesos is installed. The log directory can be [[ Configuration|configured ]] using the @log_dir@ parameter.
 

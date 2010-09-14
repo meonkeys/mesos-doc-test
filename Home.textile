@@ -47,8 +47,8 @@ You can also set up a small Mesos cluster and run a job on it as follows:
 
 h1. Where to Go From Here
 
-* [[Framework development guide]] -- learn how to build applications on Mesos.
 * [[Mesos architecture]] -- an overview of Mesos concepts.
+* [[Framework development guide]] -- learn how to build applications on Mesos.
 * [[Configuring Mesos|Configuration]]
 * Framework guides:
 ** [[Running Hadoop on Mesos]]

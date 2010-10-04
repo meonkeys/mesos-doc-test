@@ -25,6 +25,10 @@ Mesos runs on Linux and Mac OS X, and has previously also been tested on OpenSol
 * Python 2.6 (for the Mesos web UI)
 * Java 1.6 or higher (to run Java frameworks including Hadoop and "Spark":http://github.com/mesos/spark)
 
+h1. Downloading Mesos
+
+You can obtain Mesos in two ways: by downloading a tagged "release" from the [[downloads page|http://github.com/mesos/mesos/downloads]], or by checking it out from the Git repository using `git clone git://github.com/mesos/mesos`.
+
 h1. Building Mesos
 
 Mesos uses the standard GNU build tools. You should configure it using the @configure@ script in the root directory. This script accepts the following arguments to enable various options:

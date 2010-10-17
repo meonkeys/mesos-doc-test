@@ -42,7 +42,7 @@ The Git repository contains configure template scripts with the right paths for 
 After you have run @configure@, you can build Mesos with @make@.
 
 _*Notes:*_
-* On 32-bit platforms, you should set @CXXFLAGS = -march=i486@ when running @configure@ in order to ensure that certain atomic instructions can be used.
+* On 32-bit platforms, you should set @CXXFLAGS = -march=i486@ when running @configure@ in order to ensure that certain instructions can be used.
 * @configure@ prints a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested @configure@ scripts that we call, so it doesn't mean that your options were ignored.
 
 h1. Testing the Build

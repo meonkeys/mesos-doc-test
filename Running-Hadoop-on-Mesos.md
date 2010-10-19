@@ -5,7 +5,7 @@ The ported version of Hadoop is included in the Mesos directory tree under `fram
 To run Hadoop on Mesos, you need to take the following steps:
 <ol>
 <li> Build Hadoop using `ant`.</li>
-<li> Set up Hadoop's configuration as you would usually do with a new install of Hadoop, following the "instructions on the Hadoop website":http://hadoop.apache.org/common/docs/r0.20.2/index.html (at the very least, you need to set `JAVA_HOME` in Hadoop's `conf/hadoop-env.sh` and set `mapred.job.tracker` in `conf/mapred-site.xml`).</li>
+<li> Set up Hadoop's configuration as you would usually do with a new install of Hadoop, following the [[instructions on the Hadoop website|http://hadoop.apache.org/common/docs/r0.20.2/index.html]] (at the very least, you need to set `JAVA_HOME` in Hadoop's `conf/hadoop-env.sh` and set `mapred.job.tracker` in `conf/mapred-site.xml`).</li>
 
 <li> Add the following line to `conf/hadoop-env.sh` to put the Mesos module on the class path:
 <pre>export HADOOP_CLASSPATH="$HADOOP_CLASSPATH:$HADOOP_HOME/build/contrib/mesos/classes"</pre>
@@ -26,7 +26,7 @@ To run Hadoop on Mesos, you need to take the following steps:
 
 </li>
 
-<li> Launch a JobTracker with `bin/hadoop jobtracker` (_do not_ use `bin/start-mapred.sh`). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
+<li> Launch a JobTracker with `bin/hadoop jobtracker` (<i>do not</i> use `bin/start-mapred.sh`). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
 <li> Submit jobs to your JobTracker as usual.</li>
 </ol>
 

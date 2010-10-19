@@ -6,6 +6,10 @@ To run Hadoop on Mesos, you need to take the following steps:
 <ol>
 <li> Build Hadoop using @ant@.</li>
 <li> Set up Hadoop's configuration as you would usually do with a new install of Hadoop, following the "instructions on the Hadoop website":http://hadoop.apache.org/common/docs/r0.20.2/index.html (at the very least, you need to set @JAVA_HOME@ in Hadoop's @conf/hadoop-env.sh@ and set @mapred.job.tracker@ in @conf/mapred-site.xml@).</li>
+<li> Edit @conf/hadoop-env.sh@ to put the Mesos contrib module on the @CLASSPATH@ by adding the following line: </li>
+
+<pre>export HADOOP_CLASSPATH="$HADOOP_CLASSPATH:$HADOOP_HOME/build/contrib/mesos/classes"</pre>
+
 <li> Add the following parameters to Hadoop's @conf/mapred-site.xml@:
 
 <pre>

@@ -4,15 +4,12 @@ The ported version of Hadoop is included in the Mesos directory tree under `fram
 
 To run Hadoop on Mesos, you need to take the following steps:
 <ol>
-<li> Build Hadoop using `ant`.</li>
-<li> Set up Hadoop's configuration as you would usually do with a new install of Hadoop, following the [[instructions on the Hadoop website|http://hadoop.apache.org/common/docs/r0.20.2/index.html]] (at the very least, you need to set `JAVA_HOME` in Hadoop's `conf/hadoop-env.sh` and set `mapred.job.tracker` in `conf/mapred-site.xml`).</li>
-
-<li> Add the following line to `conf/hadoop-env.sh` to put the Mesos module on the class path:
+<li> Build Hadoop using <code>ant</code>.</li>
+<li> Set up Hadoop's configuration as you would usually do with a new install of Hadoop, following the [[instructions on the Hadoop website|http://hadoop.apache.org/common/docs/r0.20.2/index.html]] (at the very least, you need to set <code>JAVA_HOME</code> in Hadoop's <code>conf/hadoop-env.sh</code> and set <code>mapred.job.tracker</code> in <code>conf/mapred-site.xml</code>).</li>
+<li> Add the following line to <code>conf/hadoop-env.sh</code> to put the Mesos module on the class path:
 <pre>export HADOOP_CLASSPATH="$HADOOP_CLASSPATH:$HADOOP_HOME/build/contrib/mesos/classes"</pre>
 </li>
-
-<li> Add the following parameters to Hadoop's `conf/mapred-site.xml`:
-
+<li> Add the following parameters to Hadoop's <code>conf/mapred-site.xml</code>:
 <pre>
 &lt;property&gt;
   &lt;name&gt;mapred.jobtracker.taskScheduler&lt;/name&gt;
@@ -23,10 +20,8 @@ To run Hadoop on Mesos, you need to take the following steps:
   &lt;value&gt;[URL of Mesos master]&lt;/value&gt;
 &lt;/property&gt;
 </pre>
-
 </li>
-
-<li> Launch a JobTracker with `bin/hadoop jobtracker` (<i>do not</i> use `bin/start-mapred.sh`). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
+<li> Launch a JobTracker with <code>bin/hadoop jobtracker</code> (<i>do not</i> use <code>bin/start-mapred.sh</code>). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
 <li> Submit jobs to your JobTracker as usual.</li>
 </ol>
 

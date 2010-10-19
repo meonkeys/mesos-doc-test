@@ -2,12 +2,12 @@ We have ported version 0.20.2 of Hadoop to run on Mesos. Most of the Mesos port 
 
 The ported version of Hadoop is included in the Mesos project under `frameworks/hadoop-0.20.2`. However, if you want to patch your own version of Hadoop to add Mesos support, you can also use the patch located at `frameworks/hadoop-0.20.2/hadoop-mesos.patch`. This patch should apply on any 0.20.* version of Hadoop, and is also likely to work on Hadoop distributions derived from 0.20, such as Cloudera's or Yahoo!'s.
 
+**Note:** the Mesos EC2 instances contain a second instance of Hadoop under `/root/hadoop-0.20.2`, which is used for HDFS. Use the instance in `/root/mesos/frameworks` for running jobs.
+
 To run Hadoop on Mesos, you need to take the following steps:
 <ol>
 <li> Build Hadoop using <code>ant</code>.</li>
 <li> Set up Hadoop's configuration as you would usually do with a new install of Hadoop, following the [[instructions on the Hadoop website|http://hadoop.apache.org/common/docs/r0.20.2/index.html]] (at the very least, you need to set <code>JAVA_HOME</code> in Hadoop's <code>conf/hadoop-env.sh</code> and set <code>mapred.job.tracker</code> in <code>conf/mapred-site.xml</code>).</li>
-<li> Add the following line to <code>conf/hadoop-env.sh</code> to put the Mesos module on the class path:
-<pre>export HADOOP_CLASSPATH="$HADOOP_CLASSPATH:$HADOOP_HOME/build/contrib/mesos/classes"</pre>
 </li>
 <li> Add the following parameters to Hadoop's <code>conf/mapred-site.xml</code>:
 <pre>

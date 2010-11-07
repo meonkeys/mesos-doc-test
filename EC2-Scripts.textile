@@ -19,7 +19,7 @@ You can also run @./mesos-ec2 --help@ to see more usage options. The following o
 * @--instance-type=<INSTANCE_TYPE>@ can be used to specify an EC2 instance type to use. For now, the script only supports 64-bit instance types, and the default type is @m1.large@ (which has 2 cores and 7.5 GB RAM). Refer to the Amazon pages about "EC2 instance types":http://aws.amazon.com/ec2/instance-types and "EC2 pricing":http://aws.amazon.com/ec2/#pricing for information about other instance types. 
 * @--zone=<EC2_ZONE>@ can be used to specify an EC2 availability zone to launch instances in. Sometimes, you will get an error because there is not enough capacity in one zone, and you should try to launch in another. This happens mostly with the @m1.large@ instance types; extra-large (both @m1.xlarge@ and @c1.xlarge@) instances tend to be more available.
 * @--download=git@ will tell the instances to download the latest release of Mesos from the github git repository.
-* @--ft=<NUM_MASTERS>@ can be used to specify that mesos should run in fault tolerant (FT) mode by specifying @NUM_MASTERS@ > 1.
+* @--ft=<NUM_MASTERS>@ can be used to run Mesos in fault tolerant (FT) mode by specifying @NUM_MASTERS@ > 1.
 * If one of your launches fails due to e.g. not having the right permissions on your private key file, you can run @launch@ with the @--resume@ option to restart the setup process on an existing cluster.
 
 h1. Running Jobs

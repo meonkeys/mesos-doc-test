@@ -41,4 +41,3 @@ _*Note that there is no way to recover data on EC2 nodes after shutting them dow
 h1. Limitations
 
 * The @mesos-ec2@ script currently does not use the [[deploy scripts]] included with Mesos to manage its clusters. This will likely be fixed in the future.
-* Although @mesos-ec2@'s help string says that it supports launching a fault-tolerant cluster with ZooKeeper, this is not yet the case. 

@@ -1,0 +1,47 @@
+h1. Framework development guide
+
+See one of the example framework schedulers in @MESOS_HOME/src/examples/@ to get an idea of what a Mesos framework scheduler and executor in the language of your choice looks like.
+
+h2. Create your Framework Scheduler
+
+You can write a framework scheduler in C, C++, Java/Scala, or Python. Your framework scheduler should inherit from the @Scheduler@ class (see API below). Your scheduler should create a SchedulerDriver (which will mediate communication between your scheduler and the Mesos master) and then call @SchedulerDriver.run()@
+
+h3. Scheduler API (as of 11/12/10) declared in @MESOS_HOME/include/mesos_sched.hpp@
+
+```c++
+  // Callbacks for getting framework properties
+  virtual std::string getFrameworkName(SchedulerDriver*);
+  virtual ExecutorInfo getExecutorInfo(SchedulerDriver*);
+  
+  // Callbacks for various Mesos events  virtual void registered(SchedulerDriver* d, FrameworkID fid) {} 
+  virtual void resourceOffer(SchedulerDriver* d,
+                             OfferID oid,
+                             const std::vector<SlaveOffer>& offers) {}
+  virtual void offerRescinded(SchedulerDriver* d, OfferID oid) {}
+  virtual void statusUpdate(SchedulerDriver* d, const TaskStatus& status) {}
+  virtual void frameworkMessage(SchedulerDriver* d,
+                                const FrameworkMessage& message) {}
+  virtual void slaveLost(SchedulerDriver* d, SlaveID sid) {}
+  virtual void error(SchedulerDriver* d, int code, const std::string& message);
+
+h2. Create your Framework Executor
+
+Your framework executor must inherit from the Executor class. It must override the launchTask() method. 
+You can use the $MESOS_HOME environment variable inside of your executor to determine where mesos is running from.
+
+h3. Executor API (as of 11/12/10) declared in @MESOS_HOME/include/mesos_exec.hpp@
+
+```c++
+  virtual void init(ExecutorDriver* d, const ExecutorArgs& args) {}
+  virtual void launchTask(ExecutorDriver* d, const TaskDescription& task) {}
+  virtual void killTask(ExecutorDriver* d, TaskID taskId) {}  virtual void frameworkMessage(ExecutorDriver* d,
+                                const FrameworkMessage& message) {}  virtual void shutdown(ExecutorDriver* d) {}
+  virtual void error(ExecutorDriver* d, int code, const std::string& message);
+```
+
+
+h2. Install your Framework
+
+You need to put your framework somewhere that all slaves on the cluster can get it from. If you are running HDFS, you can your executor into HDFS and then have your framework scheduler's @getExecutorInfo()@ function return a string of the format "HDFS://path/to/executor/". Also, you can pass the @frameworks_home@ (defaults to: @MESOS_HOME/frameworks@)configuration option to your @mesos-slave@ daemons when you launch them to specify where all of your framework executors are stored (e.g. on an NFS mount that is available to all slaves), and then have @getExecutorInfo()@ return a relative path, and then the slave will prepend the value of frameworks_home to the relative path provided.
+
+Once you are sure that you're executors are available to the mesos-slaves, you should be able to run your scheduler, which will register with the Mesos master, and start receiving resource offers!

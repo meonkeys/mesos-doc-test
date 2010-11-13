@@ -1,4 +1,4 @@
-Mesos is a cluster resource manager that efficiently shares and isolates resources among multiple distributed applications, or _frameworks_. It currently supports "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports for low-latency interactive use and iterative jobs). Mesos can also serve as a platform upon which to build new cluster computing frameworks, with the advantage that your frameworks will be able to share resources with Hadoop, MPI, etc and can therefore easily be adopted by these communities.
+Mesos is a cluster resource manager that efficiently shares and isolates resources among multiple distributed applications, or _frameworks_. It currently supports "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs). Mesos can also serve as a platform upon which to build new cluster computing frameworks, with the advantage that your frameworks will be able to share resources with Hadoop, MPI, etc and can therefore easily be adopted by these communities.
 
 You can use Mesos in several ways:
 * To run Hadoop, MPI, Spark and other frameworks on a shared pool of machines.
@@ -21,7 +21,7 @@ h1. System Requirements
 Mesos runs on Linux and Mac OS X, and has previously also been tested on OpenSolaris. You will need the following packages to run it:
 
 * g++ 4.1 or higher
-* SWIG 1.3.40 or higher (If you install swig on OS X via macports, in addition to `port install swig`, you will also need to do `port install swig-java` and `port swig-python`)
+* SWIG 1.3.40 or higher (If you install swig on OS X via macports, in addition to `port install swig`, you will also need to do `port install swig-java` and `port install swig-python`)
 * Python 2.6 (for the Mesos web UI)
 * Java 1.6 or higher (to run Java frameworks including Hadoop and "Spark":http://github.com/mesos/spark)
 

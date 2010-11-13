@@ -23,6 +23,7 @@ h3. Scheduler API (as of 11/12/10) declared in @MESOS_HOME/include/mesos_sched.h
                                 const FrameworkMessage& message) {}
   virtual void slaveLost(SchedulerDriver* d, SlaveID sid) {}
   virtual void error(SchedulerDriver* d, int code, const std::string& message);
+```
 
 h2. Create your Framework Executor
 

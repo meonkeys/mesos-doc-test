@@ -25,7 +25,7 @@ Mesos runs on Linux and Mac OS X, and has previously also been tested on OpenSol
 * Python 2.6 (for the Mesos web UI)
 * Java 1.6 or higher (to run Java frameworks including Hadoop and "Spark":http://github.com/mesos/spark)
 
-\* If you install swig on OS X via macports, you will also need to do `port install swig-java` and `port swig-python`
+&#42; *Footnote:* If you install swig on OS X via macports, you will also need to do `port install swig-java` and `port swig-python`
 
 h1. Downloading Mesos
 

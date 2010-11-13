@@ -7,9 +7,6 @@ h1. Allocation Module API
 Mesos is implemented in C++, so allocation modules are implemented in C++, and inherit the @Allocator@ class defined in MESOS_HOME/src/master/allocator.hpp. As of the time of this writing (11/12/10), the API for allocation modules is as follows:
 
 ```c++
-
-class Allocator {
-public:
   virtual ~Allocator() {}
 
   virtual void frameworkAdded(Framework *framework) {}

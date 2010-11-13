@@ -1,4 +1,4 @@
-[[/images/architecture3.jpg]]
+-> [[/images/architecture3.jpg|height=300px]] <-
 
 The above figure shows the main components of Mesos.  Mesos consists of a <b>master</b> process that manages <b>slave</b> daemons running on each cluster node, and <b>frameworks</b> that run <b>tasks</b> on these slaves. 
 
@@ -8,7 +8,7 @@ A framework running on top of Mesos consists of two components: a <b>scheduler</
 
 h2. Example of resource offer 
 
-[[/images/architecture-example.jpg]]
+->[[/images/architecture-example.jpg|300px]]<-
 
 The above figure shows an example of how a framework gets scheduled to run a task. In step (1), slave 1 reports to the master that it has 4 CPUs and 4 GB of memory free. The master then invokes the allocation policy module, which tells it that framework 1 should be offered all available resources. In step (2) the master sends a resource offer describing what is available on slave 1 to framework 1.  In step (3), the framework's scheduler replies to the master with information about two tasks to run on the slave, using < 2 CPUs, 1 GB RAM> for the first task, and <1 CPUs, 2 GB RAM> for the second task. Finally, in step (4), the master sends the tasks to the slave, which allocates appropriate resources to the framework's executor, which in turn launches the two tasks (depicted with dotted-line borders in the figure).  Because 1 CPU and 1 GB of RAM are still unallocated, the allocation module may now offer them to framework 2.  In addition, this resource offer process repeats when tasks finish and new resources become free.
 

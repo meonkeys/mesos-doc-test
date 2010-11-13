@@ -12,7 +12,6 @@ h1. Common Options
 The following options are commonly configured for both the master and slave:
 
 |_. Parameter         |_. Description|
-|@port@                 | Port to bind to for communication between master and slaves. |
 |@webui_port@     | Port to bind to for user-viewable web UI. |
 |@log_dir@             | Directory to place logs into, including [[event history]] logs. It is recommended to use a local disk for each node. |
 |@quiet@                | Disable logging to standard error. |
@@ -32,5 +31,6 @@ The following options are commonly configured for the master:
 
 |_. Parameter         |_. Description|
 |@url@                     | A ZooKeeper URL can be specified when [[using ZooKeeper]]. |
+|@port@                 | Port to bind to for communication between master and slaves. |
 |@allocator@           | Which pluggable [[allocation module]] to use. Currently there is only one, @simple@, that performs fair sharing between frameworks. |
 |@ip@                      | Which IP address to bind to (to make the master bind to a desired network interface if it does not do so by default). |

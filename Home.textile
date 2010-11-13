@@ -21,11 +21,9 @@ h1. System Requirements
 Mesos runs on Linux and Mac OS X, and has previously also been tested on OpenSolaris. You will need the following packages to run it:
 
 * g++ 4.1 or higher
-* SWIG 1.3.40 or higher*
+* SWIG 1.3.40 or higher (If you install swig on OS X via macports, in addition to `port install swig`, you will also need to do `port install swig-java` and `port swig-python`)
 * Python 2.6 (for the Mesos web UI)
 * Java 1.6 or higher (to run Java frameworks including Hadoop and "Spark":http://github.com/mesos/spark)
-
-&#42; *Footnote:* If you install swig on OS X via macports, you will also need to do `port install swig-java` and `port swig-python`
 
 h1. Downloading Mesos
 

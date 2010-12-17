@@ -1,0 +1,3 @@
+Mesos comes with a framework written in Python that will run a web load balancer ([[HAProxy|http://haproxy.1wt.eu/]]) and use apache for the backend servers. The framework is in MESOS_HOME/frameworks/haproxy+apache. There is a README in that directory that might be slightly helpful, but we recommend looking a the framework scheduler and executor code to familiarize yourself with the concepts behind the framework.
+
+We have also successfully used Amazon's Elastic Load Balancer instead of HAProxy. This is still in a non-master development branch called [[andyk-elb+apache-notorque|https://github.com/mesos/mesos/tree/andyk-elb+apache-notorque]]

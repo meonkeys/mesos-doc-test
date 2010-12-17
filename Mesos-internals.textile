@@ -12,7 +12,21 @@ h2. Mesos source code
 
 The Mesos source code (found in @MESOS_HOME/src@) is organized into the following hierarchy:
 
-* conf - where the mesos configuration file @mesos.conf@ lives
-* master - source files specific to the mesos-master daemon
-* slave - source files specific to the mesos-slave daemon
 * common - shared source files (such as utilities and data structures)
+* conf - where the mesos configuration file @mesos.conf@ lives
+* config - 
+* configurator - 
+* deploy
+* detector
+* examples
+* exec
+* launcher
+* local
+* master - source files specific to the mesos-master daemon
+* messaging
+* scaling
+* sched - source files specific to the mesos-slave daemon
+* slave
+* swig - WARNING: this might go away (at least for Java, as of the proto buffer commit, see issue #3
+* tests
+* webui

@@ -1,9 +1,6 @@
 h1. Overview of Mesos
 
-<!--Mesos is a cluster resource manager that efficiently shares and isolates resources among multiple distributed applications, or _frameworks_.-->
-Mesos is a <i>cluster operating system</i>. Unlike traditional operating systems (e.g. Linux or Windows) that support applications on a single node, Mesos is a platform on which to build distributed applications. 
-<!--with the advantage that new applications will be able to share resources with existing applications (such as Hadoop, MPI, etc) and can therefore easily be adopted by these communities.-->
-Mesos currently supports "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs).
+Mesos is a <i>cluster operating system</i>. Unlike traditional operating systems (e.g. Linux or Windows) that support applications on a single node, Mesos is a platform on which to build distributed applications (which we also call <i>frameworks</i>, such as "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs).
 
 h3. You can use Mesos in several ways:
 * To run Hadoop, MPI, Spark and other distributed applications and frameworks on a shared pool of machines.

@@ -79,7 +79,7 @@ h1. Where to Go From Here
 * [[Configuring Mesos|Configuration]] -- A guide to the various conf. settings that can be passed to Mesos dameons
 * Guide to running existing frameworks:
 ** [[Running Spark on Mesos|https://github.com/mesos/spark/wiki]]
-** [[Using the Mesos-Submit tool]]
+** [[Using the Mesos Submit tool]]
 ** [[Using Mesos with Hypertable on EC2|http://code.google.com/p/hypertable/wiki/Mesos]] - Hypertable is a distributed database platform.
 ** [[Running Hadoop on Mesos]]
 ** [[Running a web application farm on Mesos]]

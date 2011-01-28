@@ -18,13 +18,13 @@ This guide explains how to set up and test Mesos, and links to further documenta
 
 _*Please note that Mesos is still in alpha. The current version is only intended for early testing.*_
 
-h2. What you'll find here:</u></b>
-* System Requirements
-* Downloading Mesos
-* Building Mesos
-* Testing the Build
-* Deploying to a Cluster
-* Where to Go From Here
+h2. What you'll find on this page</u></b>
+# System Requirements
+# Downloading Mesos
+# Building Mesos
+# Testing the Build
+# Deploying to a Cluster
+# Where to Go From Here
 
 h1. System Requirements
 

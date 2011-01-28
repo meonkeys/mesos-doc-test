@@ -1,13 +1,13 @@
-Mesos is a cluster resource manager that efficiently shares and isolates resources among multiple distributed applications, or _frameworks_. It currently supports "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs). Mesos can also serve as a platform upon which to build new cluster computing frameworks, with the advantage that your frameworks will be able to share resources with existing frameworks (such as Hadoop, MPI, etc) and can therefore easily be adopted by these communities.
+Mesos is a cluster resource manager that efficiently shares and isolates resources among multiple distributed applications, or _frameworks_. It currently supports "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs). Mesos can also serve as a platform upon which to build new distributed applications (i.e. frameworks), with the advantage that new applications will be able to share resources with existing applications (such as Hadoop, MPI, etc) and can therefore easily be adopted by these communities.
 
 You can use Mesos in several ways:
-* To run Hadoop, MPI, Spark and other frameworks on a shared pool of machines.
+* To run Hadoop, MPI, Spark and other distributed applications and frameworks on a shared pool of machines.
 * To run multiple instances of Hadoop on the same cluster -- say separate instances for production and experimental jobs -- or even multiple versions of Hadoop (to test out a new version).
-* To build new cluster applications without having to reinvent low-level facilities for farming out tasks to different nodes, monitoring them, etc, and have your frameworks coexist with existing ones.
+* To build new cluster applications without having to reinvent low-level facilities for farming out tasks to different nodes, monitoring them, etc, and have your apps and frameworks coexist with existing ones.
 
 Mesos's features include:
 * Fault-tolerant replicated master node (using "ZooKeeper":http://hadoop.apache.org/zookeeper/).
-* Support for isolating frameworks on each machine using "Linux Containers":http://lxc.sourceforge.net/.
+* Support for isolating apps and frameworks on each machine using "Linux Containers":http://lxc.sourceforge.net/.
 * Web UI for viewing cluster state.
 * Efficient fine-grained resource sharing mechanism ("resource offers") that allows data-intensive frameworks like Hadoop to achieve high data locality.
 * Multi-resource scheduling (memory and CPU aware).
@@ -23,7 +23,7 @@ Mesos runs on Linux and Mac OS X, and has previously also been tested on OpenSol
 * g++ 4.1 or higher
 * SWIG 1.3.40 or higher (If you install swig on OS X via macports, in addition to @port install swig@, you will also need to do @port install swig-java@ and @port install swig-python@)
 * Python 2.6 (for the Mesos web UI)
-* Java 1.6 or higher (to run Java frameworks including Hadoop and "Spark":http://github.com/mesos/spark)
+* Java 1.6 or higher (to run Java apps/frameworks including Hadoop and "Spark":http://github.com/mesos/spark)
 
 h1. Downloading Mesos
 
@@ -34,7 +34,7 @@ h1. Building Mesos
 Mesos uses the standard GNU build tools. You should configure it using the @configure@ script in the root directory. This script accepts the following arguments to enable various options:
 * @--with-python-headers=DIR@: Find Python header files in @DIR@ (to turn on Python support). Recommended.
 * @--with-webui@: Enable the Mesos web UI (which requires Python 2.6). Recommended.
-* @--with-java-home=DIR@: Enable Java framework support with a given installation of Java. Required for Hadoop and Spark.
+* @--with-java-home=DIR@: Enable Java application/framework support with a given installation of Java. Required for Hadoop and Spark.
 * @--with-java-headers=DIR@: Find Java header files (necessary for newer versions of OS X Snow Leopard).
 * @--with-zookeeper=DIR@ or @--with-included-zookeeper@: Enable master fault-tolerance using an existing ZooKeeper installation or the version of ZooKeeper bundled with Mesos. For details, see [[using ZooKeeper]].
 
@@ -65,7 +65,7 @@ Once you have run the basic tests, you can use Mesos's [[deploy scripts]] to lau
 h1. Where to Go From Here
 
 * [[Mesos architecture]] -- an overview of Mesos concepts.
-* [[Framework development guide]] -- learn how to build applications on top of Mesos.
+* [[App/Framework development guide]] -- learn how to build applications on top of Mesos.
 * [[Configuring Mesos|Configuration]]
 * Guide to running existing frameworks:
 ** [[Running Hadoop on Mesos]]

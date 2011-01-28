@@ -78,6 +78,6 @@ h1. Where to Go From Here
 ** [[Logging and Debugging]] -- viewing Mesos and framework logs.
 ** [[Using ZooKeeper]] for master fault-tolerance.
 ** [[Using Linux Containers]] for resource isolation on slaves.
-* [[Mesos code internals overview|Mesos internals]] -- an overview of the codebase and internal organization.
+* [[Mesos code internals overview|Mesos Code Internals]] -- an overview of the codebase and internal organization.
 * [[Mesos development roadmap|Roadmap]]
 * [[The official Mesos website|http://mesosproject.org]]

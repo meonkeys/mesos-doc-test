@@ -1,4 +1,4 @@
-h1. Mesos development Roadmap
+##Mesos development Roadmap
 
 1. Migrate into Apache Incubator (see the [[incubator proposal|http://wiki.apache.org/incubator/MesosProposal]])
     1. We will be migrating away from github issues and onto JIRA once we are in the incubator

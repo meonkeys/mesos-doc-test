@@ -1,4 +1,4 @@
-h1. Mesos Internals
+h1. Mesos Code Internals
 
 h2. Top-level directories in the Mesos distribution
 

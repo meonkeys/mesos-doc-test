@@ -83,7 +83,7 @@ h1. Where to Go From Here
 ** [[Running Hadoop on Mesos]]
 ** [[Running Torque or MPI on Mesos]]
 ** [[Running Spark on Mesos|https://github.com/mesos/spark/wiki]]
-** [[Running a web application farm on Mesos]]
+** [[Running a web application farm on Mesos]] -- A guide to the various conf. settings that can be passed to Mesos dameons
 * Feature guides:
 ** [[Deploy scripts]] for launching a Mesos cluster on a set of machines.
 ** [[EC2 scripts]] for launching a Mesos cluster on Amazon EC2.

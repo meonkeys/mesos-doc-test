@@ -13,7 +13,7 @@ h3. Mesos's features include:
 * Web UI for viewing cluster state.
 * Efficient fine-grained resource sharing mechanism ("resource offers") that allows data-intensive frameworks like Hadoop to achieve high data locality.
 * Multi-resource scheduling (memory and CPU aware).
-
+<br>
 _*Please note that Mesos is still in alpha. The current version is only intended for early testing.*_
 
 h4. What you'll find on this page</u></b>

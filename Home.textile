@@ -16,6 +16,14 @@ This guide explains how to set up and test Mesos, and links to further documenta
 
 _*Please note that Mesos is still in alpha. The current version is only intended for early testing.*_
 
+<b><u>What you'll find here:</u></b>
+* System Requirements
+* Downloading Mesos
+* Building Mesos
+* Testing the Build
+* Deploying to a Cluster
+* Where to Go From Here
+
 h1. System Requirements
 
 Mesos runs on Linux and Mac OS X, and has previously also been tested on OpenSolaris. You will need the following packages to run it:

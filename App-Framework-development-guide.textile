@@ -1,4 +1,4 @@
-h1. Framework development guide
+h1. App/Framework development guide
 
 See one of the example framework schedulers in @MESOS_HOME/src/examples/@ to get an idea of what a Mesos framework scheduler and executor in the language of your choice looks like.
 

@@ -1,11 +1,11 @@
 h1. Overview of Mesos
 
-Mesos is a <i>cluster operating system</i>. Unlike traditional operating systems (e.g. Linux or Windows) that support applications on a single node, Mesos is a platform on which to build distributed applications (which we also call <i>frameworks</i>) such as "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs).
+Mesos is a <i>cluster operating system</i>. Unlike traditional operating systems (e.g. Linux or Windows) that support applications on a single node, Mesos is a platform on which to build <i>distributed applications<i> (which we also call <i>frameworks</i>) such as "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs).
 
 h3. You can use Mesos in several ways:
-* To run Hadoop, MPI, Spark and other distributed applications and frameworks on a shared pool of machines.
+* To run Hadoop, MPI, Spark and other distributed applications fon a shared pool of machines.
 * To run multiple instances of Hadoop on the same cluster -- say separate instances for production and experimental jobs -- or even multiple versions of Hadoop (to test out a new version).
-* To build new cluster applications without having to reinvent low-level facilities for farming out tasks to different nodes, monitoring them, etc, and have your apps and frameworks coexist with existing ones.
+* To build new cluster applications without having to reinvent low-level facilities for farming out tasks to different nodes, monitoring them, etc, and have your apps coexist with existing ones.
 
 h3. Mesos's features include:
 * Fault-tolerant replicated master node (using "ZooKeeper":http://hadoop.apache.org/zookeeper/).

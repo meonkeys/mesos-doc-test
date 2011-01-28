@@ -1,6 +1,6 @@
 h1. Overview of Mesos
 
-Mesos is a <i><b>cluster operating system</b></i>. Unlike traditional operating systems (e.g. Linux or Windows) that support applications on a single computer, Mesos manages tens to thousands of computers, providing a platform on which to build <i>distributed applications</i> (which we also call <i>frameworks</i>) such as "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs).
+Mesos is an open source <i><b>cluster operating system</b></i>. Unlike traditional operating systems (e.g. Linux or Windows) that support applications on a single computer, Mesos manages tens to thousands of computers, providing a platform on which to build <i>distributed applications</i> (which we also call <i>frameworks</i>) such as "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs).
 
 h3. You can use Mesos to...
 * Run Hadoop, MPI, Spark and other distributed applications fon a shared pool of machines.
@@ -13,8 +13,6 @@ h3. Mesos's features include:
 * Web UI for viewing cluster state.
 * Efficient fine-grained resource sharing mechanism ("resource offers") that allows data-intensive frameworks like Hadoop to achieve high data locality.
 * Multi-resource scheduling (memory and CPU aware).
-
-This guide explains how to set up and test Mesos, and links to further documentation on other topics.
 
 _*Please note that Mesos is still in alpha. The current version is only intended for early testing.*_
 

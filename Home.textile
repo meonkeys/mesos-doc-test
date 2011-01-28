@@ -1,13 +1,13 @@
 h1. Overview of Mesos
 
-Mesos is a cluster resource manager that efficiently shares and isolates resources among multiple distributed applications, or _frameworks_. Mesos is a platform upon which to build new distributed applications (i.e. frameworks), with the advantage that new applications will be able to share resources with existing applications (such as Hadoop, MPI, etc) and can therefore easily be adopted by these communities. Mesos currently supports "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs).
+Mesos is a cluster resource manager that efficiently shares and isolates resources among multiple distributed applications, or _frameworks_. Mesos is an operating system, but not like a traditional OS (e.g. Linux or Windows). Mesos is an OS at the cluster level; in other words, it is a platform on which to build distributed applications (i.e. frameworks), with the advantage that new applications will be able to share resources with existing applications (such as Hadoop, MPI, etc) and can therefore easily be adopted by these communities. Mesos currently supports "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, and "Spark":http://github.com/mesos/spark (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs).
 
-You can use Mesos in several ways:
+h3. You can use Mesos in several ways:
 * To run Hadoop, MPI, Spark and other distributed applications and frameworks on a shared pool of machines.
 * To run multiple instances of Hadoop on the same cluster -- say separate instances for production and experimental jobs -- or even multiple versions of Hadoop (to test out a new version).
 * To build new cluster applications without having to reinvent low-level facilities for farming out tasks to different nodes, monitoring them, etc, and have your apps and frameworks coexist with existing ones.
 
-Mesos's features include:
+h3. Mesos's features include:
 * Fault-tolerant replicated master node (using "ZooKeeper":http://hadoop.apache.org/zookeeper/).
 * Support for isolating apps and frameworks on each machine using "Linux Containers":http://lxc.sourceforge.net/.
 * Web UI for viewing cluster state.

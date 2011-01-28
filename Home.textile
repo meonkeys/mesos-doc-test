@@ -80,6 +80,7 @@ h1. Where to Go From Here
 * Guide to running existing frameworks:
 ** [[Running Spark on Mesos|https://github.com/mesos/spark/wiki]]
 ** [[Using the Mesos-Submit tool]]
+** [[Using Mesos with Hypertable on EC2|http://code.google.com/p/hypertable/wiki/Mesos]] - Hypertable is a distributed database platform.
 ** [[Running Hadoop on Mesos]]
 ** [[Running a web application farm on Mesos]]
 ** [[Running Torque or MPI on Mesos]]

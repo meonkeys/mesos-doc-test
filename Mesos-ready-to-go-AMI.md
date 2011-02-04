@@ -36,8 +36,7 @@ Here are some high level instructions for getting started with Amazon EC2:
     <td><b>2/4/11, Fri.</b></td><td><b>ami-b87383d1</b></td><td>http://mesos-slave-master-v4.s3.amazonaws.com/</td><td>Andy rolled a new AMI with mesos Event History functionality installed and enabled by default. Check out the new line in the config file at /usr/local/mesos/conf/mesos.conf which says "event_history_sqlite=1". Also check out the two new files (one txt and one sqlite3) storing task and framework history events: /mnt/event_history_db.sqlite3 and /mnt/event_history_log.txt</td><td></td>
   </tr>
   <tr>
-    <td>
-      <b>1/30/11, Sat.</b></td><td><b>ami-8a38c8e3</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v3</td><td></td><td>Andy and Michael created a new AMI using the shiney new deploylib functionality!</td>
+    <td><b>1/30/11, Sat.</b></td><td><b>ami-8a38c8e3</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v3</td><td>Andy and Michael created a new AMI using the shiney new deploylib functionality!</td><td></td>
   </tr>
   <tr>
     <td><b>1/29/11, Sat.</b><td><b>ami-6a37c703</b></td></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v2</td><td></td><td><b>DON'T USE THIS --> andyk forgot to run `make install` ---> This image has nginx added (which was set up by Justin Ma) and the most recent version of Mesos (using the radlab-demo branch)</td>

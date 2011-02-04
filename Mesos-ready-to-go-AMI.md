@@ -31,14 +31,14 @@ Here are some high level instructions for getting started with Amazon EC2:
     <th>Date/Time</th><th>AMI ID</th><th>S3 bucket and/or URL</th><th>Description and Notes</th>
   </tr>
   <tr>
-    <td><b>2/4/11, Fri.</b></td><td>ami-b87383d1</td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v4</td><td>Andy rolled a new AMI with mesos Event History functionality installed and enabled by default. Check out the new line in the config file at /usr/local/mesos/conf/mesos.conf which says "event_history_sqlite=1". Also check out the two new files (one txt and one sqlite3) storing task and framework history events: /mnt/event_history_db.sqlite3 and /mnt/event_history_log.txt</td>
+    <td><b>2/4/11, Fri.</b></td><td><b>ami-b87383d1</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v4</td><td>Andy rolled a new AMI with mesos Event History functionality installed and enabled by default. Check out the new line in the config file at /usr/local/mesos/conf/mesos.conf which says "event_history_sqlite=1". Also check out the two new files (one txt and one sqlite3) storing task and framework history events: /mnt/event_history_db.sqlite3 and /mnt/event_history_log.txt</td>
   </tr>
   <tr>
     <td>
-      <b>1/30/11, Sat.</b></td><td>ami-8a38c8e3</td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v3</td><td>Andy and Michael created a new AMI using the shiney new deploylib functionality!</td>
+      <b>1/30/11, Sat.</b></td><td><b>ami-8a38c8e3</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v3</td><td>Andy and Michael created a new AMI using the shiney new deploylib functionality!</td>
   </tr>
   <tr>
-    <td><b>1/29/11, Sat.</b><td>ami-6a37c703</td></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v2</td><td><b>DON'T USE THIS --> andyk forgot to run `make install` ---> This image has nginx added (which was set up by Justin Ma) and the most recent version of Mesos (using the radlab-demo branch)</td>
+    <td><b>1/29/11, Sat.</b><td><b>ami-6a37c703</b></td></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v2</td><td><b>DON'T USE THIS --> andyk forgot to run `make install` ---> This image has nginx added (which was set up by Justin Ma) and the most recent version of Mesos (using the radlab-demo branch)</td>
   </tr>
   <tr>
     <td><b>1/6/11, Thu.</b></td><td><b>ami-5a26d733</b></td><td>andyk-mesos-images/mesos-slave-master-v1<</td><td>Michael and Beth updated Mesos on that image. I added the /etc/init.d/mesos-master script as well as the /etc/default/mesos file that <b>ENABLE</b>s mesos. It doesn't run mesos-master at OS startup, but you should be able to run a master.</td>

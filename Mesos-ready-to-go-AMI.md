@@ -4,6 +4,8 @@ The other main way to launch a Mesos cluster on EC2 is using the Mesos "Ready-to
 
 The most recent version of the "ready to go" AMI (which is updated regularly, so check back often) is: <b>ami-b87383d1</b> 
 
+<b>WARNING:</b> While this feature is in Alpha, this AMI has the public ssh keys of some Mesos developers in the .ssh/authorized_keys file for now which would be a security vulnerability if you use these AMIs and don't want those folks to have access to ssh into your instances! You can always remove these entries after you book the instance, and even re-bundle the AMI if you plan on reusing this functionality.
+
 ## Prerequisite: Have a functional EC2 account
 
 Here are some high level instructions for getting started with Amazon EC2:

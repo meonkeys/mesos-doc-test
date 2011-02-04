@@ -1,4 +1,4 @@
--><div style="font-size:2em"><table><tr><td>The most recent version of the "ready to go" AMI:</td><td><b>ami-767a8a1f</b></td></tr></table></div><-
+-><font size="3em"><table><tr><td>The most recent version of the "ready to go" AMI:</td><td><b>ami-767a8a1f</b></td></tr></table></font><-
 
 There are two main ways to get a Mesos cluster running on EC2 quickly and easily. One way is via the Mesos [[EC2-Scripts]]. The main guts of the EC2 Scripts are the python program in <mesos-download-root-dir>/src/ec2/mesos_ec2.py which will start up a number of Amazon EC2 Instances (these images already contain a copy of mesos at /root/mesos), and then SSH into those machines, set up the configuration files on the slaves to talk to the master, and also set up HDFS, NFS, and more on those nodes!
 

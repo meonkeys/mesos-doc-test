@@ -4,7 +4,7 @@ There are two main ways to get a Mesos cluster running on EC2 quickly and easily
 
 The other main way to launch a Mesos cluster on EC2 is using the Mesos "Ready-to-go" AMI. We have set up this AMI to make taking Mesos for a spin as easy as launching a some instances in EC2. That is, we have pre-packaged an AMI with /etc/init.d/mesos-master and /etc/init.d/mesos-slave scripts that make running a Mesos master or slave on those machines super easy!
 
-<b>WARNING:</b> While this feature is in Alpha, this AMI has the public ssh keys of some Mesos developers in the .ssh/authorized_keys file for now which would be a security vulnerability if you use these AMIs and don't want those folks to have access to ssh into your instances! You can always remove these entries after you book the instance, and even re-bundle the AMI if you plan on reusing this functionality.
+<i><b>WARNING:</b> While this feature is in Alpha, this AMI has the public ssh keys of some Mesos developers in the .ssh/authorized_keys file for now which would be a security vulnerability if you use these AMIs and don't want those folks to have access to ssh into your instances! You can always remove these entries after you boot the instance, and even re-bundle the AMI if you plan on reusing this functionality.</i>
 
 ## Prerequisite: Have a functional EC2 account
 

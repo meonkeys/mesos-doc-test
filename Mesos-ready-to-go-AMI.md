@@ -1,4 +1,4 @@
-<table><tr><td>The most recent version of the "ready to go" AMI:</td><td><b></b></td></tr></table>
+-><div style="font-size:2em"><table><tr><td>The most recent version of the "ready to go" AMI:</td><td><b>ami-767a8a1f</b></td></tr></table></div><-
 
 There are two main ways to get a Mesos cluster running on EC2 quickly and easily. One way is via the Mesos [[EC2-Scripts]]. The main guts of the EC2 Scripts are the python program in <mesos-download-root-dir>/src/ec2/mesos_ec2.py which will start up a number of Amazon EC2 Instances (these images already contain a copy of mesos at /root/mesos), and then SSH into those machines, set up the configuration files on the slaves to talk to the master, and also set up HDFS, NFS, and more on those nodes!
 
@@ -34,7 +34,7 @@ The table below contains more details on the version history of this "ready to g
   <tr>
     <th>Date/Time</th><th>AMI ID</th><th>S3 bucket and/or URL</th><th>Description and Notes</th><th>Bugs/Issues</th>
   </tr>
-<td><b>2/4/11 14:43, Fri</b></td><td><b>ami-767a8a1f</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v5td><td>Fixed ~/.tags bug in last AMI</td><td></td>
+<td><b>2/4/11 14:43, Fri</b></td><td><b>ami-767a8a1f</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v5<td><td>Fixed ~/.tags bug in last AMI</td><td></td>
   </tr>
   <tr>
     <td><b>2/4/11, Fri.</b></td><td><b>ami-b87383d1</b></td><td>http://mesos-slave-master-v4.s3.amazonaws.com/</td><td>Andy rolled a new AMI with mesos Event History functionality installed and enabled by default. Check out the new line in the config file at /usr/local/mesos/conf/mesos.conf which says "event_history_sqlite=1". Also check out the two new files (one txt and one sqlite3) storing task and framework history events: /mnt/event_history_db.sqlite3 and /mnt/event_history_log.txt</td><td>The ~/.tags director(/file?) was left on the image, needs to be removed by EC2Instance.bundleNewAMI() before ec2-bundle-volume is called.</td>

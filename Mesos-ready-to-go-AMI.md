@@ -17,7 +17,7 @@ Here are some high level instructions for getting started with Amazon EC2:
 
 ## How to use the "ready to go" AMI to run a Mesos Master node
 
-1. ec2-run-instances <AMI-IDNUM> #see above for most recent AMI-IDNUM to use`
+1. Run `ec2-run-instances <AMI-IDNUM>` -- see above for most recent AMI-IDNUM to use
 1. SSH into that machine as root and run: `service mesos-master start`
 1. Your master should be running now. You should be able to look at the mesos-master log file at /mnt/mesos-master.INFO. You should do that right now and look for the libprocess PID (the PID should look something like <Integer>@<ip-address|hostname>:<port-num>, e.g. `1@ip-10-126-43-201.ec2.internal:5050`) of the master so that you can pass it to the slaves you're going to start next! You should also now be able to view the Master webui, which by default is viewable at `http://<instance public DNS name>:8080`.
 

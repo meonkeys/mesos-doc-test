@@ -71,13 +71,14 @@ h1. Where to Go From Here
 * Guide to running existing frameworks:
 ** [[Running Spark on Mesos|https://github.com/mesos/spark/wiki]]
 ** [[Using the Mesos Submit tool]]
-** [[Using Mesos with Hypertable on EC2|http://code.google.com/p/hypertable/wiki/Mesos]] - Hypertable is a distributed database platform.
+** [[Using Mesos with Hypertable on EC2|http://code.google.com/p/hypertable/wiki/Mesos]] (external link) - Hypertable is a distributed database platform.
 ** [[Running Hadoop on Mesos]]
 ** [[Running a web application farm on Mesos]]
 ** [[Running Torque or MPI on Mesos]]
 * Feature guides:
 ** [[Deploy scripts]] for launching a Mesos cluster on a set of machines.
 ** [[EC2 scripts]] for launching a Mesos cluster on Amazon EC2.
+** [[Using Mesos Amazon Machine Images (AMIs)]] -- How bring up EC2 instances that already have Mesos a master or slave daemon installed and running.
 ** [[Logging and Debugging]] -- viewing Mesos and framework logs.
 ** [[Using ZooKeeper]] for master fault-tolerance.
 ** [[Using Linux Containers]] for resource isolation on slaves.

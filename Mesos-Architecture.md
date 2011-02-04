@@ -1,8 +1,8 @@
 -> [[/images/architecture3.jpg|height=300px]] <-
 
-The above figure shows the main components of Mesos.  Mesos consists of a <b>master</b> process that manages <b>slave</b> daemons running on each cluster node, and <b>frameworks</b> that run <b>tasks</b> on these slaves. 
+The above figure shows the main components of Mesos.  Mesos consists of a <i>master</i> process that manages <i>slave</i> daemons running on each cluster node, and <i>mesos applications</i> (also called <i>frameworks</i>) that run <i>tasks</i> on these slaves. 
 
-The master implements fine-grained sharing across frameworks using <i>resource offers</i>. Each resource offer contains a list of free resources on multiple slaves.  The master decides <b>how many</b> resources to offer to each framework according to a given organizational policy, such as fair sharing, or strict priority. To support a diverse set of policies, the master employs a modular architecture that makes it easy to add new allocation modules via a plugin mechanism.
+The master enables fine-grained sharing of resources (cpu, ram, ...) across applications by making them <i>resource offers</i>. Each resource offer contains a list of <slave ID, resource1: amount1, resource2, amount2, ...>.  The master decides <i>how many</i> resources to offer to each framework according to a given organizational policy, such as fair sharing, or strict priority. To support a diverse set of policies, the master employs a modular architecture that makes it easy to add new allocation modules via a plugin mechanism.
 
 A framework running on top of Mesos consists of two components: a <b>scheduler</b> that registers with the master to be offered resources, and an <b>executor</b> process that is launched on slave nodes to run the framework's tasks. While the master determines how many resources are offered to each framework, the frameworks' schedulers select <b>which</b> of the offered resources to use. When a frameworks accepts offered resources, it passes to Mesos a description of the tasks it wants to run on them. In turn, Mesos launches the tasks on the corresponding slaves.
 

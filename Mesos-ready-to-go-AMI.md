@@ -43,7 +43,7 @@ The table below contains more details on the version history of this "ready to g
     <td><b>1/30/11, Sat.</b></td><td><b>ami-8a38c8e3</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v3</td><td>Andy and Michael created a new AMI using the shiney new deploylib functionality!</td><td></td>
   </tr>
   <tr>
-    <td><b>1/29/11, Sat.</b><td><b>ami-6a37c703</b></td></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v2</td><td>This image has nginx added (which was set up by Justin Ma) and the most recent version of Mesos (using the radlab-demo branch)</td><td><b>DON'T USE THIS --> andyk forgot to run `make install`</td>
+    <td><b>1/29/11, Sat.</b><td><b>ami-6a37c703</b></td></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v2</td><td>This image has nginx added (which was set up by Justin Ma) and the most recent version of Mesos (using the radlab-demo branch)</td><td><i>DON'T USE THIS</i>: andyk forgot to run `make install`</td>
   </tr>
   <tr>
     <td><b>1/6/11, Thu.</b></td><td><b>ami-5a26d733</b></td><td>andyk-mesos-images/mesos-slave-master-v1<</td><td>Michael and Beth updated Mesos on that image. I added the /etc/init.d/mesos-master script as well as the /etc/default/mesos file that <b>ENABLE</b>s mesos. It doesn't run mesos-master at OS startup, but you should be able to run a master.</td><td></td>

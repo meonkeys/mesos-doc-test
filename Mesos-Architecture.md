@@ -23,4 +23,4 @@ In addition, this resource offer process repeats when tasks finish and new resou
 
 While the thin interface provided by Mesos allows it to scale and allows the frameworks to evolve independently, one question remains: how can the constraints of a framework be satisfied without Mesos knowing about these constraints? For example, how can a framework achieve data locality without Mesos knowing which nodes store the data required by the framework? Mesos answers these questions by simply giving frameworks the ability to <b>reject</b> offers. A framework will reject the offers that do not satisfy its constraints and accept the ones that do.  In particular, we have found that a simple policy called delay scheduling \cite{delay-scheduling}, in which frameworks wait for a limited time to acquire nodes storing the input data, yields nearly optimal data locality.
 
-You can also read much more about the Mesos architecture in this this [[technical paper|http://mesos.berkeley.edu/mesos_tech_report.pdf]].
+You can also read much more about the Mesos architecture in this [[technical paper|http://mesos.berkeley.edu/mesos_tech_report.pdf]].

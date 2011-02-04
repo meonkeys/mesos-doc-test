@@ -1,8 +1,8 @@
+<table><tr><td>The most recent version of the "ready to go" AMI:</td><td><b></b></td></tr></table>
+
 There are two main ways to get a Mesos cluster running on EC2 quickly and easily. One way is via the Mesos [[EC2-Scripts]]. The main guts of the EC2 Scripts are the python program in <mesos-download-root-dir>/src/ec2/mesos_ec2.py which will start up a number of Amazon EC2 Instances (these images already contain a copy of mesos at /root/mesos), and then SSH into those machines, set up the configuration files on the slaves to talk to the master, and also set up HDFS, NFS, and more on those nodes!
 
 The other main way to launch a Mesos cluster on EC2 is using the Mesos "Ready-to-go" AMI. We have set up this AMI to make taking Mesos for a spin as easy as launching a some instances in EC2. That is, we have pre-packaged an AMI with /etc/init.d/mesos-master and /etc/init.d/mesos-slave scripts that make running a Mesos master or slave on those machines super easy!
-
-The most recent version of the "ready to go" AMI (which is updated regularly, so check back often) is: <b>ami-b87383d1</b> 
 
 <b>WARNING:</b> While this feature is in Alpha, this AMI has the public ssh keys of some Mesos developers in the .ssh/authorized_keys file for now which would be a security vulnerability if you use these AMIs and don't want those folks to have access to ssh into your instances! You can always remove these entries after you book the instance, and even re-bundle the AMI if you plan on reusing this functionality.
 
@@ -28,12 +28,16 @@ Here are some high level instructions for getting started with Amazon EC2:
 1. Run the slave AMI and pass in [[user data|http://docs.amazonwebservices.com/AWSEC2/2007-03-01/DeveloperGuide/AESDG-chapter-instancedata.html]] containing the url of a running Mesos master: `ec2-run-instances <AMI-IDNUM> -d url=1@<master-ip or hostname>:<master port> #see above for most recent AMI-IDNUM to use`
 
 ## History of Mesos AMIs
+The table below contains more details on the version history of this "ready to go" AMI, which is updated regularly, so check back often!
+
 <table>
   <tr>
     <th>Date/Time</th><th>AMI ID</th><th>S3 bucket and/or URL</th><th>Description and Notes</th><th>Bugs/Issues</th>
   </tr>
+<td><b>2/4/11 14:43, Fri</b></td><td><b>ami-767a8a1f</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v5td><td>Fixed ~/.tags bug in last AMI</td><td></td>
+  </tr>
   <tr>
-    <td><b>2/4/11, Fri.</b></td><td><b>ami-b87383d1</b></td><td>http://mesos-slave-master-v4.s3.amazonaws.com/</td><td>Andy rolled a new AMI with mesos Event History functionality installed and enabled by default. Check out the new line in the config file at /usr/local/mesos/conf/mesos.conf which says "event_history_sqlite=1". Also check out the two new files (one txt and one sqlite3) storing task and framework history events: /mnt/event_history_db.sqlite3 and /mnt/event_history_log.txt</td><td></td>
+    <td><b>2/4/11, Fri.</b></td><td><b>ami-b87383d1</b></td><td>http://mesos-slave-master-v4.s3.amazonaws.com/</td><td>Andy rolled a new AMI with mesos Event History functionality installed and enabled by default. Check out the new line in the config file at /usr/local/mesos/conf/mesos.conf which says "event_history_sqlite=1". Also check out the two new files (one txt and one sqlite3) storing task and framework history events: /mnt/event_history_db.sqlite3 and /mnt/event_history_log.txt</td><td>The ~/.tags director(/file?) was left on the image, needs to be removed by EC2Instance.bundleNewAMI() before ec2-bundle-volume is called.</td>
   </tr>
   <tr>
     <td><b>1/30/11, Sat.</b></td><td><b>ami-8a38c8e3</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v3</td><td>Andy and Michael created a new AMI using the shiney new deploylib functionality!</td><td></td>

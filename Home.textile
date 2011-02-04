@@ -68,6 +68,13 @@ h1. Where to Go From Here
 * [[Mesos architecture]] -- an overview of Mesos concepts.
 * [[App/Framework development guide]] -- learn how to build applications on top of Mesos.
 * [[Configuring Mesos|Configuration]] -- A guide to the various conf. settings that can be passed to Mesos dameons
+* Mesos system feature guides:
+** [[Deploy scripts]] for launching a Mesos cluster on a set of machines.
+** [[EC2 scripts]] for launching a Mesos cluster on Amazon EC2.
+** [[Mesos "Ready-to-go" AMI|Mesos ready to go AMI]] -- bring up EC2 instances that already have a Mesos master or slave daemon installed and running.
+** [[Logging and Debugging]] -- viewing Mesos and framework logs.
+** [[Using ZooKeeper]] for master fault-tolerance.
+** [[Using Linux Containers]] for resource isolation on slaves.
 * Guide to running existing frameworks:
 ** [[Running Spark on Mesos|https://github.com/mesos/spark/wiki]]
 ** [[Using the Mesos Submit tool]]
@@ -75,13 +82,6 @@ h1. Where to Go From Here
 ** [[Running Hadoop on Mesos]]
 ** [[Running a web application farm on Mesos]]
 ** [[Running Torque or MPI on Mesos]]
-* Feature guides:
-** [[Deploy scripts]] for launching a Mesos cluster on a set of machines.
-** [[EC2 scripts]] for launching a Mesos cluster on Amazon EC2.
-** [[Mesos "Ready-to-go" AMI|Mesos ready to go AMI]] -- bring up EC2 instances that already have a Mesos master or slave daemon installed and running.
-** [[Logging and Debugging]] -- viewing Mesos and framework logs.
-** [[Using ZooKeeper]] for master fault-tolerance.
-** [[Using Linux Containers]] for resource isolation on slaves.
 * [[Mesos code internals overview|Mesos Code Internals]] -- an overview of the codebase and internal organization.
 * [[Mesos development roadmap|Mesos Roadmap]]
 * [[The official Mesos website|http://mesosproject.org]]

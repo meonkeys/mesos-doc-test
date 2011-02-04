@@ -28,7 +28,7 @@ Here are some high level instructions for getting started with Amazon EC2:
 ## History of Mesos AMIs
 <table>
   <tr>
-    <th>Date/Time</th><th>AMI ID</th><th>S3 url</th><th>Description and Notes</th>
+    <th>Date/Time</th><th>AMI ID</th><th>S3 bucket and/or URL</th><th>Description and Notes</th>
   </tr>
   <tr>
     <td><b>2/4/11, Fri.</b></td><td>ami-b87383d1</td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v4</td><td>Andy rolled a new AMI with mesos Event History functionality installed and enabled by default. Check out the new line in the config file at /usr/local/mesos/conf/mesos.conf which says "event_history_sqlite=1". Also check out the two new files (one txt and one sqlite3) storing task and framework history events: /mnt/event_history_db.sqlite3 and /mnt/event_history_log.txt</td>
@@ -41,13 +41,13 @@ Here are some high level instructions for getting started with Amazon EC2:
     <td><b>1/29/11, Sat.</b><td>ami-6a37c703</td></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v2</td><td><b>DON'T USE THIS --> andyk forgot to run `make install` ---> This image has nginx added (which was set up by Justin Ma) and the most recent version of Mesos (using the radlab-demo branch)</td>
   </tr>
   <tr>
-    <td><b>1/6/11, Thu.</b></td><td><b>ami-5a26d733</b></td><td>NA</td><td><i>andyk-mesos-images/mesos-slave-master-v1</i>. Michael and Beth updated Mesos on that image. I added the /etc/init.d/mesos-master script as well as the /etc/default/mesos file that <b>ENABLE</b>s mesos. It doesn't run mesos-master at OS startup, but you should be able to run a master.</td>
+    <td><b>1/6/11, Thu.</b></td><td><b>ami-5a26d733</b></td><td>andyk-mesos-images/mesos-slave-master-v1<</td><td>Michael and Beth updated Mesos on that image. I added the /etc/init.d/mesos-master script as well as the /etc/default/mesos file that <b>ENABLE</b>s mesos. It doesn't run mesos-master at OS startup, but you should be able to run a master.</td>
   </tr>
   <tr>
     <td><b>Dec 2010.</b></td><td><b>ami-58798d31</b></td><td>andyk-mesos-images/mesos-slave-v6</td><td>Bundled, uploaded, and registered image in s3 bucket (see image.manifest.xml inside of that for the meta data about AMI parts)</td>
   </tr>
   <tr>
-    <td><b>Fall 2010</b></td><td><b>ami-60798d09</b></td><td><i>mesos_images5</i></td><td>Created new AMI in s3 bucket (see mesos_images5/image.manifest.xml)</td>
+    <td><b>Fall 2010</b></td><td><b>ami-60798d09</b></td><td>mesos_images5</td><td>Created new AMI in s3 bucket (see mesos_images5/image.manifest.xml)</td>
   </tr>
   <tr>
 </table>

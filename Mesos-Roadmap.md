@@ -1,13 +1,20 @@
-The Mesos development roadmap can be categorized into 4 main areas.
+The Mesos development roadmap can be categorized into 3 main areas:
 
-## Growing a development community and project organization
+1. Building a community and promoting adoption
+1. Core Mesos development
+1. Mesos Application development
+
+## Growing a development community and promoting adoption
 1. Migrate into Apache Incubator (see the [[incubator proposal|http://wiki.apache.org/incubator/MesosProposal]])
     1. We will be migrating away from github issues and onto JIRA once we are in the incubator
     1. We are looking to grow an open-source community of developers around Mesos
 
 ## Core Mesos development (Cluster OS Kernel, i.e. scheduling, resource management, etc.)
-1. More advanced allocation modules
+1. More advanced allocation modules that implement the following functionality
     1. Resource revocation
+    1. Resource inheritance, hierarchical scheduling
+    1. A Mesos Service Level Objective
+    1. Scheduling based on history
 1. Migrate to ProtocolBuffers as the serialization format (under development at Twitter)
 1. More advanced User Interface and [[Event History]] (i.e. logging) - See [[issue #143|https://github.com/mesos/mesos/issuesearch?state=open&q=event#issue/143]] for more details.
 

@@ -27,9 +27,9 @@ Here are some high level instructions for getting started with Amazon EC2:
 
 ## History of Mesos AMIs
 <table>
-  <th>
-    <td>Date/Time</td><td>AMI ID</td><td>Description and Notes</td>
-  </th>
+  <tr>
+    <th>Date/Time</th><th>AMI ID</th><th>Description and Notes</th>
+  </tr>
   <tr>
     <td><b>2/4/11, Fri.</b></td><td>Andy rolled a new AMI (http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v4, ami-) with mesos Event History functionality installed and enabled by default. Check out the new line in the config file at /usr/local/mesos/conf/mesos.conf which says "event_history_sqlite=1". Also check out the two new files (one txt and one sqlite3) storing task and framework history events: /mnt/event_history_db.sqlite3 and /mnt/event_history_log.txt</td>
   </tr>

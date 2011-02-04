@@ -6,11 +6,13 @@ The master implements fine-grained sharing across frameworks using <i>resource o
 
 A framework running on top of Mesos consists of two components: a <b>scheduler</b> that registers with the master to be offered resources, and an <b>executor</b> process that is launched on slave nodes to run the framework's tasks. While the master determines how many resources are offered to each framework, the frameworks' schedulers select <b>which</b> of the offered resources to use. When a frameworks accepts offered resources, it passes to Mesos a description of the tasks it wants to run on them. In turn, Mesos launches the tasks on the corresponding slaves.
 
-h2. Example of resource offer 
+## Example of resource offer 
+
+The figure below shows an example of how a framework gets scheduled to run a task.
 
 ->[[/images/architecture-example.jpg|height=300px]]<-
 
-The above figure shows an example of how a framework gets scheduled to run a task. Let's walk through the events in the picture.
+Let's walk through the events in the figure.
 
 1. Slave 1 reports to the master that it has 4 CPUs and 4 GB of memory free. The master then invokes the allocation policy module, which tells it that framework 1 should be offered all available resources.
 2. The master sends a resource offer describing what is available on slave 1 to framework 1.  

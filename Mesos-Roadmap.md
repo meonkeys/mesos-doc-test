@@ -37,7 +37,7 @@ those which are primarily intended to be used by other applications (as opposed 
 1. Mesos package management application (i.e. the "apt-get" of the cluster... `apt-get install hadoop-0.20.0`)
 1. A machine metadata database
 
-## 3.2 Applications that provide user facing services (e.g. programming language abstractions, )
+### 3.2 Applications that provide user facing services (e.g. programming language abstractions, )
 
 Framework applications are intended to present some useful 
 

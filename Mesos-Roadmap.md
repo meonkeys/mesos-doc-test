@@ -39,7 +39,7 @@ those which are primarily intended to be used by other applications (as opposed 
 1. Mesos package management application (i.e. the "apt-get" of the cluster... `apt-get install hadoop-0.20.0`)
 1. A machine metadata database
 
-### 3.2 Applications providing user facing services (e.g. web apps, programming language abstractions)
+### 3.2 Applications providing user facing services (e.g. web apps, PL abstractions...)
 
 This category of applications is intended to interface with users. Due to nature of distributed applications (i.e. vs. what can be solved by simply using single computer applications) these apps tend to either (a) serving thousands to millions of users at a time (e.g. web applications), (b) large parallel computations (like MPI style jobs), (c) data intensive (e.g. enabling data analytics at large scale), or some combination of the above.
 

@@ -7,7 +7,7 @@ The Mesos development roadmap can roughly be separated into 3 main areas:
 ## 1. Growing a development community and promoting adoption
 1. Migrate into Apache Incubator (see the [[incubator proposal|http://wiki.apache.org/incubator/MesosProposal]])
     1. Migrate issues from github issues into JIRA
-    1. We are looking to grow an open-source community of developers around Mesos
+1. Documentation management and organization
 
 ## 2. Core Mesos development (Cluster OS Kernel, i.e. scheduling, resource management, etc.)
 1. More advanced allocation modules that implement the following functionality
@@ -19,6 +19,7 @@ The Mesos development roadmap can roughly be separated into 3 main areas:
 1. User authentication
 1. Mesos application debugging support
     1. More advanced User Interface and [[Event History]] (i.e. logging) - See [[issue #143|https://github.com/mesos/mesos/issuesearch?state=open&q=event#issue/143]] for more details.
+1. Testing infrastructure, and more tests!
 
 ## 3. Mesos application development
 

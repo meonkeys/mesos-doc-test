@@ -32,7 +32,7 @@ those which are primarily intended to be used by other applications (as opposed 
 
 1. Meta Framework Development (under development at Berkeley, and also at Twitter)
     1. Allow users to submit a job (specifying their resource constraints) and have the job wait in a queue until the resources are acquired (the Application Scheduler translates those constraints into accepting or rejecting resource offers)
-1. Slave data storage/caching services (a generalization of the map input server)
+1. Slave data storage/caching services (a generalization of MapReduce's map output server)
 1. Distributed file systems, like HDFS
 1. Further Hypertable integration
 1. Mesos package management application (i.e. the "apt-get" of the cluster... `apt-get install hadoop-0.20.0`)

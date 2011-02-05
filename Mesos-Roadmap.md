@@ -42,7 +42,10 @@ those which are primarily intended to be used by other applications (as opposed 
 Framework applications are intended to present some useful 
 
 1. Spark
-
+1. A graph processing framework? 
+1. A streaming database framework?
 ----------------
+
+## Research Roadmap
 
 In addition to a popular, (increasingly) stable, and (soon) production system, Mesos is also a research project that is pushing the borders of distributed system research! Check out <a href="http://mesosproject.org/about#research">the "About Mesos" page</a> for links to Mesos research papers, experiments, and other information about Mesos research.

@@ -35,7 +35,7 @@ The table below contains more details on the version history of this "ready to g
     <th>Date/Time</th><th>AMI ID</th><th>S3 bucket and/or URL</th><th>Description and Notes</th><th>Bugs/Issues</th>
   </tr>
   <tr>
-    <td><b>2/4/11 18:12, Fri</b></td><td><b>ami-967b8bff</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v6</td><td>Fixed <i>~/.deploylib_tags</i> bug in last 2 AMIs</td><td>The file is actually called .deploylib_tags, so this didn't fixt the bug afterall.</td>
+    <td><b>2/4/11 18:12, Fri</b></td><td><b>ami-967b8bff</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v6</td><td>Fixed <i>~/.deploylib_tags</i> bug in last 2 AMIs</td><td></td>
   </tr>
   <tr>
     <td><b>2/4/11 14:43, Fri</b></td><td><b>ami-767a8a1f</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v5</td><td>Fixed ~/.tags bug in last AMI</td><td>The file is actually called .deploylib_tags, so this didn't fixt the bug afterall.</td>

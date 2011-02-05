@@ -41,11 +41,13 @@ those which are primarily intended to be used by other applications (as opposed 
 
 ### 3.2 Applications that provide user facing services (e.g. programming language abstractions, )
 
-Framework applications are intended to present some useful 
+This category of applications is intended to interface with users. Due to nature of distributed applications (i.e. vs. what can be solved by simply using single computer applications) these apps tend to either (a) serving thousands to millions of users at a time (e.g. web applications), (b) large parallel computations (like MPI style jobs), (c) data intensive (e.g. enabling data analytics at large scale), or some combination of the above.
 
 1. Spark
 1. A graph processing framework? 
 1. A streaming database framework?
+1. Web applications (that server users)
+1. High performance computing, MPI style jobs...
 
 ## Research Roadmap
 

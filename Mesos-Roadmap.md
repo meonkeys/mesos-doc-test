@@ -44,7 +44,6 @@ Framework applications are intended to present some useful
 1. Spark
 1. A graph processing framework? 
 1. A streaming database framework?
-----------------
 
 ## Research Roadmap
 

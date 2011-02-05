@@ -8,7 +8,7 @@ The Mesos development roadmap can be categorized into 3 main areas:
 
 ## 1. Growing a development community and promoting adoption
 1. Migrate into Apache Incubator (see the [[incubator proposal|http://wiki.apache.org/incubator/MesosProposal]])
-    1. We will be migrating away from github issues and onto JIRA once we are in the incubator
+    1. Migrate issues from github issues into JIRA
     1. We are looking to grow an open-source community of developers around Mesos
 
 ## 2. Core Mesos development (Cluster OS Kernel, i.e. scheduling, resource management, etc.)
@@ -22,7 +22,7 @@ The Mesos development roadmap can be categorized into 3 main areas:
 
 ## 3. Mesos application development
 
-Technically speaking, a mesos application is defined as a mesos scheduler plus a mesos executor. Practically speaking, applications can serve many purposes. These can be broken down into a few categories.
+This category of future work is probably the most important! Technically speaking, a mesos application is defined as a mesos scheduler plus a mesos executor. Practically speaking, applications can serve many purposes. These can be broken down into a few categories.
 
 ### 3.1 Applications that provide cluster OS functionality (e.g. storage, synchronization, naming, etc.)
 

@@ -1,6 +1,4 @@
-TODO: http://radlab.cs.berkeley.edu/wiki/Retreats/AMP2010#Yahoo_Research.21
-
-The Mesos development roadmap can be categorized into 3 main areas:
+The Mesos development roadmap can roughly be separated into 3 main areas:
 
 1. Building a community and promoting adoption
 1. Core Mesos development
@@ -18,7 +16,9 @@ The Mesos development roadmap can be categorized into 3 main areas:
     1. A Mesos Service Level Objective
     1. Scheduling based on history
 1. Migrate to ProtocolBuffers as the serialization format (under development at Twitter)
-1. More advanced User Interface and [[Event History]] (i.e. logging) - See [[issue #143|https://github.com/mesos/mesos/issuesearch?state=open&q=event#issue/143]] for more details.
+1. User authentication
+1. Mesos application debugging support
+    1. More advanced User Interface and [[Event History]] (i.e. logging) - See [[issue #143|https://github.com/mesos/mesos/issuesearch?state=open&q=event#issue/143]] for more details.
 
 ## 3. Mesos application development
 
@@ -30,9 +30,10 @@ The core of Mesos has been designed using the same philosophy behind traditional
 
 those which are primarily intended to be used by other applications (as opposed to being used by human users). They can be seen as operating system modules that implement functionality in the form of services.
 
-1. Meta Framework Development (under development at Berkeley)
+1. Meta Framework Development (under development at Berkeley, and also at Twitter)
     1. Allow users to submit a job (specifying their resource constraints) and have the job wait in a queue until the resources are acquired (the Application Scheduler translates those constraints into accepting or rejecting resource offers)
-1. File systems, like HDFS
+1. Slave data storage/caching services (a generalization of the map input server)
+1. Distributed file systems, like HDFS
 1. Further Hypertable integration
 1. Mesos package management application (i.e. the "apt-get" of the cluster... `apt-get install hadoop-0.20.0`)
 1. A machine metadata database

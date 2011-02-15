@@ -2,7 +2,7 @@
 
 There are two main ways to get a Mesos cluster running on EC2 quickly and easily. One way is via the Mesos [[EC2-Scripts]]. The main guts of the EC2 Scripts are the python program in <mesos-download-root-dir>/src/ec2/mesos_ec2.py which will start up a number of Amazon EC2 Instances (these images already contain a copy of mesos at /root/mesos), and then SSH into those machines, set up the configuration files on the slaves to talk to the master, and also set up HDFS, NFS, and more on those nodes!
 
-The other main way to launch a Mesos cluster on EC2 is using the Mesos "Ready-to-go" AMI. We have set up this AMI to make taking Mesos for a spin as easy as launching a some instances in EC2. That is, we have pre-packaged an AMI with /etc/init.d/mesos-master and /etc/init.d/mesos-slave scripts that make running a Mesos master or slave on those machines super easy!
+The other main way to launch a Mesos cluster on EC2 is using the Mesos "Ready-to-go" AMI. We have set up this AMI to make taking Mesos for a spin as easy as launching a some instances in EC2. That is, we have pre-packaged an AMI with /etc/init.d/mesos-master and /etc/init.d/mesos-slave scripts that make running a Mesos master or slave on an instance of this AMI super easy!
 
 <i><b>WARNING:</b> While this feature is in Alpha, this AMI has the public ssh keys of some Mesos developers in the .ssh/authorized_keys file for now which would be a security vulnerability if you use these AMIs and don't want those folks to have access to ssh into your instances! You can always remove these entries after you boot the instance, and even re-bundle the AMI if you plan on reusing this functionality.</i>
 

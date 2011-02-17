@@ -7,7 +7,7 @@ Mesos is a cluster management platform that provides resource sharing and isolat
 
 Key features of Mesos include master fault tolerance using ZooKeeper, isolation between tasks using Linux Containers, memory and CPU aware allocation, and an efficient, high-performance resource scheduling mechanism ("resource offers") that allows applications to achieve data locality and other scheduling goals. Visit "mesosproject.org":http://mesosproject.org for more details about Mesos.
 
-_*Please note that Mesos is still in alpha. The current version is only intended for early testing.*_
+_*Please note that Mesos is still in alpha. The current version is intended for early testing.*_
 
 h4. What you'll find on this page</u></b>
 # System Requirements

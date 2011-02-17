@@ -5,7 +5,7 @@ Mesos is a cluster management platform that provides resource sharing and isolat
 * Run multiple instances of Hadoop on the same cluster -- e.g. separate instances for production and experimental jobs -- or even multiple versions of Hadoop.
 * Build new cluster applications without having to reinvent low-level facilities for farming out tasks, monitoring them, etc, and have your applications coexist with existing ones.
 
-Key features of Mesos include master fault tolerance using ZooKeeper, isolation between tasks using Linux Containers, and an efficient, memory and CPU aware allocation, and a high-performance resource scheduling mechanism ("resource offers") that allows applications to achieve data locality and other scheduling goals. Visit "mesosproject.org":http://mesosproject.org for more details about Mesos.
+Key features of Mesos include master fault tolerance using ZooKeeper, isolation between tasks using Linux Containers, memory and CPU aware allocation, and an efficient, high-performance resource scheduling mechanism ("resource offers") that allows applications to achieve data locality and other scheduling goals. Visit "mesosproject.org":http://mesosproject.org for more details about Mesos.
 
 _*Please note that Mesos is still in alpha. The current version is only intended for early testing.*_
 

@@ -3,15 +3,15 @@ h1. Overview of Mesos
 Mesos is a cluster management platform that provides resource sharing and isolation across distributed applications. For example, "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, "Hypertable":http://hypertable.org, and "Spark":http://github.com/mesos/spark/wiki (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs) can run on Mesos.
 
 h4. Mesos Use-cases
-* Run Hadoop, MPI, Spark and other cluster applications on a dynamically shared pool of machines.
-* Run multiple instances of Hadoop on the same cluster, e.g. separate instances for production and experimental jobs, or even multiple versions of Hadoop.
-* Build new cluster applications without having to reinvent low-level facilities for running tasks on different nodes, monitoring them, etc., and have your applications coexist with existing ones.
+* Run Hadoop, MPI, Spark and other cluster applications on a dynamically shared pool of machines
+* Run multiple instances of Hadoop on the same cluster, e.g. separate instances for production and experimental jobs, or even multiple versions of Hadoop
+* Build new cluster applications without having to reinvent low-level facilities for running tasks on different nodes, monitoring them, etc., and have your applications coexist with existing ones
 
 h4. Features of Mesos
 * Master fault tolerance using ZooKeeper
 * Isolation between tasks using Linux Containers
 * Memory and CPU aware allocation
-* Efficient fine-grained resource sharing abstraction (<i>resource offers</i>) that allows applications to achieve app-specific scheduling goals (e.g. Hadoop optimizes for data locality).
+* Efficient fine-grained resource sharing abstraction (<i>resource offers</i>) that allows applications to achieve app-specific scheduling goals (e.g. Hadoop optimizes for data locality)
 <br/>
 Visit "mesosproject.org":http://mesosproject.org for more details about Mesos.
 

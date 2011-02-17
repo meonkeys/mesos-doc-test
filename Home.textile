@@ -11,7 +11,7 @@ h4. Features of Mesos
 * Master fault tolerance using ZooKeeper
 * Isolation between tasks using Linux Containers
 * Memory and CPU aware allocation
-* high-performance resource scheduling mechanism ("resource offers") that allows applications to achieve data locality and other scheduling goals.
+* Efficient fine-grained resource sharing abstraction (<i>resource offers</i>) that allows applications to achieve app-specific scheduling goals (e.g. Hadoop optimizes for data locality).
 <br/>
 Visit "mesosproject.org":http://mesosproject.org for more details about Mesos.
 

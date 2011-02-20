@@ -35,6 +35,9 @@ The table below contains more details on the version history of this "ready to g
     <th>Date/Time</th><th>AMI ID</th><th>S3 bucket and/or URL</th><th>Description and Notes</th><th>Bugs/Issues</th>
   </tr>
   <tr>
+    <td><b>2/20/11 15:00, Sun</b></td><td><b>ami-44ce3d2d</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v3.1</td><td>Updated /etc/init.d/mesos-slave to export MESOS_PUBLIC_DNS=<magic that wgets the public dns name from ec2> env var before launching the slave daemon so now the externally accessible ULRs are reported to the master (and shown on the master's webui). Also updated the spark installation per Justin's instructions.</td><td></td>
+  </tr>
+  <tr>
     <td><b>2/4/11 18:12, Fri</b></td><td><b>ami-967b8bff</b></td><td>http://andyk-mesos-images.s3.amazonaws.com/mesos-slave-master-v6</td><td>Fixed <i>~/.deploylib_tags</i> bug in last 2 AMIs. <b>DON'T USE. Slave webui crashes.</b></td><td>We are seeing the following error when trying to connect to the webui for slaves:Error 500: Internal Server Error. Sorry, the requested URL http://ec2-174-129-58-11.compute-1.amazonaws.com:8080/framework/201102090027-0-0000 caused an error:Unhandled exception</td>
   </tr>
   <tr>

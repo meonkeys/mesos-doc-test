@@ -15,7 +15,8 @@ h3. Scheduler API (as of 11/12/10) declared in @MESOS_HOME/include/mesos_sched.h
   virtual std::string getFrameworkName(SchedulerDriver*);
   virtual ExecutorInfo getExecutorInfo(SchedulerDriver*);
   
-  // Callbacks for various Mesos events  virtual void registered(SchedulerDriver* d, FrameworkID fid) {} 
+  // Callbacks for various Mesos events  
+  virtual void registered(SchedulerDriver* d, FrameworkID fid) {} 
   virtual void resourceOffer(SchedulerDriver* d,
                              OfferID oid,
                              const std::vector<SlaveOffer>& offers) {}

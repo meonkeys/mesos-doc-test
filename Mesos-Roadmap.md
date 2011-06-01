@@ -51,4 +51,4 @@ This category of applications is intended to interface with users. Due to nature
 
 ## Research Roadmap
 
-In addition to a popular, (increasingly) stable, and (soon) production system, Mesos is also a research project that is pushing the borders of distributed system research! Check out <a href="http://mesosproject.org/about#research">the "About Mesos" page</a> for links to Mesos research papers, experiments, and other information about Mesos research.
+In addition to a popular, (increasingly) stable, and (soon) production system, Mesos is also a research project that is pushing the borders of distributed system research! Check out <a href="http://mesosproject.org/about.html">the "About Mesos" page</a> for links to Mesos research papers, experiments, and other information about Mesos research.

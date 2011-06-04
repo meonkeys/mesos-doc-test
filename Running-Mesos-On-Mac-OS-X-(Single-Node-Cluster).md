@@ -17,7 +17,8 @@
 * macport
     - Download and install [Macport](http://www.macports.org/install.php) 
     - As of June 2011 download [Macport for Snow Leopard](http://distfiles.macports.org/MacPorts/MacPorts-1.9.2-10.6-SnowLeopard.dmg)
-
+    - run ``$ sudo port -d selfupdate``
+    - run ``$ sudo port upgrade outdated``
 * mesos
     - 
 

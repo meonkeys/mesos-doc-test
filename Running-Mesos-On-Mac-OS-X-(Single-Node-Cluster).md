@@ -1,7 +1,6 @@
 ## Running Mesos On Mac OS X (Single Node Cluster)
 ## Prerequisites:
 * Java
-
     For Mac OS X 10.6 (Snow Leopard):  
     - Start the Terminal app.  
     - Create/Edit ~/.bash_profile file.  
@@ -12,6 +11,9 @@
     ``/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
 
 * git  
-    - Download and install Mac OS X version of git [git](http://git-scm.com/)
+    - Download and install Mac OS X version of [git](http://git-scm.com/)
+
 * mesos
+    - 
+
 * Hadoop

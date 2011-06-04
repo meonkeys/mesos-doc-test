@@ -10,6 +10,7 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     add the following:  
     ``export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
     - ``$ echo $JAVA_HOME``  
+    You should see this:  
     ``/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
 
 * git  

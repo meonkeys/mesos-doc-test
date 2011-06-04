@@ -11,6 +11,7 @@
     - ``$ echo $JAVA_HOME``  
     ``/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
 
-* git
+* git  
+    - Download and install Mac OS X version of git [git](http://git-scm.com/)
 * mesos
 * Hadoop

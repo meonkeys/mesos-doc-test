@@ -34,7 +34,8 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 * Building Mesos:  
     - run `` ~$  cd mesos``  
     - run `` ~$   ~/mesos$ ./configure.template.macosx``  
-	`checking build system type... i386-apple-darwin10.7.0
+	```
+        checking build system type... i386-apple-darwin10.7.0
 	checking host system type... i386-apple-darwin10.7.0
 	checking target system type... i386-apple-darwin10.7.0
 	===========================================================
@@ -43,4 +44,5 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 	running python2.6 to find compiler flags for creating the Mesos Python library...
 	running python2.6 to find compiler flags for embedding it...
 	checking for g++... g++
-	checking for C++ compiler default output file name... a.out`
+	checking for C++ compiler default output file name... a.out
+        ```

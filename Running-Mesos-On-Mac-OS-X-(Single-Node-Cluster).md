@@ -34,9 +34,8 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 * Building Mesos:  
     - run `` ~$  cd mesos``  
     - run `` ~$   ~/mesos$ ./configure.template.macosx``  
-
 ```
-        checking build system type... i386-apple-darwin10.7.0
+  checking build system type... i386-apple-darwin10.7.0
 	checking host system type... i386-apple-darwin10.7.0
 	checking target system type... i386-apple-darwin10.7.0
 	===========================================================

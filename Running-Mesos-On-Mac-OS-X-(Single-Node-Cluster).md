@@ -12,6 +12,8 @@
 
 * git  
     - Download and install Mac OS X version of [git](http://git-scm.com/)
+* macport
+    - Download and install [Macport](http://www.macports.org/install.php) 
 
 * mesos
     - 

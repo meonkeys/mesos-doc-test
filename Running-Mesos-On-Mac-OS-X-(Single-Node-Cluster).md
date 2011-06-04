@@ -6,10 +6,10 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     For Mac OS X 10.6 (Snow Leopard):  
     - Start the Terminal app.  
     - Create/Edit ~/.bash_profile file.  
-    - ``$ vi ~/.bash_profile``  
+    - `` ~$  vi ~/.bash_profile ``  
     add the following:  
     ``export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
-    - ``$ echo $JAVA_HOME``  
+    - `` ~$  echo $JAVA_HOME ``  
     You should see this:  
     ``/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
 
@@ -20,10 +20,14 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 * macport
     - Download and install [Macport](http://www.macports.org/install.php) 
     - As of June 2011 download [Macport for Snow Leopard](http://distfiles.macports.org/MacPorts/MacPorts-1.9.2-10.6-SnowLeopard.dmg)
-    - run ``$ sudo port -d selfupdate``
-    - run ``$ sudo port upgrade outdated``
-    - run ``$ sudo port install swig``
-    - run ``$ sudo port install swig-java``
-    - run ``$ sudo port install swig-python``
+    - run `` ~$  sudo port -d selfupdate ``
+    - run `` ~$  sudo port upgrade outdated ``
+    - run `` ~$  sudo port install swig ``
+    - run `` ~$  sudo port install swig-java ``
+    - run `` ~$  sudo port install swig-python ``
 
 * Hadoop
+
+## Mesos setup:
+* Downloading Mesos:  
+`` ~$  git clone git://github.com/mesos/mesos ``

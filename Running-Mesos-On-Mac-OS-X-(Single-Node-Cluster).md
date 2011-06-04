@@ -85,4 +85,8 @@ I0604 15:47:56.522259 1885306016 main.cpp:75] Build: 2011-06-04 14:44:57 by bill
 I0604 15:47:56.522300 1885306016 main.cpp:76] Starting Mesos master
 I0604 15:47:56.522532 1885306016 webui.cpp:64] Starting master web UI on port 8080
 I0604 15:47:56.522539 7163904 master.cpp:389] Master started at mesos://master@128.32.44.175:5050
+I0604 15:47:56.522676 7163904 master.cpp:404] Master ID: 201106041547-0
+I0604 15:47:56.522743 19939328 webui.cpp:32] Web UI thread started
+
+[ ... trimmed ... ]
 ```

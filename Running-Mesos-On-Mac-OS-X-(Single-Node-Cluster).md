@@ -1,4 +1,6 @@
-## Running Mesos On Mac OS X (Single Node Cluster)
+## Running Mesos On Mac OS X (Single Node Cluster)  
+This is step-by-step guide on setting up Mesos on a single node, and running hadoop on top of Mesos.
+
 ## Prerequisites:
 * Java
     For Mac OS X 10.6 (Snow Leopard):  
@@ -19,7 +21,8 @@
     - As of June 2011 download [Macport for Snow Leopard](http://distfiles.macports.org/MacPorts/MacPorts-1.9.2-10.6-SnowLeopard.dmg)
     - run ``$ sudo port -d selfupdate``
     - run ``$ sudo port upgrade outdated``
-* mesos
-    - 
+    - run ``$ sudo port install swig``
+    - run ``$ sudo port install swig-java``
+    - run ``$ sudo port install swig-python``
 
 * Hadoop

@@ -74,6 +74,6 @@ make -C third_party/glog-0.3.1
 [       OK ] MasterTest.SlaveLost (2 ms)
 [ ... trimmed ... ]
 ```
-### Congratulation! You have mesos running on your Mac!
+**Congratulation! You have mesos running on your Mac!**
 
 ## Setup mesos cluster

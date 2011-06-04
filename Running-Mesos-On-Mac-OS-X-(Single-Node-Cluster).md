@@ -59,3 +59,18 @@ make -C third_party/glog-0.3.1
 
 ## Testing the Mesos
 * run ` ~/mesos$ bin/tests/all-tests `
+```
+~/mesos$ bin/tests/all-tests 
+[==========] Running 61 tests from 6 test cases.
+[----------] Global test environment set-up.
+[----------] 18 tests from MasterTest
+[ RUN      ] MasterTest.ResourceOfferWithMultipleSlaves
+[       OK ] MasterTest.ResourceOfferWithMultipleSlaves (33 ms)
+[ RUN      ] MasterTest.ResourcesReofferedAfterReject
+[       OK ] MasterTest.ResourcesReofferedAfterReject (3 ms)
+[ RUN      ] MasterTest.ResourcesReofferedAfterBadResponse
+[       OK ] MasterTest.ResourcesReofferedAfterBadResponse (2 ms)
+[ RUN      ] MasterTest.SlaveLost
+[       OK ] MasterTest.SlaveLost (2 ms)
+[ ... trimmed ... ]
+```

@@ -11,9 +11,12 @@
     ``/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
 
 * git  
-    - Download and install Mac OS X version of [git](http://git-scm.com/)
+    - Download and install the lastest version of [git](http://git-scm.com/) for Mac OS X
+    - As of June 2011 download ``1.7.5.4 - OS X - Leopard - x86_64`` 
+
 * macport
     - Download and install [Macport](http://www.macports.org/install.php) 
+    - As of June 2011 download [Macport for Snow Leopard](http://distfiles.macports.org/MacPorts/MacPorts-1.9.2-10.6-SnowLeopard.dmg)
 
 * mesos
     - 

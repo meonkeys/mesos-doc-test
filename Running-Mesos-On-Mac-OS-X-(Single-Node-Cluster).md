@@ -30,8 +30,8 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 
 ## Mesos setup:
 * Downloading Mesos:  
-`` ~$  git clone git://github.com/mesos/mesos ``  
+    `` ~$  git clone git://github.com/mesos/mesos ``  
 * Building Mesos:  
-    -`` ~$  cd mesos``  
-    -`` ~$   ~/mesos$ ./configure.template.macosx``  
-    -
+    - run `` ~$  cd mesos``  
+    - run `` ~$   ~/mesos$ ./configure.template.macosx``  
+    - run

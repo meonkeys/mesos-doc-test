@@ -112,3 +112,6 @@ Task 3 is in state 2
 Task 4 is in state 1
 Task 4 is in state 2
 ```
+
+## Running Hadoop on Mesos  [Running Hadoop on Mesos](https://github.com/mesos/mesos/wiki/Running-Hadoop-on-Mesos)
+

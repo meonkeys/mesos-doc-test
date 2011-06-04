@@ -93,4 +93,22 @@ I0604 15:47:56.522743 19939328 webui.cpp:32] Web UI thread started
 2. Take note of the master URL `mesos://master@10.1.1.1:5050`
 3. Start slave: ` ~/mesos$ bin/mesos-slave ----url=mesos://master@10.1.1.1:5050`
 4. View the master's web UI at `http://10.1.1.1:8080` (here assuming this computer has IP address = 10.1.1.1).
-5. Run the test framework: `bin/examples/cpp-test-framework mesos://master@10.1.1.1:5050`
+5. Run the test framework: `~/mesos$ bin/examples/cpp-test-framework mesos://master@10.1.1.1:5050`
+```
+Registered!
+.Starting task 0 on mac.eecs.berkeley.edu
+Task 0 is in state 1
+Task 0 is in state 2
+.Starting task 1 on mac.eecs.berkeley.edu
+Task 1 is in state 1
+Task 1 is in state 2
+.Starting task 2 on mac.eecs.berkeley.edu
+Task 2 is in state 1
+Task 2 is in state 2
+.Starting task 3 on mac.eecs.berkeley.edu
+Task 3 is in state 1
+Task 3 is in state 2
+.Starting task 4 on mac.eecs.berkeley.edu
+Task 4 is in state 1
+Task 4 is in state 2
+```

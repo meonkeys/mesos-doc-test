@@ -1,0 +1,5 @@
+# Prerequisites:
+
+Java
+git
+Mesos

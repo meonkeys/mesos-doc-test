@@ -8,8 +8,8 @@
     - ``$ vi ~/.bash_profile``  
     add the following:  
     ``export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
-    - ``$ echo $JAVA_HOME``
-    ``/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
+    - ``$ echo $JAVA_HOME  
+    /System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
 
 * git
 * mesos

@@ -56,3 +56,6 @@ make -C third_party/glog-0.3.1
 
 [ ... trimmed ... ]
 ```
+
+## Testing the Mesos
+* run ` ~/mesos$ bin/tests/all-tests `

@@ -77,3 +77,12 @@ make -C third_party/glog-0.3.1
 **Congratulation! You have mesos running on your Mac!**
 
 ## Setup mesos cluster
+1. Start master: ` ~/mesos$ bin/mesos-master `
+```
+ ~/mesos/bin$ ./mesos-master
+I0604 15:47:56.499007 1885306016 logging.cpp:40] Logging to /Users/billz/mesos/logs
+I0604 15:47:56.522259 1885306016 main.cpp:75] Build: 2011-06-04 14:44:57 by billz
+I0604 15:47:56.522300 1885306016 main.cpp:76] Starting Mesos master
+I0604 15:47:56.522532 1885306016 webui.cpp:64] Starting master web UI on port 8080
+I0604 15:47:56.522539 7163904 master.cpp:389] Master started at mesos://master@128.32.44.175:5050
+```

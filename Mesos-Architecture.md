@@ -1,4 +1,4 @@
--> [[/images/architecture3.jpg|height=300px]] <-
+<p align="center">[[/images/architecture3.jpg|height=300px]]</p>
 
 The above figure shows the main components of Mesos.  Mesos consists of a <i>master</i> daemons that manages <i>slave</i> daemons running on each cluster node, and <i>mesos applications</i> (also called <i>frameworks</i>) that run <i>tasks</i> on these slaves. 
 

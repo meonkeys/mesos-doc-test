@@ -31,6 +31,7 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 ## Mesos setup:
 * Downloading Mesos:  
     `` ~$  git clone git://github.com/mesos/mesos ``  
+
 * Building Mesos:  
     - run `` ~$  cd mesos``  
     - run `` ~$   ~/mesos$ ./configure.template.macosx``  
@@ -44,6 +45,15 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 	running python2.6 to find compiler flags for creating the Mesos Python library...
 	running python2.6 to find compiler flags for embedding it...
 	checking for g++... g++
+
 	[ ... trimmed ... ]
-        
+```
+    - run `` ~/mesos$  make ``
+```
+make -C third_party/libprocess
+make -C third_party/glog-0.3.1
+/bin/sh ./libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I./src  -I./src    -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare  -DNO_FRAME_POINTER -DNDEBUG -O2 -fno-strict-aliasing -fPIC  -D_XOPEN_SOURCE -MT libglog_la-logging.lo -MD -MP -MF .deps/libglog_la-logging.Tpo -c -o libglog_la-logging.lo `test -f 'src/logging.cc' || echo './'`src/logging.cc
+
+
+[ ... trimmed ... ]
 ```

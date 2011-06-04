@@ -1,4 +1,4 @@
-## Running Mesos On Mac OS X (Single Node Cluster)  
+### ## Running Mesos On Mac OS X (Single Node Cluster)  
 This is step-by-step guide on setting up Mesos on a single node, and running hadoop on top of Mesos.
 
 ## Prerequisites:
@@ -74,3 +74,6 @@ make -C third_party/glog-0.3.1
 [       OK ] MasterTest.SlaveLost (2 ms)
 [ ... trimmed ... ]
 ```
+### Congratulation! You have mesos running on your Mac!
+
+## Setup mesos cluster

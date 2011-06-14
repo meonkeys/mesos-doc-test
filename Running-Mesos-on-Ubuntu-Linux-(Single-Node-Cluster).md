@@ -86,7 +86,8 @@ make[2]: Entering directory `/home/hadoop/mesos/third_party/libprocess/third_par
 [       OK ] MasterTest.SlaveLost (2 ms)
 [ ... trimmed ... ]
 ```
-**Congratulation! You have mesos running on your Mac!**
+
+**Congratulation! You have mesos running on your Ubuntu Linux!**
 
 ## Setup mesos cluster
 1. Start master: ` ~/mesos$ bin/mesos-master `
@@ -108,19 +109,19 @@ I0604 15:47:56.522743 19939328 webui.cpp:32] Web UI thread started
 5. Run the test framework: `~/mesos$ bin/examples/cpp-test-framework mesos://master@10.1.1.1:5050`
 ```
 Registered!
-.Starting task 0 on mac.eecs.berkeley.edu
+.Starting task 0 on ubuntu.eecs.berkeley.edu
 Task 0 is in state 1
 Task 0 is in state 2
-.Starting task 1 on mac.eecs.berkeley.edu
+.Starting task 1 on ubuntu.eecs.berkeley.edu
 Task 1 is in state 1
 Task 1 is in state 2
-.Starting task 2 on mac.eecs.berkeley.edu
+.Starting task 2 on ubuntu.eecs.berkeley.edu
 Task 2 is in state 1
 Task 2 is in state 2
-.Starting task 3 on mac.eecs.berkeley.edu
+.Starting task 3 on ubuntu.eecs.berkeley.edu
 Task 3 is in state 1
 Task 3 is in state 2
-.Starting task 4 on mac.eecs.berkeley.edu
+.Starting task 4 on ubuntu.eecs.berkeley.edu
 Task 4 is in state 1
 Task 4 is in state 2
 ```

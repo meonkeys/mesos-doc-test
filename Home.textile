@@ -28,7 +28,7 @@ h4. What you'll find on this page</u></b>
 
 --------------
 
-h4. Step-by-step guide of setting up Mesos
+h1. Step-by-step guide of setting up Mesos
 * [[Running Mesos On Mac OS X (Single Node Cluster)]]
 * [[Running Mesos On Ubuntu Linux (Single Node Cluster)]]
 

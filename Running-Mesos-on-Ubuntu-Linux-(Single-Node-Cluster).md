@@ -12,8 +12,10 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     - `` ~$  echo $JAVA_HOME ``  
     You should see this:  
     ``/usr/lib/jvm/java-6-sun``
-    - Add the Canonical Partner Repository to your apt repositories:
-    `sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"`
+    - Add the Canonical Partner Repository to your apt repositories:    
+    `sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"`    
+    Or edit `vi /etc/apt/sources.list`
+
     - Update the source list
     `sudo apt-get update`
 

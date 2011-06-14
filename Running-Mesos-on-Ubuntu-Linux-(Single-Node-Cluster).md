@@ -39,7 +39,11 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 
 * Building Mesos:  
     - run `` ~$  cd mesos``  
-    - run `` ~$   ~/mesos$ ./configure.template.macosx``  
+    - edit ` ~$  vi configure.template.ubuntu-lucid-64`  
+    Change the following:  
+    ``--with-java-home=/usr/lib/jvm/java-6-sun``  
+    So, `--with-java-home=` equal to JAVA_HOME.
+    - run `` ~$   ~/mesos$ ./configure.template.ubuntu-lucid-64``  
 ```
   checking build system type... i386-apple-darwin10.7.0
 	checking host system type... i386-apple-darwin10.7.0

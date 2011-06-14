@@ -26,7 +26,6 @@ h4. What you'll find on this page</u></b>
 # Where to Go From Here
 <br>
 
---------------
 
 h1. Step-by-step guide of setting up Mesos
 * [[Running Mesos On Mac OS X (Single Node Cluster)]]

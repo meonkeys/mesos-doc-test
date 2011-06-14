@@ -16,21 +16,20 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     `sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"`    
     Or edit `vi /etc/apt/sources.list`
 
-    - Update the source list
-    `sudo apt-get update`
+    - Update the source list   
+    `sudo apt-get update`  
+    - Install the build tools  
+    `sudo apt-get install build-essential sun-java6-jdk sun-java6-plugin`    
+    `sudo update-java-alternatives -s java-6-sun`  
 
 * git  
-    - Download and install the lastest version of [git](http://git-scm.com/) for Mac OS X
-    - As of June 2011 download [1.7.5.4 - OS X - Leopard - x86_64](http://code.google.com/p/git-osx-installer/downloads/detail?name=git-1.7.5.4-x86_64-leopard.dmg&can=3&q=) 
+    - `sudo apt-get -y install git-core gitosis`  
+    - As of June 2011 download [Git release is v1.7.5.4]
 
-* macport
-    - Download and install [Macport](http://www.macports.org/install.php) 
-    - As of June 2011 download [Macport for Snow Leopard](http://distfiles.macports.org/MacPorts/MacPorts-1.9.2-10.6-SnowLeopard.dmg)
-    - run `` ~$  sudo port -d selfupdate ``
-    - run `` ~$  sudo port upgrade outdated ``
-    - run `` ~$  sudo port install swig ``
-    - run `` ~$  sudo port install swig-java ``
-    - run `` ~$  sudo port install swig-python ``
+* Swig and Python
+
+    - run `` ~$  sudo apt-get install swig ``
+    - run `` ~$  sudo apt-get install python-dev ``
 
 * Hadoop [Hadoop setup](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
 

@@ -24,9 +24,7 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     - As of June 2011 download [Macport for Snow Leopard](http://distfiles.macports.org/MacPorts/MacPorts-1.9.2-10.6-SnowLeopard.dmg)
     - run `` ~$  sudo port -d selfupdate ``
     - run `` ~$  sudo port upgrade outdated ``
-    - run `` ~$  sudo port install swig ``
-    - run `` ~$  sudo port install swig-java ``
-    - run `` ~$  sudo port install swig-python ``
+    - run `` ~$  sudo port install swig swig-java swig-python``  
 
 * Hadoop [Hadoop setup](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
 

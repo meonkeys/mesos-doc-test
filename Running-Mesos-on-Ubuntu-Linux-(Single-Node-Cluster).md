@@ -56,7 +56,7 @@ running python2.6 to find compiler flags for embedding it...
 checking for g++... g++
 checking for C++ compiler default output file name... a.out
 
-	[ ... trimmed ... ]
+    [ ... trimmed ... ]
 ```
     - run `` ~/mesos$  make ``
 ```
@@ -65,8 +65,8 @@ make[1]: Entering directory `/home/hadoop/mesos/third_party/libprocess'
 make -C third_party/glog-0.3.1
 make[2]: Entering directory `/home/hadoop/mesos/third_party/libprocess/third_party/glog-0.3.1'
 /bin/bash ./libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I./src  -I./src    -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare  -DNO_FRAME_POINTER -DNDEBUG -O2 -fno-strict-aliasing -fPIC  -MT libglog_la-logging.lo -MD -MP -MF .deps/libglog_la-logging.Tpo -c -o libglog_la-logging.lo `test -f 'src/logging.cc' || echo './'`src/logging.cc
-
-[ ... trimmed ... ]
+  
+    [ ... trimmed ... ]
 ```
 
 ## Testing the Mesos

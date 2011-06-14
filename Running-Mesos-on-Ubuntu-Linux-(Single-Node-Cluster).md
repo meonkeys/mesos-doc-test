@@ -13,17 +13,17 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     You should see this:  
     ``/usr/lib/jvm/java-6-sun``
     - Add the Canonical Partner Repository to your apt repositories:    
-    `sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"`    
-    Or edit `vi /etc/apt/sources.list`
+    `~$ sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"`    
+    Or edit `~$  vi  /etc/apt/sources.list`
 
     - Update the source list   
     `sudo apt-get update`  
     - Install the build tools  
-    `sudo apt-get install build-essential sun-java6-jdk sun-java6-plugin`    
-    `sudo update-java-alternatives -s java-6-sun`  
+    `~$ sudo apt-get install build-essential sun-java6-jdk sun-java6-plugin`    
+    `~$ sudo update-java-alternatives -s java-6-sun`  
 
 * git  
-    - `sudo apt-get -y install git-core gitosis`  
+    - `~$ sudo apt-get -y install git-core gitosis`  
     - As of June 2011 download [Git release is v1.7.5.4]
 
 * Swig and Python

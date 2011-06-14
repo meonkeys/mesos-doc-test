@@ -33,7 +33,7 @@ h1. Step-by-Step Guide of Running Mesos
 
 h1. System Requirements
 
-Mesos runs on Linux and [[[[Running Mesos On Mac OS X (Single Node Cluster)]]]], and has previously also been tested on OpenSolaris. You will need the following packages to run it:
+Mesos runs on Linux and "Mac OS X":[[Running Mesos On Mac OS X (Single Node Cluster)]], and has previously also been tested on OpenSolaris. You will need the following packages to run it:
 
 * g++ 4.1 or higher
 * SWIG 1.3.40 or higher (If you install swig on Mac OS X via "MacPorts":http://www.macports.org/, run @sudo port install swig swig-java swig-python@)

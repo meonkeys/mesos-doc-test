@@ -5,13 +5,13 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 * Java
     For Ubuntu 10.04 LTS (Lucid Lynx):  
     - Go to Applications > Accessories > Terminal.
-    - Create/Edit ~/.bash_profile file.  
-    - `` ~$  vi ~/.bash_profile ``  
+    - Create/Edit ~/.bashrc file.  
+    - `` ~$  vi ~/.bashrc ``  
     add the following:  
-    ``export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
+    ``export JAVA_HOME=/usr/lib/jvm/java-6-sun``
     - `` ~$  echo $JAVA_HOME ``  
     You should see this:  
-    ``/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
+    ``/usr/lib/jvm/java-6-sun``
 
 * git  
     - Download and install the lastest version of [git](http://git-scm.com/) for Mac OS X

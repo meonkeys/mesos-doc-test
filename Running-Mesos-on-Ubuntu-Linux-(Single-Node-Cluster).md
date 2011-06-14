@@ -80,11 +80,18 @@ make[2]: Entering directory `/home/hadoop/mesos/third_party/libprocess/third_par
 [       OK ] MasterTest.ResourceOfferWithMultipleSlaves (33 ms)
 [ RUN      ] MasterTest.ResourcesReofferedAfterReject
 [       OK ] MasterTest.ResourcesReofferedAfterReject (3 ms)
-[ RUN      ] MasterTest.ResourcesReofferedAfterBadResponse
-[       OK ] MasterTest.ResourcesReofferedAfterBadResponse (2 ms)
-[ RUN      ] MasterTest.SlaveLost
-[       OK ] MasterTest.SlaveLost (2 ms)
+
 [ ... trimmed ... ]
+
+[ RUN      ] MasterTest.MultipleExecutors
+[       OK ] MasterTest.MultipleExecutors (2 ms)
+[----------] 18 tests from MasterTest (38 ms total)
+
+[----------] Global test environment tear-down
+[==========] 61 tests from 6 test cases ran. (17633 ms total)
+[  PASSED  ] 61 tests. 
+  YOU HAVE 3 DISABLED TESTS 
+
 ```
 
 **Congratulation! You have mesos running on your Ubuntu Linux!**

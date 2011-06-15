@@ -26,10 +26,11 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     - `~$ sudo apt-get -y install git-core gitosis`  
     - As of June 2011 download [Git release is v1.7.5.4]
 
-* Swig and Python
+* Swig, Python and ssh
 
     - run `` ~$  sudo apt-get install swig ``
     - run `` ~$  sudo apt-get install python-dev ``
+    - run `` ~$  sudo apt-get install openssh-server openssh-client ``
 
 * Hadoop [Hadoop setup](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
 

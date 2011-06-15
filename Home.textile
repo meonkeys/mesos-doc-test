@@ -4,7 +4,7 @@ Mesos is a cluster management platform that provides resource sharing and isolat
 
 h4. Mesos Use-cases
 * Run Hadoop, MPI, Spark and other cluster applications on a dynamically shared pool of machines
-* Run multiple instances of Hadoop on the same cluster, e.g. separate instances for production and experimental jobs, or even multiple versions of Hadoop
+* Run **multiple instances of Hadoop** on the same cluster, e.g. separate instances for production and experimental jobs, or even multiple versions of Hadoop
 * Build new cluster applications without having to reinvent low-level facilities for running tasks on different nodes, monitoring them, etc., and have your applications coexist with existing ones
 
 h4. Features of Mesos

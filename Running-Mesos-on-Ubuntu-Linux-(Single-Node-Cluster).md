@@ -135,3 +135,11 @@ Task 4 is in state 2
 ```
 
 ## Running Hadoop on Mesos  [Running Hadoop on Mesos](https://github.com/mesos/mesos/wiki/Running-Hadoop-on-Mesos)
+
+## Need more help?   
+* [Use our mailing lists](http://incubator.apache.org/projects/mesos.html)
+* mesos-dev@incubator.apache.org
+
+## Wants to contribute?
+* [Contributing to Open Source Projects HOWTO](http://www.kegel.com/academy/opensource.html)
+* [Submit a Bug](https://issues.apache.org/jira/browse/MESOS)

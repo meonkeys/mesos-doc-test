@@ -172,8 +172,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
 ```
 
 2. Hadoop configuration:  
-    - Edit core-site.xml file.  
-    add the following:  
+    - In core-site.xml file add the following:  
 ```
 <!-- In: conf/core-site.xml -->
 <property>
@@ -192,18 +191,50 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
   determine the host, port, etc. for a filesystem.</description>
 </property>
 ```
+    - In hdfs-site.xml file add the following:  
+```
+<!-- In: conf/hdfs-site.xml -->
+<property>
+  <name>dfs.replication</name>
+  <value>1</value>
+  <description>Default block replication.
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time.
+  </description>
+</property>
+```
+    - In mapred-site.xml file add the following:  
+```
+<!-- In: conf/mapred-site.xml -->
+<property>
+  <name>mapred.job.tracker</name>
+  <value>localhost:9001</value>
+  <description>The host and port that the MapReduce job tracker runs
+  at.  If "local", then jobs are run in-process as a single map
+  and reduce task.
+  </description>
+</property>
 
+<property>
+  <name>mapred.jobtracker.taskScheduler</name>
+  <value>org.apache.hadoop.mapred.MesosScheduler</value>
+</property>
+<property>
+  <name>mapred.mesos.master</name>
+  <value>mesos://master@10.1.1.1:5050</value> <!-- Here we are assuming your host IP address is 10.1.1.1 -->
+</property>
+
+```
 
 </li>
 <li> Launch a JobTracker with <code>bin/hadoop jobtracker</code> (<i>do not</i> use <code>bin/start-mapred.sh</code>). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
 <li> Submit jobs to your JobTracker as usual.</li>
 </ol>
 
-Note that when you run on a cluster, Hadoop (and Mesos) should be located on the same path on all nodes.
 
-If you wish to run multiple JobTrackers, the easiest way is to give each one a different port by using a different Hadoop `conf` directory for each one and passing the `--conf` flag to `bin/hadoop` to specify which config directory to use. You can copy Hadoop's existing `conf` directory to a new location and modify it to achieve this.
 
-Finally, if you run your own patched version of Hadoop instead of the one included in Mesos, you will need to take an additional step before building and running Hadoop: you must set the `MESOS_HOME` environment variable to the location where Mesos is found. You need to do this both in your shell environment when you run `ant`, and in Hadoop's `hadoop-env.sh`.
+
+
 
 
 ## Need more help?   

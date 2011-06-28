@@ -153,7 +153,7 @@ To run Hadoop on Mesos, follow these steps:
     # Add Hadoop bin/ directory to PATH  
     export PATH=$PATH:$HADOOP_HOME/bin  
 
-    # Set where you installed the mesos directory. For me is /home/hadoop/mesos. hadoop is my username.  
+    # Set where you installed the mesos. For me is /home/hadoop/mesos. hadoop is my username.  
     export MESOS_HOME=/home/hadoop/mesos
 ```
     - Go to hadoop directory that come with mesos's directory:  
@@ -167,23 +167,33 @@ export JAVA_HOME=/usr/lib/jvm/java-6-sun
 # The mesos use this.
 export MESOS_HOME=/home/hadoop/mesos
 
-# Extra Java runtime options.  Empty by default. This disable IPv6
+# Extra Java runtime options.  Empty by default. This disable IPv6.
 export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
 ```
 
- (at the very least, you need to set <code>JAVA_HOME</code> in Hadoop's <code>conf/hadoop-env.sh</code> and set <code>mapred.job.tracker</code> in <code>conf/mapred-site.xml</code>).</li>
-</li>
-<li> Add the following parameters to Hadoop's <code>conf/mapred-site.xml</code>:
-<pre>
-&lt;property&gt;
-  &lt;name&gt;mapred.jobtracker.taskScheduler&lt;/name&gt;
-  &lt;value&gt;org.apache.hadoop.mapred.MesosScheduler&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-  &lt;name&gt;mapred.mesos.master&lt;/name&gt;
-  &lt;value&gt;[URL of Mesos master]&lt;/value&gt;
-&lt;/property&gt;
-</pre>
+2. Hadoop configuration:  
+    - Edit core-site.xml file.  
+    add the following:  
+```
+<!-- In: conf/core-site.xml -->
+<property>
+  <name>hadoop.tmp.dir</name>
+  <value>/app/hadoop/tmp</value>
+  <description>A base for other temporary directories.</description>
+</property>
+
+<property>
+  <name>fs.default.name</name>
+  <value>hdfs://localhost:54310</value>
+  <description>The name of the default file system.  A URI whose
+  scheme and authority determine the FileSystem implementation.  The
+  uri's scheme determines the config property (fs.SCHEME.impl) naming
+  the FileSystem implementation class.  The uri's authority is used to
+  determine the host, port, etc. for a filesystem.</description>
+</property>
+```
+
+
 </li>
 <li> Launch a JobTracker with <code>bin/hadoop jobtracker</code> (<i>do not</i> use <code>bin/start-mapred.sh</code>). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
 <li> Submit jobs to your JobTracker as usual.</li>

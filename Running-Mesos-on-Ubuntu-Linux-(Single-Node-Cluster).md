@@ -134,16 +134,28 @@ Task 4 is in state 1
 Task 4 is in state 2
 ```
 
-## Running Hadoop on Mesos  [Running Hadoop on Mesos](https://github.com/mesos/mesos/wiki/Running-Hadoop-on-Mesos)  
+## [Running Hadoop on Mesos](https://github.com/mesos/mesos/wiki/Running-Hadoop-on-Mesos)  
 
 We have ported version 0.20.2 of Hadoop to run on Mesos. Most of the Mesos port is implemented by a pluggable Hadoop scheduler, which communicates with Mesos to receive nodes to launch tasks on. However, a few small additions to Hadoop's internal APIs are also required.
 
 The ported version of Hadoop is included in the Mesos project under `frameworks/hadoop-0.20.2`. However, if you want to patch your own version of Hadoop to add Mesos support, you can also use the patch located at `frameworks/hadoop-0.20.2/hadoop-mesos.patch`. This patch should apply on any 0.20.* version of Hadoop, and is also likely to work on Hadoop distributions derived from 0.20, such as Cloudera's or Yahoo!'s.
 
 To run Hadoop on Mesos, follow these steps:
-<ol>
-<li> Build Hadoop using <code>ant</code>.</li>
-<li> Set up [[Hadoop's configuration|http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/]] as you would usually do with a new install of Hadoop, following the [[instructions on the Hadoop website|http://hadoop.apache.org/common/docs/r0.20.2/index.html]] (at the very least, you need to set <code>JAVA_HOME</code> in Hadoop's <code>conf/hadoop-env.sh</code> and set <code>mapred.job.tracker</code> in <code>conf/mapred-site.xml</code>).</li>
+
+1. Setting up the environment:  
+    - Create/Edit ~/.bashrc file.  
+    - `` ~$  vi ~/.bashrc ``  
+    add the following:  
+    ```
+    # Set Hadoop-related environment variables
+    export HADOOP_HOME=/usr/local/hadoop
+    ```
+    - `` ~$  echo $JAVA_HOME ``  
+    You should see this:  
+    ``/usr/lib/jvm/java-6-sun``
+
+
+ (at the very least, you need to set <code>JAVA_HOME</code> in Hadoop's <code>conf/hadoop-env.sh</code> and set <code>mapred.job.tracker</code> in <code>conf/mapred-site.xml</code>).</li>
 </li>
 <li> Add the following parameters to Hadoop's <code>conf/mapred-site.xml</code>:
 <pre>

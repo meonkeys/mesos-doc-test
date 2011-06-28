@@ -156,10 +156,20 @@ To run Hadoop on Mesos, follow these steps:
     # Set where you installed the mesos directory. For me is /home/billz/mesos.  
     export MESOS_HOME=/home/hadoop/mesos
 ```
-    - `` ~$  echo $JAVA_HOME ``  
-    You should see this:  
-    ``/usr/lib/jvm/java-6-sun``
+    - Go to hadoop directory that come with mesos's directory:  
+    - `cd ~/mesos/frameworks/hadoop-0.20.2/conf`  
+    - Edit hadoop-env.sh file.  
+    add the following:  
+```
+# The java implementation to use.  Required.
+export JAVA_HOME=/usr/lib/jvm/java-6-sun
 
+# The mesos use this.
+export MESOS_HOME=/home/hadoop/mesos
+
+# Extra Java runtime options.  Empty by default. This disable IPv6
+export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
+```
 
  (at the very least, you need to set <code>JAVA_HOME</code> in Hadoop's <code>conf/hadoop-env.sh</code> and set <code>mapred.job.tracker</code> in <code>conf/mapred-site.xml</code>).</li>
 </li>

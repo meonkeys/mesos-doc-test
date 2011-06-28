@@ -146,7 +146,7 @@ To run Hadoop on Mesos, follow these steps:
     - Create/Edit ~/.bashrc file.  
     - `` ~$  vi ~/.bashrc ``  
     add the following:  
-    ```
+```
     # Set Hadoop-related environment variables  
     export HADOOP_HOME=/usr/local/hadoop  
 
@@ -155,7 +155,7 @@ To run Hadoop on Mesos, follow these steps:
 
     # Set where you installed the mesos directory. For me is /home/billz/mesos.  
     export MESOS_HOME=/home/hadoop/mesos
-    ```
+```
     - `` ~$  echo $JAVA_HOME ``  
     You should see this:  
     ``/usr/lib/jvm/java-6-sun``

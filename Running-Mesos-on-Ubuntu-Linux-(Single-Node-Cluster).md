@@ -1,5 +1,5 @@
 ## Running Mesos On Ubuntu Linux (Single Node Cluster)
-This is step-by-step guide on setting up Mesos on a single node, and running hadoop on top of Mesos. Here we are assuming Ubuntu 10.04 LTS - Long-term support 64-bit (Lucid Lynx).
+This is step-by-step guide on setting up Mesos on a single node, and running hadoop on top of Mesos. Here we are assuming Ubuntu 10.04 LTS - Long-term support 64-bit (Lucid Lynx).  Plus, we are using username "hadoop" for this guide.
 
 ## Prerequisites:
 * Java
@@ -153,7 +153,7 @@ To run Hadoop on Mesos, follow these steps:
     # Add Hadoop bin/ directory to PATH  
     export PATH=$PATH:$HADOOP_HOME/bin  
 
-    # Set where you installed the mesos directory. For me is /home/billz/mesos.  
+    # Set where you installed the mesos directory. For me is /home/hadoop/mesos. hadoop is my username.  
     export MESOS_HOME=/home/hadoop/mesos
 ```
     - Go to hadoop directory that come with mesos's directory:  

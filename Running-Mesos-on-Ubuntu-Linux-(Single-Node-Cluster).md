@@ -6,7 +6,7 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     For Ubuntu 10.04 LTS (Lucid Lynx):  
     - Go to Applications > Accessories > Terminal.
     - Create/Edit ~/.bashrc file.  
-    - `` ~$  vi ~/.bashrc ``  
+    `` ~$  vi ~/.bashrc ``  
     add the following:  
     ``export JAVA_HOME=/usr/lib/jvm/java-6-sun``
     - `` ~$  echo $JAVA_HOME ``  
@@ -144,7 +144,7 @@ To run Hadoop on Mesos, follow these steps:
 
 1. Setting up the environment:  
     - Create/Edit ~/.bashrc file.  
-    - `` ~$  vi ~/.bashrc ``  
+    `` ~$  vi ~/.bashrc ``  
     add the following:  
 ```
     # Set Hadoop-related environment variables  

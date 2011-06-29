@@ -157,7 +157,7 @@ To run Hadoop on Mesos, follow these steps:
     export MESOS_HOME=/home/hadoop/mesos
 ```
     - Go to hadoop directory that come with mesos's directory:  
-    - `cd ~/mesos/frameworks/hadoop-0.20.2/conf`  
+    `cd ~/mesos/frameworks/hadoop-0.20.2/conf`  
     - Edit hadoop-env.sh file.  
     add the following:  
 ```
@@ -224,7 +224,16 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
   <value>mesos://master@10.1.1.1:5050</value> <!-- Here we are assuming your host IP address is 10.1.1.1 -->
 </property>
 
-```
+```  
+  
+3. Build the Hadoop-0.20.2 that come with Mesos
+    - Start a new bash shell or reboot the host:  
+    `sudo shutdown -r now`  
+    - Login as "hadoop" or any user that you start with this guide
+    - Go to hadoop-0.20.2 directory:  
+    ` ~$ cd ~/mesos/frameworks/hadoop-0.20.2`  
+    - Build Hadoop:  
+    ` ~$ ant `  
 
 </li>
 <li> Launch a JobTracker with <code>bin/hadoop jobtracker</code> (<i>do not</i> use <code>bin/start-mapred.sh</code>). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>

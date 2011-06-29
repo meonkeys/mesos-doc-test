@@ -224,7 +224,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
   <value>mesos://master@10.1.1.1:5050</value> <!-- Here we are assuming your host IP address is 10.1.1.1 -->
 </property>
 
-```  
+```
   
 3. Build the Hadoop-0.20.2 that come with Mesos
     - Start a new bash shell or reboot the host:  

@@ -140,6 +140,8 @@ We have ported version 0.20.2 of Hadoop to run on Mesos. Most of the Mesos port 
 
 The ported version of Hadoop is included in the Mesos project under `frameworks/hadoop-0.20.2`. However, if you want to patch your own version of Hadoop to add Mesos support, you can also use the patch located at `frameworks/hadoop-0.20.2/hadoop-mesos.patch`. This patch should apply on any 0.20.* version of Hadoop, and is also likely to work on Hadoop distributions derived from 0.20, such as Cloudera's or Yahoo!'s.
 
+Most of the Hadoop setup is derived from [Michael G. Noll' guide](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
+
 To run Hadoop on Mesos, follow these steps:
 
 1. Setting up the environment:  

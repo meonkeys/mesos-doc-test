@@ -228,7 +228,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
   
 3. Build the Hadoop-0.20.2 that come with Mesos
     - Start a new bash shell or reboot the host:  
-    `sudo shutdown -r now`  
+    ` ~$ sudo shutdown -r now`  
     - Login as "hadoop" or any user that you start with this guide
     - Go to hadoop-0.20.2 directory:  
     ` ~$ cd ~/mesos/frameworks/hadoop-0.20.2`  

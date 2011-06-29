@@ -237,6 +237,18 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
     - Build Hadoop:  
     ` ~$ ant `  
 
+4. Setup Hadoop’s Distributed File System **HDFS**:  
+    - create the directory and set the required ownerships and permissions: 
+```
+$ sudo mkdir /app/hadoop/tmp
+$ sudo chown hadoop:hadoop /app/hadoop/tmp
+# ...and if you want to tighten up security, chmod from 755 to 750...
+$ sudo chmod 750 /app/hadoop/tmp
+```
+    - formatting the Hadoop filesystem:  
+    `~/mesos/frameworks/hadoop-0.20.2$  bin/hadoop namenode -format`
+    
+
 </li>
 <li> Launch a JobTracker with <code>bin/hadoop jobtracker</code> (<i>do not</i> use <code>bin/start-mapred.sh</code>). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
 <li> Submit jobs to your JobTracker as usual.</li>

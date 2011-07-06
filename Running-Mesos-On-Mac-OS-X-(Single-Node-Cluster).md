@@ -230,7 +230,9 @@ $ sudo chmod 750 /app/hadoop/tmp
 
     
 5. Web UI for Hadoop
-- web UI for MapReduce job tracker(s): [http://localhost:50030](http://localhost:50030)
+    - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  
+    - web UI for task tracker(s): 
+    - web UI for HDFS name node(s)
 
 
 </li>

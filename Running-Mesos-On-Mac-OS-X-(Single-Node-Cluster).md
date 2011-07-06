@@ -227,7 +227,11 @@ $ sudo chmod 750 /app/hadoop/tmp
 ```
     - formatting the Hadoop filesystem:  
     `~/mesos/frameworks/hadoop-0.20.2$  bin/hadoop namenode -format`
+
     
+5. Web UI for Hadoop
+- web UI for MapReduce job tracker(s): [http://localhost:50030](http://localhost:50030)
+
 
 </li>
 <li> Launch a JobTracker with <code>bin/hadoop jobtracker</code> (<i>do not</i> use <code>bin/start-mapred.sh</code>). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>

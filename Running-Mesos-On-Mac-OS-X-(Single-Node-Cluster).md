@@ -114,7 +114,131 @@ Task 4 is in state 1
 Task 4 is in state 2
 ```
 
-## Running Hadoop on Mesos  [Running Hadoop on Mesos](https://github.com/mesos/mesos/wiki/Running-Hadoop-on-Mesos)
+## Running Hadoop on Mesos [old link](https://github.com/mesos/mesos/wiki/Running-Hadoop-on-Mesos)  
+
+We have ported version 0.20.2 of Hadoop to run on Mesos. Most of the Mesos port is implemented by a pluggable Hadoop scheduler, which communicates with Mesos to receive nodes to launch tasks on. However, a few small additions to Hadoop's internal APIs are also required.
+
+The ported version of Hadoop is included in the Mesos project under `frameworks/hadoop-0.20.2`. However, if you want to patch your own version of Hadoop to add Mesos support, you can also use the patch located at `frameworks/hadoop-0.20.2/hadoop-mesos.patch`. This patch should apply on any 0.20.* version of Hadoop, and is also likely to work on Hadoop distributions derived from 0.20, such as Cloudera's or Yahoo!'s.
+
+Most of the Hadoop setup is derived from [Michael G. Noll' guide](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
+
+To run Hadoop on Mesos, follow these steps:
+
+1. Setting up the environment:  
+    - Create/Edit ~/.bashrc file.  
+    `` ~$  vi ~/.bashrc ``  
+    add the following:  
+```
+    # Set Hadoop-related environment variables. Here the username is billz
+    export HADOOP_HOME=/Users/billz/mesos/frameworks/hadoop-0.20.2/  
+
+    # Add Hadoop bin/ directory to PATH  
+    export PATH=$PATH:$HADOOP_HOME/bin  
+
+    # Set where you installed the mesos. For me is /Users/billz/mesos. billz is my username.  
+    export MESOS_HOME=/Users/billz/mesos/
+```
+    - Go to hadoop directory that come with mesos's directory:  
+    `cd ~/mesos/frameworks/hadoop-0.20.2/conf`  
+    - Edit **hadoop-env.sh** file.  
+    add the following:  
+```
+# The java implementation to use.  Required.
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+
+# The mesos use this.
+export MESOS_HOME=/Users/billz/mesos/
+
+# Extra Java runtime options.  Empty by default. This disable IPv6.
+export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
+```
+
+2. Hadoop configuration:  
+    - In **core-site.xml** file add the following:  
+```
+<!-- In: conf/core-site.xml -->
+<property>
+  <name>hadoop.tmp.dir</name>
+  <value>/app/hadoop/tmp</value>
+  <description>A base for other temporary directories.</description>
+</property>
+
+<property>
+  <name>fs.default.name</name>
+  <value>hdfs://localhost:54310</value>
+  <description>The name of the default file system.  A URI whose
+  scheme and authority determine the FileSystem implementation.  The
+  uri's scheme determines the config property (fs.SCHEME.impl) naming
+  the FileSystem implementation class.  The uri's authority is used to
+  determine the host, port, etc. for a filesystem.</description>
+</property>
+```
+    - In **hdfs-site.xml** file add the following:  
+```
+<!-- In: conf/hdfs-site.xml -->
+<property>
+  <name>dfs.replication</name>
+  <value>1</value>
+  <description>Default block replication.
+  The actual number of replications can be specified when the file is created.
+  The default is used if replication is not specified in create time.
+  </description>
+</property>
+```
+    - In **mapred-site.xml** file add the following:  
+```
+<!-- In: conf/mapred-site.xml -->
+<property>
+  <name>mapred.job.tracker</name>
+  <value>localhost:9001</value>
+  <description>The host and port that the MapReduce job tracker runs
+  at.  If "local", then jobs are run in-process as a single map
+  and reduce task.
+  </description>
+</property>
+
+<property>
+  <name>mapred.jobtracker.taskScheduler</name>
+  <value>org.apache.hadoop.mapred.MesosScheduler</value>
+</property>
+<property>
+  <name>mapred.mesos.master</name>
+  <value>mesos://master@10.1.1.1:5050</value> <!-- Here we are assuming your host IP address is 10.1.1.1 -->
+</property>
+
+```
+  
+3. Build the Hadoop-0.20.2 that come with Mesos
+    - Start a new bash shell or reboot the host:  
+    ` ~$ reboot`  
+    - Login as "billz" or any user that you start with this guide
+    - Go to hadoop-0.20.2 directory:  
+    ` ~$ cd ~/mesos/frameworks/hadoop-0.20.2`  
+    - Build Hadoop:  
+    ` ~$ ant `  
+
+4. Setup Hadoop’s Distributed File System **HDFS**:  
+    - create the directory and set the required ownerships and permissions: 
+```
+$ sudo mkdir /app/hadoop/tmp
+$ sudo chown billz:billz /app/hadoop/tmp
+# ...and if you want to tighten up security, chmod from 755 to 750...
+$ sudo chmod 750 /app/hadoop/tmp
+```
+    - formatting the Hadoop filesystem:  
+    `~/mesos/frameworks/hadoop-0.20.2$  bin/hadoop namenode -format`
+    
+
+</li>
+<li> Launch a JobTracker with <code>bin/hadoop jobtracker</code> (<i>do not</i> use <code>bin/start-mapred.sh</code>). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
+<li> Submit jobs to your JobTracker as usual.</li>
+</ol>
+
+
+
+
+
+
 
 ## Need more help?   
 * [Use our mailing lists](http://incubator.apache.org/projects/mesos.html)

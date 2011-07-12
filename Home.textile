@@ -28,8 +28,8 @@ h4. What you'll find on this page</u></b>
 
 
 h1. Step-by-Step Guide of Running Mesos
-* [[Running Mesos On Mac OS X (Single Node Cluster)]]
-* [[Running Mesos On Ubuntu Linux (Single Node Cluster)]]
+h4. * [[Running Mesos On Mac OS X (Single Node Cluster)]]
+h4. * [[Running Mesos On Ubuntu Linux (Single Node Cluster)]]
 
 h1. System Requirements
 

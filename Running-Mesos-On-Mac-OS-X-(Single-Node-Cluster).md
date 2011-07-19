@@ -216,6 +216,9 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
     ` ~$ cd ~/mesos/frameworks/hadoop-0.20.2`  
     - Build Hadoop:  
     ` ~$ ant `  
+    - Build the Hadoop's Jar files:
+    ` ~$ ant compile-core jar`  
+    ` ~$ ant compile-examples jar`
 
 4. Setup Hadoop’s Distributed File System **HDFS**:  
     - create the directory and set the required ownerships and permissions: 
@@ -251,7 +254,14 @@ Found 6 items
 
 ```
 
-6. Web UI for Hadoop
+6. Run the MapReduce job:  
+We will now run your first Hadoop MapReduce job. We will use the [WordCount](http://wiki.apache.org/hadoop/WordCount) example job which reads text files and counts how often words occur. The input is text files and the output is text files, each line of which contains a word and the count of how often it occurred, separated by a tab.  
+
+    - Run the wordcount example MapReduce job:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/billz/g /user/billz/g-out`  
+
+
+7. Web UI for Hadoop
     - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  
     - [http://localhost:50060](http://localhost:50060) - web UI for task tracker(s)  
     - [http://localhost:50070](http://localhost:50070) - web UI for HDFS name node(s)  

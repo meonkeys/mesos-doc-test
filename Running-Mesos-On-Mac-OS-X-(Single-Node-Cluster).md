@@ -229,10 +229,15 @@ $ sudo chmod 750 /app/hadoop/tmp
     `~/mesos/frameworks/hadoop-0.20.2$  bin/hadoop namenode -format`
 
 5. Copy local example data to HDFS  
-    - Download some plain text document from Project Gutenberg
-    [The Notebooks of Leonardo Da Vinci](http://www.gutenberg.org/ebooks/5000)
+    - Download some plain text document from Project Gutenberg  
+    [The Notebooks of Leonardo Da Vinci](http://www.gutenberg.org/ebooks/5000)  
+    save it to /tmp/gutenberg directory.  
+    - Copy files from our local file system to Hadoop’s HDFS  
+    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -copyFromLocal /tmp/gutenberg /user/billz/gutenberg`  
+    - Check the file(s) in Hadoop's HDFS  
+    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/billz/gutenberg`       
 
-    
+
 6. Web UI for Hadoop
     - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  
     - [http://localhost:50060](http://localhost:50060) - web UI for task tracker(s)  

@@ -231,12 +231,25 @@ $ sudo chmod 750 /app/hadoop/tmp
 5. Copy local example data to HDFS  
     - Download some plain text document from Project Gutenberg  
     [The Notebooks of Leonardo Da Vinci](http://www.gutenberg.org/ebooks/5000)  
-    save it to /tmp/gutenberg directory.  
+    [Ulysses by James Joyce](http://www.gutenberg.org/ebooks/4300)  
+    [The Complete Works of William Shakespeare](http://www.gutenberg.org/ebooks/100)  
+    save these to /tmp/gutenberg/ directory.  
     - Copy files from our local file system to Hadoop’s HDFS  
     `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -copyFromLocal /tmp/gutenberg /user/billz/gutenberg`  
     - Check the file(s) in Hadoop's HDFS  
     `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/billz/gutenberg`       
+    - You should see something like the following:
+```
+ ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/billz/gutenberg
+Found 6 items
+-rw-r--r--   1 billz supergroup    5582656 2011-07-14 16:38 /user/billz/g/pg100.txt
+-rw-r--r--   1 billz supergroup    3322643 2011-07-14 16:38 /user/billz/g/pg135.txt
+-rw-r--r--   1 billz supergroup    1884720 2011-07-14 16:38 /user/billz/g/pg14833.txt
+-rw-r--r--   1 billz supergroup    2130906 2011-07-14 16:38 /user/billz/g/pg18997.txt
+-rw-r--r--   1 billz supergroup    3288707 2011-07-14 16:38 /user/billz/g/pg2600.txt
+-rw-r--r--   1 billz supergroup    1423801 2011-07-14 16:38 /user/billz/g/pg5000.txt
 
+```
 
 6. Web UI for Hadoop
     - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  

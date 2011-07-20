@@ -323,7 +323,7 @@ Found 2 items
 drwxr-xr-x   - billz supergroup          0 2011-07-14 16:38 /user/billz/gutenberg
 drwxr-xr-x   - billz supergroup          0 2011-07-19 15:35 /user/billz/output
 ```
-   - View the output file:
+   - View the output file:  
 ```
 ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -cat /user/billz/output/part-r-00000
 "       268
@@ -342,7 +342,7 @@ drwxr-xr-x   - billz supergroup          0 2011-07-19 15:35 /user/billz/output
 "'Belle-Isle    1
 
 [ ... trimmed ... ]
-```
+```  
 
 
 

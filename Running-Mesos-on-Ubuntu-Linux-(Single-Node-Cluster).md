@@ -236,6 +236,9 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
     ` ~$ cd ~/mesos/frameworks/hadoop-0.20.2`  
     - Build Hadoop:  
     ` ~$ ant `  
+    - Build the Hadoop's Jar files:  
+    ` ~$ ant compile-core jar`   
+    ` ~$ ant compile-examples jar`  
 
 4. Setup Hadoop’s Distributed File System **HDFS**:  
     - create the directory and set the required ownerships and permissions: 
@@ -249,15 +252,70 @@ $ sudo chmod 750 /app/hadoop/tmp
     `~/mesos/frameworks/hadoop-0.20.2$  bin/hadoop namenode -format`
     
 
-</li>
-<li> Launch a JobTracker with <code>bin/hadoop jobtracker</code> (<i>do not</i> use <code>bin/start-mapred.sh</code>). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
-<li> Submit jobs to your JobTracker as usual.</li>
-</ol>
+5. Copy local example data to HDFS  
+    - Download some plain text document from Project Gutenberg  
+    [The Notebooks of Leonardo Da Vinci](http://www.gutenberg.org/ebooks/5000)  
+    [Ulysses by James Joyce](http://www.gutenberg.org/ebooks/4300)  
+    [The Complete Works of William Shakespeare](http://www.gutenberg.org/ebooks/100)  
+    save these to /tmp/gutenberg/ directory.  
+    - Copy files from our local file system to Hadoop’s HDFS  
+    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -copyFromLocal /tmp/gutenberg /user/hadoop/gutenberg`  
+    - Check the file(s) in Hadoop's HDFS  
+    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/hadoop/gutenberg`       
+    - You should see something like the following:
+```
+ ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/hadoop/gutenberg
+Found 6 items
+-rw-r--r--   1 hadoop supergroup    5582656 2011-07-14 16:38 /user/hadoop/gutenberg/pg100.txt
+-rw-r--r--   1 hadoop supergroup    3322643 2011-07-14 16:38 /user/hadoop/gutenberg/pg135.txt
+-rw-r--r--   1 hadoop supergroup    1423801 2011-07-14 16:38 /user/hadoop/gutenberg/pg5000.txt 
+```
 
+6. Start all your frameworks!
+    - Start Mesos's Master:      
+    ` ~/mesos$ bin/mesos-master &`  
+    - Start Mesos's Slave:       
+    ` ~/mesos$ bin/mesos-slave --url=mesos://master@localhost:5050 &`  
+    - Start Hadoop's namenode:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode &`  
+    - Start Hadoop's datanode:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop datanode &`  
+    - Start Hadoop's jobtracker:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker &`  
 
+7. Run the MapReduce job:  
+   We will now run your first Hadoop MapReduce job. We will use the [WordCount](http://wiki.apache.org/hadoop/WordCount) example job which reads text files and counts how often words occur. The input is text files and the output is text files, each line of which contains a word and the count of how often it occurred, separated by a tab.  
 
+    - Run the "wordcount" example MapReduce job:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/hadoop/gutenberg /user/hadoop/output`  
+    - You will see something like the following:  
+```
+11/07/19 15:34:29 INFO input.FileInputFormat: Total input paths to process : 6
+11/07/19 15:34:29 INFO mapred.JobClient: Running job: job_201107191533_0001
+11/07/19 15:34:30 INFO mapred.JobClient:  map 0% reduce 0%
+11/07/19 15:34:43 INFO mapred.JobClient:  map 16% reduce 0%
 
+[ ... trimmed ... ]
+```
 
+8. Web UI for Hadoop and Mesos:   
+    - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  
+    - [http://localhost:50060](http://localhost:50060) - web UI for task tracker(s)  
+    - [http://localhost:50070](http://localhost:50070) - web UI for HDFS name node(s)  
+    - [http://localhost:8080](http://localhost:8080) - web UI for Mesos master  
+
+9. Retrieve the job result from HDFS:
+   - list the HDFS directory:
+```
+~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/billz/gutenberg
+Found 2 items
+drwxr-xr-x   - hadoop supergroup          0 2011-07-14 16:38 /user/hadoop/gutenberg
+drwxr-xr-x   - hadoop supergroup          0 2011-07-19 15:35 /user/hadoop/output
+```
+   - View the output file:  
+    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -cat /user/hadoop/output/part-r-00000`
+
+### Congratulation! You have Hadoop running on mesos, and mesos running on your Ubuntu Linux!
 
 
 ## Need more help?   

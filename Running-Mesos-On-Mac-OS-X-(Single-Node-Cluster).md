@@ -277,6 +277,8 @@ Found 6 items
 11/07/19 15:34:29 INFO mapred.JobClient: Running job: job_201107191533_0001
 11/07/19 15:34:30 INFO mapred.JobClient:  map 0% reduce 0%
 11/07/19 15:34:43 INFO mapred.JobClient:  map 16% reduce 0%
+
+[ ... trimmed ... ]
 ```
 
 8. Web UI for Hadoop and Mesos:   

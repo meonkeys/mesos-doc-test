@@ -308,7 +308,7 @@ Found 6 items
 11/07/19 15:35:30 INFO mapred.JobClient:     Reduce input records=272198
 ```  
 
-8. Web UI for Hadoop and Mesos:
+8. Web UI for Hadoop and Mesos:  
     - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  
     - [http://localhost:50060](http://localhost:50060) - web UI for task tracker(s)  
     - [http://localhost:50070](http://localhost:50070) - web UI for HDFS name node(s)  

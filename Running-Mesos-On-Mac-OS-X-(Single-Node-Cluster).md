@@ -216,7 +216,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
     ` ~$ cd ~/mesos/frameworks/hadoop-0.20.2`  
     - Build Hadoop:  
     ` ~$ ant `  
-    - Build the Hadoop's Jar files:
+    - Build the Hadoop's Jar files:  
     ` ~$ ant compile-core jar`  
     ` ~$ ant compile-examples jar`
 

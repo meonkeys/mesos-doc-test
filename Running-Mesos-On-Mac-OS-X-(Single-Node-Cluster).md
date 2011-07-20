@@ -272,7 +272,7 @@ Found 6 items
     - Run the "wordcount" example MapReduce job:  
     ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/billz/gutenberg /user/billz/output`  
     - You will see something like the following:  
-```
+```  
 11/07/19 15:34:29 INFO input.FileInputFormat: Total input paths to process : 6
 11/07/19 15:34:29 INFO mapred.JobClient: Running job: job_201107191533_0001
 11/07/19 15:34:30 INFO mapred.JobClient:  map 0% reduce 0%
@@ -306,9 +306,9 @@ Found 6 items
 11/07/19 15:35:30 INFO mapred.JobClient:     Combine input records=3232036
 11/07/19 15:35:30 INFO mapred.JobClient:     Map output records=2982256
 11/07/19 15:35:30 INFO mapred.JobClient:     Reduce input records=272198
-```  
+```    
 
-8. Web UI for Hadoop and Mesos:  
+8. Web UI for Hadoop and Mesos:   
     - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  
     - [http://localhost:50060](http://localhost:50060) - web UI for task tracker(s)  
     - [http://localhost:50070](http://localhost:50070) - web UI for HDFS name node(s)  

@@ -295,10 +295,8 @@ drwxr-xr-x   - billz supergroup          0 2011-07-14 16:38 /user/billz/gutenber
 drwxr-xr-x   - billz supergroup          0 2011-07-19 15:35 /user/billz/output
 ```
    - View the output file:  
-```
-~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -cat /user/billz/output/part-r-00000
+    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -cat /user/billz/output/part-r-00000`
 
-```  
 
 
 

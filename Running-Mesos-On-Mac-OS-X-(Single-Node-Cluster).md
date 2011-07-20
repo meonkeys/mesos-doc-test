@@ -272,41 +272,12 @@ Found 6 items
     - Run the "wordcount" example MapReduce job:  
     ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/billz/gutenberg /user/billz/output`  
     - You will see something like the following:  
-<code>
+```
 11/07/19 15:34:29 INFO input.FileInputFormat: Total input paths to process : 6
 11/07/19 15:34:29 INFO mapred.JobClient: Running job: job_201107191533_0001
 11/07/19 15:34:30 INFO mapred.JobClient:  map 0% reduce 0%
 11/07/19 15:34:43 INFO mapred.JobClient:  map 16% reduce 0%
-11/07/19 15:34:49 INFO mapred.JobClient:  map 33% reduce 0%
-11/07/19 15:34:55 INFO mapred.JobClient:  map 50% reduce 0%
-11/07/19 15:35:01 INFO mapred.JobClient:  map 66% reduce 0%
-11/07/19 15:35:07 INFO mapred.JobClient:  map 83% reduce 0%
-11/07/19 15:35:13 INFO mapred.JobClient:  map 100% reduce 0%
-11/07/19 15:35:22 INFO mapred.JobClient:  map 100% reduce 33%
-11/07/19 15:35:28 INFO mapred.JobClient:  map 100% reduce 100%
-11/07/19 15:35:30 INFO mapred.JobClient: Job complete: job_201107191533_0001
-11/07/19 15:35:30 INFO mapred.JobClient: Counters: 17
-11/07/19 15:35:30 INFO mapred.JobClient:   Job Counters 
-11/07/19 15:35:30 INFO mapred.JobClient:     Launched reduce tasks=1
-11/07/19 15:35:30 INFO mapred.JobClient:     Launched map tasks=6
-11/07/19 15:35:30 INFO mapred.JobClient:     Data-local map tasks=6
-11/07/19 15:35:30 INFO mapred.JobClient:   FileSystemCounters
-11/07/19 15:35:30 INFO mapred.JobClient:     FILE_BYTES_READ=8728012
-11/07/19 15:35:30 INFO mapred.JobClient:     HDFS_BYTES_READ=17633433
-11/07/19 15:35:30 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=12731585
-11/07/19 15:35:30 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=1811544
-11/07/19 15:35:30 INFO mapred.JobClient:   Map-Reduce Framework
-11/07/19 15:35:30 INFO mapred.JobClient:     Reduce input groups=160151
-11/07/19 15:35:30 INFO mapred.JobClient:     Combine output records=521978
-11/07/19 15:35:30 INFO mapred.JobClient:     Map input records=382211
-11/07/19 15:35:30 INFO mapred.JobClient:     Reduce shuffle bytes=4003381
-11/07/19 15:35:30 INFO mapred.JobClient:     Reduce output records=160151
-11/07/19 15:35:30 INFO mapred.JobClient:     Spilled Records=870282
-11/07/19 15:35:30 INFO mapred.JobClient:     Map output bytes=28576095
-11/07/19 15:35:30 INFO mapred.JobClient:     Combine input records=3232036
-11/07/19 15:35:30 INFO mapred.JobClient:     Map output records=2982256
-11/07/19 15:35:30 INFO mapred.JobClient:     Reduce input records=272198
-</code>  
+```
 
 8. Web UI for Hadoop and Mesos:   
     - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  
@@ -326,22 +297,7 @@ drwxr-xr-x   - billz supergroup          0 2011-07-19 15:35 /user/billz/output
    - View the output file:  
 ```
 ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -cat /user/billz/output/part-r-00000
-"       268
-"'A     2
-"'Adieu;'       1
-"'Ah!   1
-"'Ah!'  2
-"'Ah,   1
-"'An    2
-"'And   3
-"'And,  1
-"'Another,      1
-"'Ask   1
-"'Ay,   3
-"'Beautiful     1
-"'Belle-Isle    1
 
-[ ... trimmed ... ]
 ```  
 
 

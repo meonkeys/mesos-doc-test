@@ -299,7 +299,7 @@ drwxr-xr-x   - billz supergroup          0 2011-07-19 15:35 /user/billz/output
    - View the output file:  
     `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -cat /user/billz/output/part-r-00000`
 
-### Congratulation! You have Hadoop running on mesos and mesos running on your Mac OS X!
+### Congratulation! You have Hadoop running on mesos, and mesos running on your Mac OS X!
 
 
 ## Need more help?   

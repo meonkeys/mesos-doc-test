@@ -260,33 +260,89 @@ Found 6 items
     - Start Mesos's Slave:       
     ` ~/mesos$ bin/mesos-slave --url=mesos://master@localhost:5050 &`  
     - Start Hadoop's namenode:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode &`  
     - Start Hadoop's datanode:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop datanode`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop datanode &`  
     - Start Hadoop's jobtracker:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker &`  
 
 7. Run the MapReduce job:  
    We will now run your first Hadoop MapReduce job. We will use the [WordCount](http://wiki.apache.org/hadoop/WordCount) example job which reads text files and counts how often words occur. The input is text files and the output is text files, each line of which contains a word and the count of how often it occurred, separated by a tab.  
 
-    - Run the wordcount example MapReduce job:  
+    - Run the "wordcount" example MapReduce job:  
     ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/billz/gutenberg /user/billz/output`  
+    - You will see something like the following:  
+```
+11/07/19 15:34:29 INFO input.FileInputFormat: Total input paths to process : 6
+11/07/19 15:34:29 INFO mapred.JobClient: Running job: job_201107191533_0001
+11/07/19 15:34:30 INFO mapred.JobClient:  map 0% reduce 0%
+11/07/19 15:34:43 INFO mapred.JobClient:  map 16% reduce 0%
+11/07/19 15:34:49 INFO mapred.JobClient:  map 33% reduce 0%
+11/07/19 15:34:55 INFO mapred.JobClient:  map 50% reduce 0%
+11/07/19 15:35:01 INFO mapred.JobClient:  map 66% reduce 0%
+11/07/19 15:35:07 INFO mapred.JobClient:  map 83% reduce 0%
+11/07/19 15:35:13 INFO mapred.JobClient:  map 100% reduce 0%
+11/07/19 15:35:22 INFO mapred.JobClient:  map 100% reduce 33%
+11/07/19 15:35:28 INFO mapred.JobClient:  map 100% reduce 100%
+11/07/19 15:35:30 INFO mapred.JobClient: Job complete: job_201107191533_0001
+11/07/19 15:35:30 INFO mapred.JobClient: Counters: 17
+11/07/19 15:35:30 INFO mapred.JobClient:   Job Counters 
+11/07/19 15:35:30 INFO mapred.JobClient:     Launched reduce tasks=1
+11/07/19 15:35:30 INFO mapred.JobClient:     Launched map tasks=6
+11/07/19 15:35:30 INFO mapred.JobClient:     Data-local map tasks=6
+11/07/19 15:35:30 INFO mapred.JobClient:   FileSystemCounters
+11/07/19 15:35:30 INFO mapred.JobClient:     FILE_BYTES_READ=8728012
+11/07/19 15:35:30 INFO mapred.JobClient:     HDFS_BYTES_READ=17633433
+11/07/19 15:35:30 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=12731585
+11/07/19 15:35:30 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=1811544
+11/07/19 15:35:30 INFO mapred.JobClient:   Map-Reduce Framework
+11/07/19 15:35:30 INFO mapred.JobClient:     Reduce input groups=160151
+11/07/19 15:35:30 INFO mapred.JobClient:     Combine output records=521978
+11/07/19 15:35:30 INFO mapred.JobClient:     Map input records=382211
+11/07/19 15:35:30 INFO mapred.JobClient:     Reduce shuffle bytes=4003381
+11/07/19 15:35:30 INFO mapred.JobClient:     Reduce output records=160151
+11/07/19 15:35:30 INFO mapred.JobClient:     Spilled Records=870282
+11/07/19 15:35:30 INFO mapred.JobClient:     Map output bytes=28576095
+11/07/19 15:35:30 INFO mapred.JobClient:     Combine input records=3232036
+11/07/19 15:35:30 INFO mapred.JobClient:     Map output records=2982256
+11/07/19 15:35:30 INFO mapred.JobClient:     Reduce input records=272198
+```  
 
-8. Web UI for Hadoop
+8. Web UI for Hadoop and Mesos:
     - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  
     - [http://localhost:50060](http://localhost:50060) - web UI for task tracker(s)  
     - [http://localhost:50070](http://localhost:50070) - web UI for HDFS name node(s)  
     - [http://localhost:8080](http://localhost:8080) - web UI for Mesos master  
 
 
-</li>
-<li> Launch a JobTracker with <code>bin/hadoop jobtracker</code> (<i>do not</i> use <code>bin/start-mapred.sh</code>). The JobTracker will then launch TaskTrackers on Mesos when jobs are submitted.</li>
-<li> Submit jobs to your JobTracker as usual.</li>
-</ol>
+9. Retrieve the job result from HDFS:
+   - list the HDFS directory:
+```
+~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/billz/gutenberg
+Found 2 items
+drwxr-xr-x   - billz supergroup          0 2011-07-14 16:38 /user/billz/gutenberg
+drwxr-xr-x   - billz supergroup          0 2011-07-19 15:35 /user/billz/output
+```
+   - View the output file:
+```
+~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -cat /user/billz/output/part-r-00000
+"       268
+"'A     2
+"'Adieu;'       1
+"'Ah!   1
+"'Ah!'  2
+"'Ah,   1
+"'An    2
+"'And   3
+"'And,  1
+"'Another,      1
+"'Ask   1
+"'Ay,   3
+"'Beautiful     1
+"'Belle-Isle    1
 
-
-
-
+[ ... trimmed ... ]
+```
 
 
 

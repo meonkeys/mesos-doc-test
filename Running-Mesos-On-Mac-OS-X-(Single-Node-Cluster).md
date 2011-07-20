@@ -245,23 +245,34 @@ $ sudo chmod 750 /app/hadoop/tmp
 ```
  ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/billz/gutenberg
 Found 6 items
--rw-r--r--   1 billz supergroup    5582656 2011-07-14 16:38 /user/billz/g/pg100.txt
--rw-r--r--   1 billz supergroup    3322643 2011-07-14 16:38 /user/billz/g/pg135.txt
--rw-r--r--   1 billz supergroup    1884720 2011-07-14 16:38 /user/billz/g/pg14833.txt
--rw-r--r--   1 billz supergroup    2130906 2011-07-14 16:38 /user/billz/g/pg18997.txt
--rw-r--r--   1 billz supergroup    3288707 2011-07-14 16:38 /user/billz/g/pg2600.txt
--rw-r--r--   1 billz supergroup    1423801 2011-07-14 16:38 /user/billz/g/pg5000.txt
+-rw-r--r--   1 billz supergroup    5582656 2011-07-14 16:38 /user/billz/gutenberg/pg100.txt
+-rw-r--r--   1 billz supergroup    3322643 2011-07-14 16:38 /user/billz/gutenberg/pg135.txt
+-rw-r--r--   1 billz supergroup    1884720 2011-07-14 16:38 /user/billz/gutenberg/pg14833.txt
+-rw-r--r--   1 billz supergroup    2130906 2011-07-14 16:38 /user/billz/gutenberg/pg18997.txt
+-rw-r--r--   1 billz supergroup    3288707 2011-07-14 16:38 /user/billz/gutenberg/pg2600.txt
+-rw-r--r--   1 billz supergroup    1423801 2011-07-14 16:38 /user/billz/gutenberg/pg5000.txt
 
 ```
 
-6. Run the MapReduce job:  
+6. Start all your frameworks!
+    - Start Mesos's Master:      
+    ` ~/mesos$ bin/mesos-master &`  
+    - Start Mesos's Slave:       
+    ` ~/mesos$ bin/mesos-slave --url=mesos://master@localhost:5050 &`  
+    - Start Hadoop's namenode:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode`  
+    - Start Hadoop's datanode:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop datanode`  
+    - Start Hadoop's jobtracker:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker`  
+
+7. Run the MapReduce job:  
    We will now run your first Hadoop MapReduce job. We will use the [WordCount](http://wiki.apache.org/hadoop/WordCount) example job which reads text files and counts how often words occur. The input is text files and the output is text files, each line of which contains a word and the count of how often it occurred, separated by a tab.  
 
     - Run the wordcount example MapReduce job:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/billz/g /user/billz/g-out`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/billz/gutenberg /user/billz/output`  
 
-
-7. Web UI for Hadoop
+8. Web UI for Hadoop
     - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  
     - [http://localhost:50060](http://localhost:50060) - web UI for task tracker(s)  
     - [http://localhost:50070](http://localhost:50070) - web UI for HDFS name node(s)  

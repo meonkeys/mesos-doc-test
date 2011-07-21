@@ -218,7 +218,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
     ` ~$ ant `  
     - Build the Hadoop's Jar files:  
     ` ~$ ant compile-core jar`  
-    ` ~$ ant compile-examples jar`
+    ` ~$ ant examples jar`
 
 4. Setup Hadoop’s Distributed File System **HDFS**:  
     - create the directory and set the required ownerships and permissions: 

@@ -1,5 +1,5 @@
 Please Follow these new steps:  
-  [[Running Mesos On Mac OS X (Single Node Cluster)]]  
+  [[Running Mesos On Mac OS X Snow Leopard (Single Node Cluster)]]  
   [[Running Mesos On Ubuntu Linux (Single Node Cluster)]]  
 
 We have ported version 0.20.2 of Hadoop to run on Mesos. Most of the Mesos port is implemented by a pluggable Hadoop scheduler, which communicates with Mesos to receive nodes to launch tasks on. However, a few small additions to Hadoop's internal APIs are also required.

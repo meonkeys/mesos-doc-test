@@ -28,7 +28,7 @@ h4. What you'll find on this page</u></b>
 
 h1. Step-by-Step Guide of Running Mesos
   [[Running Mesos On Mac OS X Snow Leopard (Single Node Cluster)]]
-  [[Running Mesos On Mac OS X Lion (Single Node Cluster) (Preview)]]
+  [[Running Mesos On Mac OS X Lion (Single Node Cluster)]]
   [[Running Mesos On Ubuntu Linux (Single Node Cluster)]]
 
 

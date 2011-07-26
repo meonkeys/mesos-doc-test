@@ -26,8 +26,6 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     - run `` ~$  sudo port upgrade outdated ``
     - run `` ~$  sudo port install swig swig-java swig-python``  
 
-* Hadoop [Hadoop setup](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
-
 ## Mesos setup:
 * Downloading Mesos:  
     `` ~$  git clone git://github.com/mesos/mesos ``  

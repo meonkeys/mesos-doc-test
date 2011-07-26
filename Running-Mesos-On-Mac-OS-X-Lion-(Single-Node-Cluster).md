@@ -56,6 +56,7 @@ make -C third_party/glog-0.3.1
 
 [ ... trimmed ... ]
 ```
+**Compilation doesn't work on Mac OS X Lion!!**
 
 ## Testing the Mesos
 * run ` ~/mesos$ bin/tests/all-tests `

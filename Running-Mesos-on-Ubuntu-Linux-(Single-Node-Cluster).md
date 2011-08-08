@@ -57,8 +57,8 @@ running python2.6 to find compiler flags for embedding it...
 checking for g++... g++
 checking for C++ compiler default output file name... a.out
 
-    [ ... trimmed ... ]
-```
+    [ ... trimmed ... ]  
+```  
     - run `` ~/mesos$  make ``
 ```
 make -C third_party/libprocess

@@ -22,7 +22,7 @@ Once you launch the VM, log in with the following account details:
 
 The **hadoop** account has *sudo* privileges in the VM.
 
-### Testing the Mesos  
+### 1. Testing the Mesos  
 * run ` ~/mesos$ bin/tests/all-tests `  
 
 ```
@@ -46,6 +46,33 @@ The **hadoop** account has *sudo* privileges in the VM.
 [  PASSED  ] 61 tests.   
   YOU HAVE 3 DISABLED TESTS    
 ``` 
+
+### 2. Start all your frameworks!
+    - Start Mesos's Master:      
+    ` ~/mesos$ bin/mesos-master &`  
+    - Start Mesos's Slave:       
+    ` ~/mesos$ bin/mesos-slave --url=mesos://master@localhost:5050 &`  
+    - Start Hadoop's namenode:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode &`  
+    - Start Hadoop's datanode:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop datanode &`  
+    - Start Hadoop's jobtracker:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker &`  
+
+### 3. Run the MapReduce job:  
+   We will now run your first Hadoop MapReduce job. We will use the [WordCount](http://wiki.apache.org/hadoop/WordCount) example job which reads text files and counts how often words occur. The input is text files and the output is text files, each line of which contains a word and the count of how often it occurred, separated by a tab.  
+
+    - Run the "wordcount" example MapReduce job:  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/hadoop/g  /user/hadoop/output`  
+    - You will see something like the following:  
+```
+11/07/19 15:34:29 INFO input.FileInputFormat: Total input paths to process : 6
+11/07/19 15:34:29 INFO mapred.JobClient: Running job: job_201107191533_0001
+11/07/19 15:34:30 INFO mapred.JobClient:  map 0% reduce 0%
+11/07/19 15:34:43 INFO mapred.JobClient:  map 16% reduce 0%
+
+[ ... trimmed ... ]
+```  
 
 Click the Firefox Web Browser on the Panel to view Mesos's documentation.
 The browser also provides the following bookmarks:   

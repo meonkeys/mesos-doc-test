@@ -24,7 +24,7 @@ The **hadoop** account has *sudo* privileges in the VM.
 
 ### Testing the Mesos  
 * run ` ~/mesos$ bin/tests/all-tests `  
-```  
+<code> 
 ~/mesos$ bin/tests/all-tests   
 [==========] Running 61 tests from 6 test cases.  
 [----------] Global test environment set-up.  
@@ -45,7 +45,7 @@ The **hadoop** account has *sudo* privileges in the VM.
 [  PASSED  ] 61 tests.   
   YOU HAVE 3 DISABLED TESTS    
   
-```  
+</code>  
 
 Click the Firefox Web Browser on the Panel to view Mesos's documentation.
 The browser also provides the following bookmarks:   

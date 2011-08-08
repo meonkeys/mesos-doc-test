@@ -46,16 +46,16 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     So, `--with-java-home` option set to whatever JAVA_HOME points to.
     - run `` ~$   ~/mesos$ ./configure.template.ubuntu-lucid-64``  
 ```  
-checking build system type... x86_64-unknown-linux-gnu
-checking host system type... x86_64-unknown-linux-gnu
-checking target system type... x86_64-unknown-linux-gnu
-===========================================================
-Setting up build environment for x86_64 linux-gnu
-===========================================================
-running python2.6 to find compiler flags for creating the Mesos Python library...
-running python2.6 to find compiler flags for embedding it...
-checking for g++... g++
-checking for C++ compiler default output file name... a.out
+   checking build system type... x86_64-unknown-linux-gnu
+   checking host system type... x86_64-unknown-linux-gnu
+    checking target system type... x86_64-unknown-linux-gnu
+    ===========================================================
+    Setting up build environment for x86_64 linux-gnu
+    ===========================================================
+    running python2.6 to find compiler flags for creating the Mesos Python library...
+    running python2.6 to find compiler flags for embedding it...
+    checking for g++... g++
+    checking for C++ compiler default output file name... a.out
 
     [ ... trimmed ... ]  
 ```  

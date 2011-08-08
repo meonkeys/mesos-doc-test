@@ -45,9 +45,9 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     ``--with-java-home=/usr/lib/jvm/java-6-sun``  
     So, `--with-java-home` option set to whatever JAVA_HOME points to.
     - run `` ~$   ~/mesos$ ./configure.template.ubuntu-lucid-64``  
-```  
-   checking build system type... x86_64-unknown-linux-gnu
-   checking host system type... x86_64-unknown-linux-gnu
+``  
+    checking build system type... x86_64-unknown-linux-gnu
+    checking host system type... x86_64-unknown-linux-gnu
     checking target system type... x86_64-unknown-linux-gnu
     ===========================================================
     Setting up build environment for x86_64 linux-gnu
@@ -58,7 +58,7 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     checking for C++ compiler default output file name... a.out
 
     [ ... trimmed ... ]  
-```  
+``    
     - run `` ~/mesos$  make ``
 ```
 make -C third_party/libprocess

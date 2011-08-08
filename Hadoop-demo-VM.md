@@ -48,16 +48,16 @@ The **hadoop** account has *sudo* privileges in the VM.
 ``` 
 
 ### 2. Start all your frameworks!
-    - Start Mesos's Master:      
-    ` ~/mesos$ bin/mesos-master &`  
-    - Start Mesos's Slave:       
-    ` ~/mesos$ bin/mesos-slave --url=mesos://master@localhost:5050 &`  
-    - Start Hadoop's namenode:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode &`  
-    - Start Hadoop's datanode:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop datanode &`  
-    - Start Hadoop's jobtracker:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker &`  
+* Start Mesos's Master:      
+` ~/mesos$ bin/mesos-master &`  
+* Start Mesos's Slave:       
+` ~/mesos$ bin/mesos-slave --url=mesos://master@localhost:5050 &`  
+* Start Hadoop's namenode:  
+` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode &`  
+* Start Hadoop's datanode:  
+` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop datanode &`  
+* Start Hadoop's jobtracker:  
+` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker &`
 
 ### 3. Run the MapReduce job:  
    We will now run your first Hadoop MapReduce job. We will use the [WordCount](http://wiki.apache.org/hadoop/WordCount) example job which reads text files and counts how often words occur. The input is text files and the output is text files, each line of which contains a word and the count of how often it occurred, separated by a tab.  

@@ -25,26 +25,26 @@ The **hadoop** account has *sudo* privileges in the VM.
 ### Testing the Mesos  
 * run ` ~/mesos$ bin/tests/all-tests `  
 ```  
-~/mesos$ bin/tests/all-tests 
-[==========] Running 61 tests from 6 test cases.
-[----------] Global test environment set-up.
-[----------] 18 tests from MasterTest
-[ RUN      ] MasterTest.ResourceOfferWithMultipleSlaves
-[       OK ] MasterTest.ResourceOfferWithMultipleSlaves (33 ms)
-[ RUN      ] MasterTest.ResourcesReofferedAfterReject
-[       OK ] MasterTest.ResourcesReofferedAfterReject (3 ms)
-
-[ ... trimmed ... ]
-
-[ RUN      ] MasterTest.MultipleExecutors
-[       OK ] MasterTest.MultipleExecutors (2 ms)
-[----------] 18 tests from MasterTest (38 ms total)
-
-[----------] Global test environment tear-down
-[==========] 61 tests from 6 test cases ran. (17633 ms total)
-[  PASSED  ] 61 tests. 
-  YOU HAVE 3 DISABLED TESTS  
-
+~/mesos$ bin/tests/all-tests   
+[==========] Running 61 tests from 6 test cases.  
+[----------] Global test environment set-up.  
+[----------] 18 tests from MasterTest  
+[ RUN      ] MasterTest.ResourceOfferWithMultipleSlaves  
+[       OK ] MasterTest.ResourceOfferWithMultipleSlaves (33 ms)  
+[ RUN      ] MasterTest.ResourcesReofferedAfterReject  
+[       OK ] MasterTest.ResourcesReofferedAfterReject (3 ms)  
+  
+[ ... trimmed ... ]  
+  
+[ RUN      ] MasterTest.MultipleExecutors  
+[       OK ] MasterTest.MultipleExecutors (2 ms)  
+[----------] 18 tests from MasterTest (38 ms total)  
+  
+[----------] Global test environment tear-down  
+[==========] 61 tests from 6 test cases ran. (17633 ms total)  
+[  PASSED  ] 61 tests.   
+  YOU HAVE 3 DISABLED TESTS    
+  
 ```  
 
 Click the Firefox Web Browser on the Panel to view Mesos's documentation.

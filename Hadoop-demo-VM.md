@@ -22,7 +22,9 @@ Once you launch the VM, log in with the following account details:
 
 The **hadoop** account has *sudo* privileges in the VM.
 
- Web UI for Hadoop and Mesos:   
+Click the Firefox Web Browser on the Panel to view Mesos's documentation.
+The browser also provides the following bookmarks:
+### Web UI for Hadoop and Mesos:   
     - [http://localhost:50030](http://localhost:50030) - web UI for MapReduce job tracker(s)  
     - [http://localhost:50060](http://localhost:50060) - web UI for task tracker(s)  
     - [http://localhost:50070](http://localhost:50070) - web UI for HDFS name node(s)  

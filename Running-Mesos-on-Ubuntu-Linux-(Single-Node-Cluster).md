@@ -163,6 +163,7 @@ To run Hadoop on Mesos, follow these steps:
     # Set where you installed the mesos. For me is /home/hadoop/mesos. hadoop is my username.  
     export MESOS_HOME=/home/hadoop/mesos
 ```
+
     - Go to hadoop directory that come with mesos's directory:  
     `cd ~/mesos/frameworks/hadoop-0.20.2/conf`  
     - Edit **hadoop-env.sh** file.  

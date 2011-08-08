@@ -62,9 +62,9 @@ The **hadoop** account has *sudo* privileges in the VM.
 ### 3. Run the MapReduce job:  
    We will now run your first Hadoop MapReduce job. We will use the [WordCount](http://wiki.apache.org/hadoop/WordCount) example job which reads text files and counts how often words occur. The input is text files and the output is text files, each line of which contains a word and the count of how often it occurred, separated by a tab.  
 
-    - Run the "wordcount" example MapReduce job:  
+* Run the "wordcount" example MapReduce job:  
     ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/hadoop/g  /user/hadoop/output`  
-    - You will see something like the following:  
+* You will see something like the following:  
 ```
 11/07/19 15:34:29 INFO input.FileInputFormat: Total input paths to process : 6
 11/07/19 15:34:29 INFO mapred.JobClient: Running job: job_201107191533_0001

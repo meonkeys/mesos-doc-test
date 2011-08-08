@@ -15,10 +15,10 @@ To make it easy for you to get started with Apache Mesos, we created a virtual m
 
 To launch the VMWare image, you will either need [VMware Player for Windows and Linux](http://www.vmware.com/go/downloadplayer/), or [VMware Fusion for Mac](http://www.vmware.com/products/fusion/). (Note that VMware Fusion only works on Intel architectures, so older Macs with PowerPC processors cannot run the training VM.)
 
-Once you launch the VM, log in with the following account details:
+Once you launch the VM, log in with the following account details:  
 
-username: hadoop
-password: hadoop
+  - username: hadoop  
+  - password: hadoop
 
 The **hadoop** account has *sudo* privileges in the VM.
 

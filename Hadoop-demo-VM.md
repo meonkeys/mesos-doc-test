@@ -11,7 +11,7 @@ Feel Free to mirror internally or externally to minimize bandwidth usage.
 The Uncompressed version of VM required 6GB of disk space.
 ```
 
-To make it easy for you to get started with Apache Mesos, we created a virtual machine with everything youneed. our VM runs Ubuntu 10.04 LTS - Long-term support 64-bit (Lucid Lynx) and Mesos with Apache Hadoop.
+To make it easy for you to get started with Apache Mesos, we created a virtual machine with everything you need. our VM runs Ubuntu 10.04 LTS - Long-term support 64-bit (Lucid Lynx) and Mesos with Apache Hadoop 0.20.2.
 
 To launch the VMWare image, you will either need [VMware Player for Windows and Linux](http://www.vmware.com/go/downloadplayer/), or [VMware Fusion for Mac](http://www.vmware.com/products/fusion/). (Note that VMware Fusion only works on Intel architectures, so older Macs with PowerPC processors cannot run the training VM.)
 

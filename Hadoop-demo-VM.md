@@ -1,7 +1,5 @@
 ## Mesos VMWare Image with Hadoop pre-installed
 
-### Demo VMWare Image version 1.0
-
 ***
 Last Updated: August 2011
 

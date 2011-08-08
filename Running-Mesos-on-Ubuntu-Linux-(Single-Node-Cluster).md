@@ -182,6 +182,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
 
 2. Hadoop configuration:  
     - In **core-site.xml** file add the following:  
+
 ```
 <!-- In: conf/core-site.xml -->
 <property>
@@ -201,6 +202,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
 </property>
 ```
     - In **hdfs-site.xml** file add the following:  
+
 ```
 <!-- In: conf/hdfs-site.xml -->
 <property>
@@ -213,6 +215,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
 </property>
 ```
     - In **mapred-site.xml** file add the following:  
+
 ```
 <!-- In: conf/mapred-site.xml -->
 <property>
@@ -271,6 +274,7 @@ $ sudo chmod 750 /app/hadoop/tmp
     - Check the file(s) in Hadoop's HDFS  
     `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/hadoop/gutenberg`       
     - You should see something like the following:
+
 ```
  ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/hadoop/gutenberg
 Found 6 items

@@ -60,8 +60,8 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 
     [ ... trimmed ... ]  
 ```     
-    - run `` ~/mesos$  make ``
-```
+    - run ` ~/mesos$  make `  
+```  
 make -C third_party/libprocess
 make[1]: Entering directory `/home/hadoop/mesos/third_party/libprocess'
 make -C third_party/glog-0.3.1

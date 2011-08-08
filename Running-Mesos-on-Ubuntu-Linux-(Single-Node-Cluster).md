@@ -73,6 +73,7 @@ make[2]: Entering directory `/home/hadoop/mesos/third_party/libprocess/third_par
 
 ## Testing the Mesos
 * run ` ~/mesos$ bin/tests/all-tests `
+
 ```
 ~/mesos$ bin/tests/all-tests 
 [==========] Running 61 tests from 6 test cases.
@@ -100,6 +101,7 @@ make[2]: Entering directory `/home/hadoop/mesos/third_party/libprocess/third_par
 
 ## Setup mesos cluster
 1. Start master: ` ~/mesos$ bin/mesos-master `
+
 ```
  ~/mesos/bin$ ./mesos-master
 I0604 15:47:56.499007 1885306016 logging.cpp:40] Logging to /Users/billz/mesos/logs
@@ -116,6 +118,7 @@ I0604 15:47:56.522743 19939328 webui.cpp:32] Web UI thread started
 3. Start slave: ` ~/mesos$ bin/mesos-slave --url=mesos://master@10.1.1.1:5050`
 4. View the master's web UI at `http://10.1.1.1:8080` (here assuming this computer has IP address = 10.1.1.1).
 5. Run the test framework: `~/mesos$ bin/examples/cpp-test-framework mesos://master@10.1.1.1:5050`
+
 ```
 Registered!
 .Starting task 0 on ubuntu.eecs.berkeley.edu
@@ -149,6 +152,7 @@ To run Hadoop on Mesos, follow these steps:
     - Create/Edit ~/.bashrc file.  
     `` ~$  vi ~/.bashrc ``  
     add the following:  
+
 ```
     # Set Hadoop-related environment variables  
     export HADOOP_HOME=/usr/local/hadoop  
@@ -163,6 +167,7 @@ To run Hadoop on Mesos, follow these steps:
     `cd ~/mesos/frameworks/hadoop-0.20.2/conf`  
     - Edit **hadoop-env.sh** file.  
     add the following:  
+
 ```
 # The java implementation to use.  Required.
 export JAVA_HOME=/usr/lib/jvm/java-6-sun
@@ -243,6 +248,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
 
 4. Setup Hadoop’s Distributed File System **HDFS**:  
     - create the directory and set the required ownerships and permissions: 
+
 ```
 $ sudo mkdir /app/hadoop/tmp
 $ sudo chown hadoop:hadoop /app/hadoop/tmp
@@ -290,6 +296,7 @@ Found 6 items
     - Run the "wordcount" example MapReduce job:  
     ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/hadoop/gutenberg /user/hadoop/output`  
     - You will see something like the following:  
+
 ```
 11/07/19 15:34:29 INFO input.FileInputFormat: Total input paths to process : 6
 11/07/19 15:34:29 INFO mapred.JobClient: Running job: job_201107191533_0001
@@ -307,6 +314,7 @@ Found 6 items
 
 9. Retrieve the job result from HDFS:
    - list the HDFS directory:
+
 ```
 ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/billz/gutenberg
 Found 2 items

@@ -1,5 +1,5 @@
 ## Running Mesos On Ubuntu Linux (Single Node Cluster)
-This is step-by-step guide on setting up Mesos on a single node, and running hadoop on top of Mesos. Here we are assuming Ubuntu 10.04 LTS - Long-term support 64-bit (Lucid Lynx).  Plus, we are using username "hadoop" and password "hadoop" for this guide.
+This is step-by-step guide on setting up Mesos on a single node, and running hadoop on top of Mesos. Here we are assuming Ubuntu 10.04 LTS - Long-term support 64-bit (Lucid Lynx).  Plus, we are using username "hadoop" and password "hadoop" for this guide.  
 
 ## Prerequisites:
 * Java

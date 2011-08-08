@@ -149,9 +149,9 @@ Most of the Hadoop setup is derived from [Michael G. Noll' guide](http://www.mic
 To run Hadoop on Mesos, follow these steps:
 
 1. Setting up the environment:  
-    - Create/Edit ~/.bashrc file.  
-    `` ~$  vi ~/.bashrc ``  
-    add the following:  
+   * Create/Edit ~/.bashrc file.  
+   `` ~$  vi ~/.bashrc ``  
+   add the following:  
 
 ```
     # Set Hadoop-related environment variables  
@@ -164,10 +164,10 @@ To run Hadoop on Mesos, follow these steps:
     export MESOS_HOME=/home/hadoop/mesos
 ```
 
-    - Go to hadoop directory that come with mesos's directory:  
-    `cd ~/mesos/frameworks/hadoop-0.20.2/conf`  
-    - Edit **hadoop-env.sh** file.  
-    add the following:  
+   * Go to hadoop directory that come with mesos's directory:  
+   `cd ~/mesos/frameworks/hadoop-0.20.2/conf`  
+   * Edit **hadoop-env.sh** file.  
+   add the following:  
 
 ```
 # The java implementation to use.  Required.
@@ -181,7 +181,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
 ```
 
 2. Hadoop configuration:  
-    - In **core-site.xml** file add the following:  
+   * In **core-site.xml** file add the following:  
 
 ```
 <!-- In: conf/core-site.xml -->
@@ -201,7 +201,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
   determine the host, port, etc. for a filesystem.</description>
 </property>
 ```
-    - In **hdfs-site.xml** file add the following:  
+   * In **hdfs-site.xml** file add the following:  
 
 ```
 <!-- In: conf/hdfs-site.xml -->
@@ -214,7 +214,7 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
   </description>
 </property>
 ```
-    - In **mapred-site.xml** file add the following:  
+   * In **mapred-site.xml** file add the following:  
 
 ```
 <!-- In: conf/mapred-site.xml -->

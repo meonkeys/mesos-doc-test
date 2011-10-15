@@ -4,7 +4,7 @@ Mesos comes with a framework written in Python that will run a web load balancer
 
 HAProxy has this annoying artifact that in order to ramp up and down in the number of servers it is load balancing between it has to kill the existing running HAProxy process and start a new one, which inevitably leads to dropped connections. Some people have looked into ways to get around the dropped connections (see this animoto blog post about adding/removing servers to haproxy: [[http://labs.animoto.com/2010/03/10/uptime-with-haproxy/]]).
 
-We recommend checking out other load balancers as well. Basically, whatever load balancer you're using, the framework scheduler should query the statistics of the load balancer to figure out how many web requests are being served to it and then ramp up and down the number of web server tasks based on those statistics. We've also written a framework that uses [[Linux Virtual Server (LVS)|http://www.linux-vs.org/]] as the load balancer. LVS an be run in three different modes, and any should work with Mesos.
+We recommend checking out other load balancers as well. Basically, whatever load balancer you're using, the framework scheduler should query the statistics of the load balancer to figure out how many web requests are being served to it and then ramp up and down the number of web server tasks based on those statistics. We've also written a framework that uses [[Linux Virtual Server (LVS)|http://www.linux-vs.org/]] as the load balancer. LVS can be run in three different modes, and any should work with Mesos.
 
 h1. Running a web farm on Mesos on EC2
 

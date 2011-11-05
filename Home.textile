@@ -45,9 +45,11 @@ Mesos runs on "Linux":https://github.com/mesos/mesos/wiki/Running-Mesos-On-Ubunt
 
 h1. Downloading Mesos
 
-We are actively working on our first official Apache release. Currently, you can obtain Mesos in two ways:
-# For alpha version 0.4 and before: download tagged "alpha releases" from github via the [[tags page|https://github.com/mesos/mesos/tags]]
-# For the current development HEAD: check it out from the Apache SVN repository using @svn co https://svn.apache.org/repos/asf/incubator/mesos/trunk mesos-trunk@ or from the mirror Apache git repository using @git clone git://git.apache.org/mesos.git@.
+We are actively working on our first official Apache release. Currently, you can obtain Mesos (the current development HEAD) by checking it out from either the Apache SVN or Apache Git repository (they are mirrors of each other)
+* For SVN, use: @svn co https://svn.apache.org/repos/asf/incubator/mesos/trunk mesos-trunk@
+* For git, use: @git clone git://git.apache.org/mesos.git@.
+
+NOTE: For alpha version 0.4 and before: download tagged "alpha releases" from github via the [[tags page|https://github.com/mesos/mesos/tags]]
 
 h1. Building Mesos
 

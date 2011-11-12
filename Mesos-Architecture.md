@@ -10,7 +10,7 @@ A framework running on top of Mesos consists of two components: a <i>scheduler</
 
 The figure below shows an example of how a framework gets scheduled to run a task.
 
-->[[/images/architecture-example.jpg|height=300px]]<-
+<p align="center">[[/images/architecture-example.jpg|height=300px]]</p>
 
 Let's walk through the events in the figure.
 

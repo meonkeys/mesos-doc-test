@@ -230,10 +230,10 @@ $ sudo chmod 750 /app/hadoop/tmp
     `~/mesos/frameworks/hadoop-0.20.2$  bin/hadoop namenode -format`
 
     - run the Hadoop filesystem:
-...    
+```    
 ~/mesos/frameworks/hadoop-0.20.2$  bin/hadoop namenode
 ~/mesos/frameworks/hadoop-0.20.2$  bin/hadoop datanode
-...
+```
 
 5. Copy local example data to HDFS  
     - Download some plain text document from Project Gutenberg  

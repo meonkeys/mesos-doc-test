@@ -5,9 +5,7 @@ Last Updated: August 2011
 
 [DOWNLOAD](http://amplab.cs.berkeley.edu/downloads/mesos/mesos-demo.tar.bz2)
 
-**Note: This VM download is approximately 1.7GB.  **
-**Feel Free to mirror internally or externally to minimize bandwidth usage.**
-**The Uncompressed version of VM required 6GB of disk space.**
+**Note: This VM download is approximately 1.7GB. Feel Free to mirror internally or externally to minimize bandwidth usage. The Uncompressed version of VM required 6GB of disk space.**
 
 To make it easy for you to get started with Apache Mesos, we created a virtual machine with everything you need. our VM runs Ubuntu 10.04 LTS - Long-term support 64-bit (Lucid Lynx) and Mesos with Apache Hadoop 0.20.2.
 

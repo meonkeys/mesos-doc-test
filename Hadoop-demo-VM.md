@@ -20,7 +20,7 @@ Once you launch the VM, log in with the following account details:
 
 The **hadoop** account has *sudo* privileges in the VM.
 
-### 1. Testing the Mesos  
+### 1. Testing Mesos  
 * run ` ~/mesos$ bin/tests/all-tests `  
 
 ```

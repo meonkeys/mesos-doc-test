@@ -236,12 +236,12 @@ $ sudo chmod 750 /app/hadoop/tmp
     [The Complete Works of William Shakespeare](http://www.gutenberg.org/ebooks/100)  
     save these to /tmp/gutenberg/ directory.  
     - Copy files from our local file system to Hadoop’s HDFS  
-    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -copyFromLocal /tmp/gutenberg /user/billz/gutenberg`  
+    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -copyFromLocal /tmp/gutenberg ~/gutenberg`  
     - Check the file(s) in Hadoop's HDFS  
-    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/billz/gutenberg`       
+    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls ~/gutenberg`       
     - You should see something like the following:
 ```
- ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/billz/gutenberg
+ ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls ~/gutenberg
 Found 6 items
 -rw-r--r--   1 billz supergroup    5582656 2011-07-14 16:38 /user/billz/gutenberg/pg100.txt
 -rw-r--r--   1 billz supergroup    3322643 2011-07-14 16:38 /user/billz/gutenberg/pg135.txt
@@ -256,7 +256,7 @@ Found 6 items
     - Start Mesos's Master:      
     ` ~/mesos$ bin/mesos-master &`  
     - Start Mesos's Slave:       
-    ` ~/mesos$ bin/mesos-slave --url=mesos://master@localhost:5050 &`  
+    ` ~/mesos$ bin/mesos-slave --master=mesos://master@localhost:5050 &`  
     - Start Hadoop's namenode:  
     ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode &`  
     - Start Hadoop's datanode:  
@@ -268,7 +268,7 @@ Found 6 items
    We will now run your first Hadoop MapReduce job. We will use the [WordCount](http://wiki.apache.org/hadoop/WordCount) example job which reads text files and counts how often words occur. The input is text files and the output is text files, each line of which contains a word and the count of how often it occurred, separated by a tab.  
 
     - Run the "wordcount" example MapReduce job:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount /user/billz/gutenberg /user/billz/output`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount ~/gutenberg ~/output`  
     - You will see something like the following:  
 ```
 11/07/19 15:34:29 INFO input.FileInputFormat: Total input paths to process : 6
@@ -289,13 +289,13 @@ Found 6 items
 9. Retrieve the job result from HDFS:
    - list the HDFS directory:
 ```
-~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls /user/billz/gutenberg
+~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -ls ~/gutenberg
 Found 2 items
 drwxr-xr-x   - billz supergroup          0 2011-07-14 16:38 /user/billz/gutenberg
 drwxr-xr-x   - billz supergroup          0 2011-07-19 15:35 /user/billz/output
 ```
    - View the output file:  
-    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -cat /user/billz/output/part-r-00000`
+    `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop dfs -cat ~/output/part-r-00000`
 
 ### Congratulation! You have Hadoop running on mesos, and mesos running on Mac OS X!
 

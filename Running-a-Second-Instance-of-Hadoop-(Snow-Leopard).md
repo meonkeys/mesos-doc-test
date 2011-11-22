@@ -10,9 +10,17 @@
     - Build Hadoop:      
       `~/hadoop$ ant`      
       `~/hadoop$ ant compile-core jar`      
-      `~/hadoop$ ant examples jar`      
+      `~/hadoop$ ant examples jar`   
+    - Start up Mesos:      
+      `~/mesos$ bin/mesos-master`      
+      `~/mesos$ bin/mesos-slave --master=mesos://master@localhost:5050`      
     - Start up HDFS (we'll have one instance of HDFS that both instances of Hadoop access):      
       `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode`      
       `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop datanode`
-    - Start the jobtracker:
-      `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker`
+    - Start the jobtrackers:      
+      `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker`      
+      `~/hadoop$ bin/hadoop jobtracker`
+    - Run some tests:      
+      `~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount ~/gutenburg/ ~/output`      
+      `~/hadoop$ bin/hadoop jar build/hadoop-0.20.3-dev-examples.jar wordcount ~/gutenburg/ ~/output1`
+    - At this point, you should be able to run both instances of wordcount at the same time.

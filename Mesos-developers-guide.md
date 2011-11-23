@@ -1,5 +1,8 @@
+This page is under construction still!
+
 ## Using SVN/Git
-The Mesos team primarily uses Git. But since Apache doesn't currently support Git
+* The Mesos team primarily uses Git. But since Apache doesn't currently support Git, so we use git-svn
+* TODO: link to apache git instructions
 
 ## Using JIRA
 * We track all issues via Apache's hosted JIRA issue tracker: http://issues.apache.org/browse/MESOS

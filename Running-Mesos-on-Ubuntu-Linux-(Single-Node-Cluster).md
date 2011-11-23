@@ -35,14 +35,13 @@ This is step-by-step guide on setting up Mesos on a single node, and (optionally
 * OPTIONAL: If you want to run Hadoop, see [Hadoop setup](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
 
 ## Mesos setup:
-* Follow the general setup instructions at [Home][Home]
+* Follow the general setup instructions at [Home](Home)
 
 **Congratulation! You have mesos running on your Ubuntu Linux!**
 
-## Setup mesos cluster
-1. Start master: ` ~/mesos$ bin/mesos-master `
-
-```
+## Simulating a Mesos cluster on one machine
+1. Start a Mesos master: ` ~/mesos$ bin/mesos-master `
+<pre>
  ~/mesos/bin$ ./mesos-master
 I0604 15:47:56.499007 1885306016 logging.cpp:40] Logging to /Users/billz/mesos/logs
 I0604 15:47:56.522259 1885306016 main.cpp:75] Build: 2011-06-04 14:44:57 by billz
@@ -51,15 +50,18 @@ I0604 15:47:56.522532 1885306016 webui.cpp:64] Starting master web UI on port 80
 I0604 15:47:56.522539 7163904 master.cpp:389] Master started at mesos://master@10.1.1.1:5050
 I0604 15:47:56.522676 7163904 master.cpp:404] Master ID: 201106041547-0
 I0604 15:47:56.522743 19939328 webui.cpp:32] Web UI thread started
+... trimmed ...
+</pre>
 
-[ ... trimmed ... ]
-```
 2. Take note of the master URL `mesos://master@10.1.1.1:5050`
-3. Start slave: ` ~/mesos$ bin/mesos-slave --url=mesos://master@10.1.1.1:5050`
+
+3. Start a Mesos slave: ` ~/mesos$ bin/mesos-slave --master=mesos://master@10.1.1.1:5050`
+
 4. View the master's web UI at `http://10.1.1.1:8080` (here assuming this computer has IP address = 10.1.1.1).
+
 5. Run the test framework: `~/mesos$ bin/examples/cpp-test-framework mesos://master@10.1.1.1:5050`
 
-```
+<pre>
 Registered!
 .Starting task 0 on ubuntu.eecs.berkeley.edu
 Task 0 is in state 1
@@ -76,7 +78,7 @@ Task 3 is in state 2
 .Starting task 4 on ubuntu.eecs.berkeley.edu
 Task 4 is in state 1
 Task 4 is in state 2
-```
+</pre>
 
 ## Running Hadoop on Mesos [old link](https://github.com/mesos/mesos/wiki/Running-Hadoop-on-Mesos)  
 

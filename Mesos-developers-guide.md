@@ -7,7 +7,7 @@
 
 1. Join the mesos-dev@incubator.apache.org mailing list by sending an email to mesos-dev-subscribe@incubator.apache.org
 
-1. Find a JIRA that is currently unassigned that you want to work on at http://issues.apache.org/browse/MESOS, or create your own (you'll need a JIRA account for this, see below)!
+1. Find a JIRA that is currently unassigned that you want to work on at http://issues.apache.org/jira/browse/MESOS, or create your own (you'll need a JIRA account for this, see below)!
     2. This could be a JIRA representing a bug (possibly a bug that you encountered and reported, e.g. when trying to build) or a new feature
 
 1. Assign the JIRA to yourself. To do this, you will need:

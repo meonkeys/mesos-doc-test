@@ -1,5 +1,5 @@
 ## Running Mesos On Ubuntu Linux (Single Node Cluster)
-This is step-by-step guide on setting up Mesos on a single node, and running hadoop on top of Mesos. Here we are assuming Ubuntu 10.04 LTS - Long-term support 64-bit (Lucid Lynx).  Plus, we are using username "hadoop" and password "hadoop" for this guide.  
+This is step-by-step guide on setting up Mesos on a single node, and (optionally) running hadoop on top of Mesos. Here we are assuming Ubuntu 10.04 LTS - Long-term support 64-bit (Lucid Lynx).  Plus, we are using username "hadoop" and password "hadoop" for this guide.  
 
 ## Prerequisites:
 * Java
@@ -18,7 +18,8 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 
     - Update the source list   
     `sudo apt-get update`  
-    - Install the build tools  
+    - Install Java (we'll use Sun Java 1.6 for this tutorial, but you can OpenJDK if you want to)
+
     `~$ sudo apt-get install build-essential sun-java6-jdk sun-java6-plugin`    
     `~$ sudo update-java-alternatives -s java-6-sun`  
 
@@ -26,76 +27,15 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     - `~$ sudo apt-get -y install git-core gitosis`  
     - As of June 2011 download [Git release is v1.7.5.4]
 
-* Swig, Python and ssh
+* Python and ssh
 
-    - run `` ~$  sudo apt-get install swig ``
     - run `` ~$  sudo apt-get install python-dev ``
     - run `` ~$  sudo apt-get install openssh-server openssh-client ``
 
-* Hadoop [Hadoop setup](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
+* OPTIONAL: If you want to run Hadoop, see [Hadoop setup](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
 
 ## Mesos setup:
-* Downloading Mesos:  
-    `` ~$  git clone git://github.com/mesos/mesos ``  
-
-* Building Mesos:  
-    - run `` ~$  cd mesos``  
-    - edit ` ~$  vi configure.template.ubuntu-lucid-64`  
-    Change the following line to this:  
-    ``--with-java-home=/usr/lib/jvm/java-6-sun``  
-    So, `--with-java-home` option set to whatever JAVA_HOME points to.
-    - run `` ~$   ~/mesos$ ./configure.template.ubuntu-lucid-64``  
-
-```
-    checking build system type... x86_64-unknown-linux-gnu
-    checking host system type... x86_64-unknown-linux-gnu
-    checking target system type... x86_64-unknown-linux-gnu
-    ===========================================================
-    Setting up build environment for x86_64 linux-gnu
-    ===========================================================
-    running python2.6 to find compiler flags for creating the Mesos Python library...
-    running python2.6 to find compiler flags for embedding it...
-    checking for g++... g++
-    checking for C++ compiler default output file name... a.out
-
-    [ ... trimmed ... ]  
-```     
-    - run ` ~/mesos$  make `  
-```  
-make -C third_party/libprocess
-make[1]: Entering directory `/home/hadoop/mesos/third_party/libprocess'
-make -C third_party/glog-0.3.1
-make[2]: Entering directory `/home/hadoop/mesos/third_party/libprocess/third_party/glog-0.3.1'
-/bin/bash ./libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I./src  -I./src    -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare  -DNO_FRAME_POINTER -DNDEBUG -O2 -fno-strict-aliasing -fPIC  -MT libglog_la-logging.lo -MD -MP -MF .deps/libglog_la-logging.Tpo -c -o libglog_la-logging.lo `test -f 'src/logging.cc' || echo './'`src/logging.cc
-  
-    [ ... trimmed ... ]
-```
-
-## Testing the Mesos
-* run ` ~/mesos$ bin/tests/all-tests `
-
-```
-~/mesos$ bin/tests/all-tests 
-[==========] Running 61 tests from 6 test cases.
-[----------] Global test environment set-up.
-[----------] 18 tests from MasterTest
-[ RUN      ] MasterTest.ResourceOfferWithMultipleSlaves
-[       OK ] MasterTest.ResourceOfferWithMultipleSlaves (33 ms)
-[ RUN      ] MasterTest.ResourcesReofferedAfterReject
-[       OK ] MasterTest.ResourcesReofferedAfterReject (3 ms)
-
-[ ... trimmed ... ]
-
-[ RUN      ] MasterTest.MultipleExecutors
-[       OK ] MasterTest.MultipleExecutors (2 ms)
-[----------] 18 tests from MasterTest (38 ms total)
-
-[----------] Global test environment tear-down
-[==========] 61 tests from 6 test cases ran. (17633 ms total)
-[  PASSED  ] 61 tests. 
-  YOU HAVE 3 DISABLED TESTS 
-
-```
+* Follow the general instructions 
 
 **Congratulation! You have mesos running on your Ubuntu Linux!**
 
@@ -163,7 +103,6 @@ To run Hadoop on Mesos, follow these steps:
     # Set where you installed the mesos. For me is /home/hadoop/mesos. hadoop is my username.  
     export MESOS_HOME=/home/hadoop/mesos
 ```
-
    * Go to hadoop directory that come with mesos's directory:  
    `cd ~/mesos/frameworks/hadoop-0.20.2/conf`  
    * Edit **hadoop-env.sh** file.  

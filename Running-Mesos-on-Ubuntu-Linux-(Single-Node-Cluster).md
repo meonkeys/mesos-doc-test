@@ -35,7 +35,7 @@ This is step-by-step guide on setting up Mesos on a single node, and (optionally
 * OPTIONAL: If you want to run Hadoop, see [Hadoop setup](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
 
 ## Mesos setup:
-* Follow the general instructions 
+* Follow the general setup instructions at [Home]
 
 **Congratulation! You have mesos running on your Ubuntu Linux!**
 

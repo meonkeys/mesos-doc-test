@@ -55,7 +55,7 @@
 
 
 ## Guidelines for using JIRA
-* We track all issues via Apache's hosted JIRA issue tracker: http://issues.apache.org/browse/MESOS
+* We track all issues via Apache's hosted JIRA issue tracker: https://issues.apache.org/jira/browse/MESOS
 * A JIRA should be created for every task, feature, bug-fix, etc.
 * Always assign the JIRA to yourself before you start working on it. This helps to avoid duplication of work
 

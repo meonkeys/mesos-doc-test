@@ -90,9 +90,9 @@ Once you have run the basic tests, you can use Mesos's [[deploy scripts]] to lau
 h1. Where to Go From Here
 
 * [[Mesos architecture]] -- an overview of Mesos concepts.
-* [[Mesos Developers guide]] -- Resources for developers contributing to Mesos. Style guides, tips for working with SVN/git, and more!
+* [[Mesos Developers guide]] -- resources for developers contributing to Mesos. Style guides, tips for working with SVN/git, and more!
 * [[App/Framework development guide]] -- learn how to build applications on top of Mesos.
-* [[Configuring Mesos|Configuration]] -- A guide to the various settings that can be passed to Mesos daemons.
+* [[Configuring Mesos|Configuration]] -- a guide to the various settings that can be passed to Mesos daemons.
 * Mesos system feature guides:
 ** [[Deploy scripts]] for launching a Mesos cluster on a set of machines.
 ** [[EC2 scripts]] for launching a Mesos cluster on Amazon EC2.

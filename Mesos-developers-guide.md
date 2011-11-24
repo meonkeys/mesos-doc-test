@@ -61,3 +61,7 @@
 
 ## Using Review Board
 * A code review request should be created for every JIRA that involves a change to the codebase
+
+## Style Guides
+* [[Mesos C++ Style Guide]]
+* [[Mesos Python Style Guide]]

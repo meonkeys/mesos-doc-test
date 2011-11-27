@@ -28,7 +28,7 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 
 ## Mesos setup:
 * Downloading Mesos:  
-    `` ~$  git clone git://github.com/mesos/mesos ``  
+    `` ~$  git clone git://git.apache.org/mesos.git ``  
 
 * Building Mesos:  
     - run `` ~$  cd mesos``  

@@ -33,6 +33,7 @@
     2. Make sure to pull in any changes that have been committed to trunk. If you are using Git, do this via something like:
         3. `git remote update`
         3. `git rebase origin/trunk`
+        3. Check the output of `git diff origin/trunk` and make sure it lists only your changes. If other changes you did not make are listed, try a merge to bring your branch up to date with origin/trunk.
     2. Make sure it is building and all test cases are passing (run bin/tests/all-tests). To be extra sure, before moving on to requesting a review request, we recommend running `make clean`
 
 1. Create a diff of your code changes, including your test case.

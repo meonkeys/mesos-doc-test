@@ -1,4 +1,3 @@
-**h1. NOTE THAT MESOS IS NOW AN APACHE PROJECT and this mesos code on github is old and no longer maintained.  Use the svn to see the latest changes to Mesos: "Download":http://www.mesosproject.org/download.html **
 
 
 h1. Overview of Mesos

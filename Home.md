@@ -1,5 +1,8 @@
 h1. Overview of Mesos
 
+NOTE THAT MESOS IS NOW AN APACHE PROJECT and this mesos code on github is old and no longer maintained.  Use the svn to see the latest changes to Mesos: http://www.mesosproject.org/download.html
+
+
 Mesos is a cluster management platform that provides resource sharing and isolation across distributed applications. For example, "Hadoop MapReduce":http://hadoop.apache.org, "MPI":http://www.mcs.anl.gov/research/projects/mpich2/, "Hypertable":http://hypertable.org, and "Spark":http://github.com/mesos/spark/wiki (a new MapReduce-like framework from the Mesos team that supports low-latency interactive and iterative jobs) can run on Mesos.
 
 h4. Mesos Use-cases

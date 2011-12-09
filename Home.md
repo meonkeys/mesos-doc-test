@@ -1,5 +1,3 @@
-
-
 h1. Overview of Mesos
 
 

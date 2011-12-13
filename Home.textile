@@ -52,10 +52,13 @@ NOTES: The Apache SVN repository is the definitive spot for the source code now.
 
 h1. Building Mesos
 
-*NOTE: do not simply run `./configure` without arguments. If you do, your build will fail due to a known bug (see [[MESOS-103|https://issues.apache.org/jira/browse/MESOS-103]] for more details)*
-Mesos uses the standard GNU build tools. Depending on whether you are running on OS X or Ubuntu, you may find it convenient to use one of the configure.template scripts in the root directory that will call the more general @configure@ script and pass it appropriate arguments. 
+Mesos uses the standard GNU build tools. 
 
-These configure template scripts try to guess the right Java and Python paths for Mac OS X and several Linux distributions. However, they assume that you have installed the necessary packages (e.g. @python-dev@ and a JDK). You should double check the configure template script you use, for example, to make sure that if you have installed Java Sun 1.6 your configure template script is not setting java_home to be for openjdk.
+*NOTE: do not simply run `./configure` without arguments. If you do, your build will fail due to a known issue (see [[MESOS-103|https://issues.apache.org/jira/browse/MESOS-103]] for more details)*
+
+We recommend you use one of the configure.template scripts in the root directory, which will call the more general @configure@ script and pass it appropriate arguments. E.g. if you are using OS X, run ./configure.template.macosx.
+
+These configure template scripts try to guess the right Java and Python paths for Mac OS X and several Linux distributions. They assume that you have already installed the packages (i.e. @python-dev@ and a JDK). You should double check the configure template script you use (they are just shell scripts, i.e. text files) to make sure the paths it is using for Python and Java match what you have installed. for example, make sure that if you have installed Sun's Java 1.6, your configure template script is not setting JAVA_HOME to be for openjdk.
 
 The configure script itself accepts the following arguments to enable various options:
 * @--with-python-headers=DIR@: Find Python header files in @DIR@ (to turn on Python support). Recommended.
@@ -64,7 +67,11 @@ The configure script itself accepts the following arguments to enable various op
 * @--with-java-headers=DIR@: Find Java header files (necessary for newer versions of OS X Snow Leopard).
 * @--with-zookeeper=DIR@ or @--with-included-zookeeper@: Enable master fault-tolerance using an existing ZooKeeper installation or the version of ZooKeeper bundled with Mesos. For details, see [[using ZooKeeper]].
 
-After you have run @configure@ (either directly or with a configure template script), you can build Mesos with @make@.
+*NOTE:* as described in [[MESOS-103|https://issues.apache.org/jira/browse/MESOS-103]], if you run ./configure without java-home and java-headers set up correctly (on many machines, specifying java-home is enough, but on OS X Snow Leopard the Java headers are in a non standard location so they must be set up correctly) currently, your build will fail when you run make.
+
+After you have run @configure@ (either directly with the necessary flags, or with a configure template script), you can build Mesos by running:
+
+@make@
 
 *Notes:*
 * On 32-bit platforms, you should set @CXXFLAGS="-march=i486"@ when running @configure@ to ensure certain atomic instructions can be used.

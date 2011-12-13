@@ -39,7 +39,7 @@ Mesos runs on "Linux":https://github.com/mesos/mesos/wiki/Running-Mesos-On-Ubunt
 
 * g++ 4.1 or higher
 * Python 2.6 (for the Mesos web UI)
-* Java 1.6 or higher (to run Java apps/frameworks including Hadoop and "Spark":http://github.com/mesos/spark). Mac OS X 10.6 users will need to install the JDK from http://connect.apple.com/ and set @JAVA_HEADERS=/System/Library/Frameworks/JavaVM.framework/Versions/A/Headers@.
+* Java JDK 1.6 or higher. Mac OS X 10.6 users will need to install the JDK from http://connect.apple.com/ and set @JAVA_HEADERS=/System/Library/Frameworks/JavaVM.framework/Versions/A/Headers@.
  
 
 h1. Downloading Mesos

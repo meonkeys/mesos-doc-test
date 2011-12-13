@@ -19,20 +19,13 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 
 * Install the latest [Xcode](http://developer.apple.com) 
 
-* macport
-    - Download and install [Macport](http://www.macports.org/install.php) 
-    - As of June 2011 download [Macport for Snow Leopard](http://distfiles.macports.org/MacPorts/MacPorts-1.9.2-10.6-SnowLeopard.dmg)
-    - run `` ~$  sudo port -d selfupdate ``
-    - run `` ~$  sudo port upgrade outdated ``
-    - run `` ~$  sudo port install swig swig-java swig-python``  
-
 ## Mesos setup:
 * Downloading Mesos:  
-    `` ~$  git clone git://git.apache.org/mesos.git ``  
+    `` $  git clone git://git.apache.org/mesos.git ``  
 
 * Building Mesos:  
-    - run `` ~$  cd mesos``  
-    - run `` ~$   ~/mesos$ ./configure.template.macosx``  
+    - run `` $ cd mesos``  
+    - run `` $ ./configure.template.macosx``  
 ```
   checking build system type... i386-apple-darwin10.7.0
 	checking host system type... i386-apple-darwin10.7.0
@@ -46,7 +39,7 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
 
 	[ ... trimmed ... ]
 ```
-    - run `` ~/mesos$  make ``
+    - run `` $  make ``
 ```
 make -C third_party/libprocess
 make -C third_party/glog-0.3.1
@@ -75,8 +68,8 @@ make -C third_party/glog-0.3.1
 
 **Congratulation! You have mesos running on your Mac OS X!**
 
-## Setup mesos cluster
-1. Start master: ` ~/mesos$ bin/mesos-master `
+## Setup a small Mesos test cluster on your laptop
+1. Start a master: ` $ bin/mesos-master `
 ```
  ~/mesos/bin$ ./mesos-master
 I0604 15:47:56.499007 1885306016 logging.cpp:40] Logging to /Users/billz/mesos/logs
@@ -89,10 +82,10 @@ I0604 15:47:56.522743 19939328 webui.cpp:32] Web UI thread started
 
 [ ... trimmed ... ]
 ```
-2. Take note of the master URL `mesos://master@10.1.1.1:5050`
-3. Start slave: ` ~/mesos$ bin/mesos-slave --url=mesos://master@10.1.1.1:5050`
-4. View the master's web UI at `http://10.1.1.1:8080` or [localhost:8080](http://localhost:8080) (here assuming this computer has IP address = 10.1.1.1).
-5. Run the test framework: `~/mesos$ bin/examples/cpp-test-framework mesos://master@10.1.1.1:5050`
+2. Take note of the master URL printed in the output `mesos://master@10.1.1.1:5050`
+3. Start a slave: ` $ bin/mesos-slave --master=mesos://master@10.1.1.1:5050`
+4. View the master's web UI at `http://10.1.1.1:8080` or [localhost:8080](http://localhost:8080) (assuming this computer has IP address = 10.1.1.1).
+5. Run an example framework, we'll use the CPP framework: `$ bin/examples/cpp-test-framework mesos://master@10.1.1.1:5050`
 ```
 Registered!
 .Starting task 0 on mac.eecs.berkeley.edu
@@ -112,7 +105,7 @@ Task 4 is in state 1
 Task 4 is in state 2
 ```
 
-## Running Hadoop on Mesos [old link](https://github.com/mesos/mesos/wiki/Running-Hadoop-on-Mesos)  
+## OPTIONAL: Running Hadoop on Mesos [old link](https://github.com/mesos/mesos/wiki/Running-Hadoop-on-Mesos)  
 
 We have ported version 0.20.2 of Hadoop to run on Mesos. Most of the Mesos port is implemented by a pluggable Hadoop scheduler, which communicates with Mesos to receive nodes to launch tasks on. However, a few small additions to Hadoop's internal APIs are also required.
 
@@ -144,8 +137,8 @@ To run Hadoop on Mesos, follow these steps:
 # The java implementation to use.  Required.
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 
-# The mesos use this.
-export MESOS_HOME=/Users/billz/mesos/
+# Mesos uses this.
+export MESOS_HOME=/Users/username/mesos/
 
 # Extra Java runtime options.  Empty by default. This disable IPv6.
 export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true

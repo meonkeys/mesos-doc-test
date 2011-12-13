@@ -15,7 +15,7 @@ h4. Features of Mesos
 <br/>
 Visit "mesosproject.org":http://mesosproject.org for more details about Mesos.
 
-_*Please note that Mesos is still in alpha. The current version is intended for early testing.*_
+_*Please note that Mesos is still in beta. Though the current version is in use in production at Twitter, it may have some stability issues in certain environments.*_
 
 h4. What you'll find on this page</u></b>
 # System Requirements

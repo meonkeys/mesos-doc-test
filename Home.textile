@@ -84,7 +84,9 @@ You can also set up a small Mesos cluster and run a job on it as follows:
 
 h1. Deploying to a Cluster
 
-Once you have run the basic tests, you can use Mesos's [[deploy scripts]] to launch a cluster on a private cluster that you own. To launch a cluster on Amazon EC2, you can use the Mesos [[EC2 scripts]] or the [[Mesos "Ready-to-go" AMI|Mesos ready to go AMI]].
+To run Mesos on more than one machine, you have multiple options:
+* To launch a cluster on a private cluster that you own, use Mesos's [[deploy scripts]]
+* To launch a cluster on Amazon EC2, you can use the Mesos [[EC2 scripts]]
 
 h1. Where to Go From Here
 

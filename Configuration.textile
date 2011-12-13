@@ -9,7 +9,9 @@ In addition, it is possible to tell the binaries to use a different configuratio
 
 h1. Common Options
 
-The following list may not match the version of mesos you are running, as the configuration flags evolve from time to time in the code. The definitive source for which flags your version of mesos supports can be found by running the binary with the flag `--help`, for example `bin/mesos-master --help`.
+The following list may not match the version of mesos you are running, as the configuration flags evolve from time to time in the code. 
+
+<div style="font-size:1.5em"><b>The definitive source for which flags your version of Mesos supports can be found by running the binary with the flag <code>--help</code>, for example <code>bin/mesos-master --help</code>.</b></div>
 
 The following options are commonly configured for both the master and slave:
 

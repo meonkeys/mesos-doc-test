@@ -25,7 +25,7 @@ The following options are commonly configured for the slave:
 
 |_. Parameter         |_. Description|
 |@master@                     | Master URL to connect to. |
-|@resources@                 | A semicolon separated set of _key:value_ pairs, e.g. `cpus:1;mem:1024` |
+|@resources@                 | A semicolon separated set of _key:value_ pairs, e.g. <code>cpus:1;mem:1024</code> |
 |@work_dir@         | Directory for slaves to place framework's output files in. It is recommended to use a local disk for each slave. |
 |@isolation@            | Isolation module to use for isolating tasks. The default is @process@, which performs no isolation other than running each framework as its user, but @lxc@ can be used on systems that support Linux Containers. See [[using Linux containers]] for details. |
 |@hadoop_home@ | Location of Hadoop, if you wish to use the Hadoop Distributed File System for distributing framework binaries across the cluster. |

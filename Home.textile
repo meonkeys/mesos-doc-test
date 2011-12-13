@@ -52,6 +52,7 @@ NOTES: The Apache SVN repository is the definitive spot for the source code now.
 
 h1. Building Mesos
 
+*NOTE: do not simply run `./configure` without arguments. If you do, your build will fail due to a known bug (see [[MESOS-103|https://issues.apache.org/jira/browse/MESOS-103]] for more details)*
 Mesos uses the standard GNU build tools. Depending on whether you are running on OS X or Ubuntu, you may find it convenient to use one of the configure.template scripts in the root directory that will call the more general @configure@ script and pass it appropriate arguments. 
 
 These configure template scripts try to guess the right Java and Python paths for Mac OS X and several Linux distributions. However, they assume that you have installed the necessary packages (e.g. @python-dev@ and a JDK). You should double check the configure template script you use, for example, to make sure that if you have installed Java Sun 1.6 your configure template script is not setting java_home to be for openjdk.

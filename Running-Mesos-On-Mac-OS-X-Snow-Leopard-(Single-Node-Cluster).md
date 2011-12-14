@@ -297,6 +297,6 @@ drwxr-xr-x   - billz supergroup          0 2011-07-19 15:35 /user/billz/output
 * [Use our mailing lists](http://incubator.apache.org/projects/mesos.html)
 * mesos-dev@incubator.apache.org
 
-## Wants to contribute?
-* [Contributing to Open Source Projects HOWTO](http://www.kegel.com/academy/opensource.html)
+## Want to contribute?
+* Check out the [[Mesos Developers Guide]]
 * [Submit a Bug](https://issues.apache.org/jira/browse/MESOS)

@@ -17,7 +17,7 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     - Download and install the lastest version of [git](http://git-scm.com/) for Mac OS X
     - As of June 2011 download [1.7.5.4 - OS X - Leopard - x86_64](http://code.google.com/p/git-osx-installer/downloads/detail?name=git-1.7.5.4-x86_64-leopard.dmg&can=3&q=) 
 
-* Install the latest [Xcode](http://developer.apple.com) 
+* Install the latest [Xcode](http://developer.apple.com) (for g++)
 
 ## Mesos setup:
 * Downloading Mesos:  

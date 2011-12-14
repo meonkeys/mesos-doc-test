@@ -14,17 +14,9 @@ This is step-by-step guide on setting up Mesos on a single node, and running had
     ``/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home``
 
 * git  
-    - Download and install the lastest version of [git](http://git-scm.com/) for Mac OS X
-    - As of July 2011 download [1.7.6 - OS X - x86_64](http://code.google.com/p/git-osx-installer/downloads/detail?name=git-1.7.6-x86_64-snow-leopard.dmg&can=3&q=) 
+    - Download and install the lastest version of Git for Mac OS X. We recommend using the [git-osx installer](http://code.google.com/p/git-osx-installer/downloads/list?can=3).
 
-* Install the latest [Xcode](http://developer.apple.com) 
-
-* macport
-    - Download and install [Macport](http://www.macports.org/install.php) 
-    - As of July 2011 download [Macport for Lion](https://distfiles.macports.org/MacPorts/MacPorts-2.0.0-10.7-Lion.dmg)
-    - run `` ~$  sudo port -d selfupdate ``
-    - run `` ~$  sudo port upgrade outdated ``
-    - run `` ~$  sudo port install swig swig-java swig-python``  
+* Install the latest [Xcode](http://developer.apple.com) to get g++ 
 
 ## Mesos setup:
 * Downloading Mesos:  

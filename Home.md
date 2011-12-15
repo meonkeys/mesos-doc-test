@@ -75,6 +75,8 @@ After you have run @configure@ (either directly with the necessary flags, or wit
 *Notes:*
 * On 32-bit platforms, you should set @CXXFLAGS="-march=i486"@ when running @configure@ to ensure certain atomic instructions can be used.
 * @configure@ prints a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested @configure@ scripts that we call, so it doesn't mean that your options were ignored.
+* If you get errors with @pushd@ not working on Ubuntu, this is because /bin/sh is a link to /bin/dash, not /bin/bash. To fix, do: `sudo ln -fs /bin/bash /bin/sh`.
+
 
 h1. Testing the Build
 

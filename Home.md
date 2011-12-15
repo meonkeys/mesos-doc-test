@@ -85,11 +85,11 @@ You can also set up a small Mesos cluster and run a job on it as follows:
 
 1. Go into the directory where you built Mesos.
 1. Type `bin/mesos-master` to launch the master.
-1. Take note of the master URL that is printed to stdout, which will look something like <code>mesos://master@192.168.0.1:5050</code> (here assuming the IP address of master is 192.168.0.1. Please use IP address of the host instead of localhost or 127.0.0.1.)
+1. Take note of the master URL that is printed to stdout, which will look something like <code>mesos://master@192.168.0.1:5050</code> (in this example the IP address of master is 192.168.0.1).
 1. URL of master: <code>mesos://master@192.168.0.1:5050</code>
 1. View the master's web UI at `http://[hostname of master]:8080`.
-1. Launch a slave by typing <code>bin/mesos-slave --master=mesos://master@192.168.0.1:5050</code>. The slave will show up on the web UI if you refresh it.
-1. Run the C++ test framework (a sample that just runs five tasks on the cluster) using <code>bin/examples/cpp-test-framework mesos://master@192.168.0.1:5050</code>. It should successfully exit after running five tasks.
+1. Launch a slave by typing <code>bin/mesos-slave --master=mesos://master@192.168.0.1:5050</code>. The slave will show up on the master's web UI if you refresh it.
+1. Run the C++ test framework (a sample that just runs five tasks on the cluster) using <code>bin/examples/cpp-test-framework mesos://master@192.168.0.1:5050</code>. It should successfully exit after running five tasks. You can also try the example python or Java frameworks.
 
 # Deploying to a Cluster
 

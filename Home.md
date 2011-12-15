@@ -94,6 +94,7 @@ You can also set up a small Mesos cluster and run a job on it as follows:
 # Deploying to a Cluster
 
 To run Mesos on more than one machine, you have multiple options:
+
 * To launch a cluster on a private cluster that you own, use Mesos's [[deploy scripts]]
 * To launch a cluster on Amazon EC2, you can use the Mesos [[EC2 scripts]]
 

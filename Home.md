@@ -18,6 +18,7 @@ Visit [mesosproject.org](http://mesosproject.org) for more details about Mesos.
 _**Please note that Mesos is still in beta. Though the current version is in use in production at Twitter, it may have some stability issues in certain environments.**_
 
 #### What you'll find on this page
+1. Quick-start Guides
 1. System Requirements
 1. Downloading Mesos
 1. Building Mesos

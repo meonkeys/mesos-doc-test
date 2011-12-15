@@ -60,6 +60,7 @@ We recommend you use one of the configure.template scripts in the root directory
 These configure template scripts try to guess the right Java and Python paths for Mac OS X and several Linux distributions. They assume that you have already installed the packages (i.e. `python-dev` and a JDK). You should double check the configure template script you use (they are just shell scripts, i.e. text files) to make sure the paths it is using for Python and Java match what you have installed. for example, make sure that if you have installed Sun's Java 1.6, your configure template script is not setting JAVA_HOME to be for openjdk.
 
 The configure script itself accepts the following arguments to enable various options:
+
 * `--with-python-headers=DIR`: Find Python header files in `DIR` (to turn on Python support). Recommended.
 * `--with-webui`: Enable the Mesos web UI (which requires Python 2.6). Recommended.
 * `--with-java-home=DIR`: Enable Java application/framework support with a given installation of Java. Required for Hadoop and Spark.
@@ -81,6 +82,7 @@ After you have run `configure` (either directly with the necessary flags, or wit
 After you build Mesos, you can run its unit tests using the `mesos/bin/tests/all-tests` program located in `bin/tests`. Note that a few tests for specific platforms are disabled by default. You can run `all-tests` with `--help` to view its options.
 
 You can also set up a small Mesos cluster and run a job on it as follows:
+
 1. Go into the directory where you built Mesos.
 1. Type `bin/mesos-master` to launch the master.
 1. Take note of the master URL that is printed to stdout, which will look something like <code>mesos://master@192.168.0.1:5050</code> (here assuming the IP address of master is 192.168.0.1. Please use IP address of the host instead of localhost or 127.0.0.1.)

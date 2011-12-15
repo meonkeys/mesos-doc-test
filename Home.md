@@ -74,8 +74,7 @@ After you have run `configure` (either directly with the necessary flags, or wit
 * As described in [[MESOS-103|https://issues.apache.org/jira/browse/MESOS-103]], if you run ./configure without java-home and java-headers set up correctly (on many machines, specifying java-home is enough, but on OS X Snow Leopard the Java headers are in a non standard location so they must be set up correctly) currently, your build will fail when you run make.
 * On 32-bit platforms, you should set `CXXFLAGS="-march=i486"` when running `configure` to ensure certain atomic instructions can be used.
 * `configure` prints a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested `configure` scripts that we call, so it doesn't mean that your options were ignored.
-* If you get errors with `pushd` not working on Ubuntu, this is because /bin/sh is a link to /bin/dash, not /bin/bash. To fix, do: `sudo ln -fs /bin/bash /bin/sh`.
-
+* If you get errors with `pushd` not working on Ubuntu, this is because /bin/sh is a link to /bin/dash, not /bin/bash. To fix, do: `sudo ln -fs /bin/bash /bin/sh` (this bug has been fixed in [MESOS-50](https://issues.apache.org/jira/browse/MESOS-50), so if you are seeing it, consider upgrading to a newer version of Mesos)
 
 # Testing the Build
 

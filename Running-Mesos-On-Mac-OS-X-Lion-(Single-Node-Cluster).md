@@ -142,6 +142,9 @@ export MESOS_HOME=/Users/billz/mesos/
 
 # Extra Java runtime options.  Empty by default. This disable IPv6.
 export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
+
+# work around for Mac OS X Lion. For more info: https://issues.apache.org/jira/browse/HADOOP-7489
+export HADOOP_OPTS="-Djava.security.krb5.realm=OX.AC.UK -Djava.security.krb5.kdc=kdc0.ox.ac.uk:kdc1.ox.ac.uk"
 ```
 
 2. Hadoop configuration:  

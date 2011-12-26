@@ -1,6 +1,8 @@
 ## Running Mesos On Mac OS X (Single Node Cluster)  
 This is step-by-step guide on setting up Mesos on a single node, and running hadoop on top of Mesos.  In this guide, we are assuming Mac OS X 10.7 (Lion).
 
+**Currently, the Mac OS X Lion DOES NOT work with mesos pending bug [MESOS-32](https://issues.apache.org/jira/browse/MESOS-32)**
+
 ## Prerequisites:
 * Java
     For Mac OS X 10.7 (Lion):  

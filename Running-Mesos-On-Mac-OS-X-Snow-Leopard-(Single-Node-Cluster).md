@@ -251,11 +251,11 @@ Found 6 items
     - Start Mesos's Slave:       
     ` ~/mesos$ bin/mesos-slave --master=mesos://master@localhost:5050 &`  
     - Start Hadoop's namenode:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode &`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop-daemon.sh namenode`  
     - Start Hadoop's datanode:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop datanode &`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop-daemon.sh datanode`  
     - Start Hadoop's jobtracker:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker &`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop-daemon.sh jobtracker`  
 
 7. Run the MapReduce job:  
    We will now run your first Hadoop MapReduce job. We will use the [WordCount](http://wiki.apache.org/hadoop/WordCount) example job which reads text files and counts how often words occur. The input is text files and the output is text files, each line of which contains a word and the count of how often it occurred, separated by a tab.  

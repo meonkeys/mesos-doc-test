@@ -230,11 +230,11 @@ Found 6 items
     - Start Mesos's Slave:       
     ` ~/mesos$ bin/mesos-slave --url=mesos://master@localhost:5050 &`  
     - Start Hadoop's namenode:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop namenode &`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop-daemon.sh namenode`  
     - Start Hadoop's datanode:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop datanode &`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop-daemon.sh datanode`  
     - Start Hadoop's jobtracker:  
-    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop jobtracker &`  
+    ` ~/mesos/frameworks/hadoop-0.20.2$ bin/hadoop-daemon.sh jobtracker`  
 
     - Note: There may be some intermediate issue with dfs directory. Try deleting the /app/hadoop/tmp and /tmp/hadoop*.  Then do a hadoop namenode -format.
 

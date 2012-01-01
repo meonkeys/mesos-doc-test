@@ -31,7 +31,7 @@ _**Please note that Mesos is still in beta. Though the current version is in use
 
 * [[Running Mesos On Ubuntu Linux (Single Node Cluster)]]
 * [[Running Mesos On Mac OS X Snow Leopard (Single Node Cluster)]]
-* [[Running Mesos On Mac OS X Lion (Single Node Cluster) with Hadoop]]
+* [[Running Mesos On Mac OS X Lion (Single Node Cluster)]]
 
 # System Requirements
 

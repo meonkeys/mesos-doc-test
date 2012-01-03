@@ -37,9 +37,8 @@ _**Please note that Mesos is still in beta. Though the current version is in use
 
 Mesos runs on [Linux](https://github.com/mesos/mesos/wiki/Running-Mesos-On-Ubuntu-Linux-(Single-Node-Cluster)) and [Mac OS X](https://github.com/mesos/mesos/wiki/Running-Mesos-On-Mac-OS-X-(Single-Node-Cluster)), and has previously also been tested on OpenSolaris. You will need the following packages to run it:
 
-* g++ 4.1 or higher
-* Python 2.6 (for the Mesos web UI)
-  * On Mac OS X 10.6 or earlier, get Python from [MacPorts](http://www.macports.org/) via `port install python2.6`, because OS X's version of Python is not 64-bit.
+* g++ 4.1 or higher.
+* Python 2.6 (for the Mesos web UI). On Mac OS X 10.6 or earlier, get Python from [MacPorts](http://www.macports.org/) via `port install python2.6`, because OS X's version of Python is not 64-bit.
 * Java JDK 1.6 or higher. Mac OS X 10.6 users will need to install the JDK from http://connect.apple.com/ and set `JAVA_HEADERS=/System/Library/Frameworks/JavaVM.framework/Versions/A/Headers`.
  
 

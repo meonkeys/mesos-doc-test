@@ -106,7 +106,6 @@ To run Mesos on more than one machine, you have multiple options:
 * Mesos system feature guides:
     * [[Deploy scripts]] for launching a Mesos cluster on a set of machines.
     * [[EC2 scripts]] for launching a Mesos cluster on Amazon EC2.
-    * [[Mesos "Ready-to-go" AMI|Mesos ready to go AMI]] -- bring up EC2 instances that already have a Mesos master or slave daemon installed and running.
     * [[Logging and Debugging]] -- viewing Mesos and framework logs.
     * [[Using ZooKeeper]] for master fault-tolerance.
     * [[Using Linux Containers]] for resource isolation on slaves.

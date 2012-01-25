@@ -2,7 +2,7 @@
 
 We migrated the Mesos build system on Jan 19th 2012 to using Autotools (SVN commit #1233580, which is equivalent to Git-SVN commit #ebaf069611abf23266b009c3516da4b3cccccb8d). If you are using a version of Mesos from before that commit, checked out from Apache SVN (possibly via git-svn), then you probably need to follow these build instructions:
 
-<b style="font-size:20pt">1) Run one of the configure template scripts</b>
+<b style="text-size:20pt">1) Run one of the configure template scripts</b>
 
 **NOTE:** do not simply run `./configure` without arguments. If you do, your build will fail due to a known issue (see [[MESOS-103|https://issues.apache.org/jira/browse/MESOS-103]] for more details).
 

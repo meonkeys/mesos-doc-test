@@ -60,7 +60,7 @@ We migrated the Mesos build system on Jan 19th 2012 to using Autotools. If you a
 
 1. run `./bootstrap`
 
-2. run `./configure --with-webui --with-included-zookeeper` (these flags are what we recommend, you may want to exclude these flags or use others, see below).
+2. run `./configure --with-webui --with-included-zookeeper` (these flags are what we recommend; advanced users may want to exclude these flags or use others, see below).
 
 The configure script itself accepts the following arguments to enable various options:
 

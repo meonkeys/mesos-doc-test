@@ -54,11 +54,13 @@ NOTES: The Apache SVN repository is the definitive spot for the source code now.
 
 Mesos uses the standard GNU build tools. 
 
-**NOTE:** do not simply run `./configure` without arguments. If you do, your build will fail due to a known issue (see [[MESOS-103|https://issues.apache.org/jira/browse/MESOS-103]] for more details).
+NOTE: Until our first Apache release, we <i>strongly</i> recommend that you continue to keep the version of Mesos that you are using up to date with the SVN trunk. <i><b>If you are using an old version of Mesos</b></i>, you may need to use [Old Mesos Build Instructions].
 
-We recommend you use one of the configure.template scripts in the root directory, which will call the more general `configure` script and pass it appropriate arguments. E.g. if you are using OS X, run ./configure.template.macosx.
+We migrated the Mesos build system on Jan 19th 2012 to using Autotools. If you are using an up to date version of Mesos trunk (checked out from SVN), follow these instructions:
 
-These configure template scripts try to guess the right Java and Python paths for Mac OS X and several Linux distributions. They assume that you have already installed the packages (i.e. `python-dev` and a JDK). You should double check the configure template script you use (they are just shell scripts, i.e. text files) to make sure the paths it is using for Python and Java match what you have installed. for example, make sure that if you have installed Sun's Java 1.6, your configure template script is not setting JAVA_HOME to be for openjdk.
+1. run `./bootstrap`
+
+2. run `./configure --with-webui --with-included-zookeeper` (these flags are what we recommend, you may want to exclude these flags or use others, see below).
 
 The configure script itself accepts the following arguments to enable various options:
 
@@ -68,13 +70,12 @@ The configure script itself accepts the following arguments to enable various op
 * `--with-java-headers=DIR`: Find Java header files (necessary for newer versions of OS X Snow Leopard).
 * `--with-zookeeper=DIR` or `--with-included-zookeeper`: Enable master fault-tolerance using an existing ZooKeeper installation or the version of ZooKeeper bundled with Mesos. For details, see [[using ZooKeeper]].
 
-After you have run `configure` (either directly with the necessary flags, or with a configure template script), you can build Mesos by running: `make`
+3. run `make`
 
 ### NOTES:
-* As described in [[MESOS-103|https://issues.apache.org/jira/browse/MESOS-103]], if you run ./configure without java-home and java-headers set up correctly (on many machines, specifying java-home is enough, but on OS X Snow Leopard the Java headers are in a non standard location so they must be set up correctly) currently, your build will fail when you run make.
-* On 32-bit platforms, you should set `CXXFLAGS="-march=i486"` when running `configure` to ensure certain atomic instructions can be used.
-* `configure` prints a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested `configure` scripts that we call, so it doesn't mean that your options were ignored.
-* If you get errors with `pushd` not working on Ubuntu, this is because /bin/sh is a link to /bin/dash, not /bin/bash. To fix, do: `sudo ln -fs /bin/bash /bin/sh` (this bug has been fixed in [MESOS-50](https://issues.apache.org/jira/browse/MESOS-50), so if you are seeing it, consider upgrading to a newer version of Mesos)
+* In the SVN trunk branch since Jan 19 2012 (when Mesos switched fully to the GNU Autotools build system), the build process attempts to guess where your Java include directory is but if you have set the $JAVA_HOME environment variable, it will use $JAVA_HOME/include, which may not be correct for your machine (in which case you will see an error such as: "configure: error: failed to build against JDK (using libtool)"). If this is the case, we suggest you unset the JAVA_HOME environment variable.
+* (NOT SURE IF THIS IS STILL RELEVANT) On 32-bit platforms, you should set `CXXFLAGS="-march=i486"` when running `configure` to ensure certain atomic instructions can be used.
+* (NOT SURE IF THIS IS STILL RELEVANT) `configure` prints a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested `configure` scripts that we call, so it doesn't mean that your options were ignored.
 
 # Testing the Build
 

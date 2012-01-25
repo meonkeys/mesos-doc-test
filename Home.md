@@ -73,9 +73,9 @@ The configure script itself accepts the following arguments to enable various op
 3. run `make`
 
 ### NOTES:
-* In the SVN trunk branch since Jan 19 2012 (when Mesos switched fully to the GNU Autotools build system), the build process attempts to guess where your Java include directory is but if you have set the $JAVA_HOME environment variable, it will use $JAVA_HOME/include, which may not be correct for your machine (in which case you will see an error such as: "configure: error: failed to build against JDK (using libtool)"). If this is the case, we suggest you unset the JAVA_HOME environment variable.
+* In the SVN trunk branch since Jan 19 2012 (when Mesos switched fully to the GNU Autotools build system), the build process attempts to guess where your Java include directory is, but if you have set the $JAVA_HOME environment variable, it will use $JAVA_HOME/include, which may not be correct (or exist) on your machine (in which case you will see an error such as: "configure: error: failed to build against JDK (using libtool)"). If this is the case, we suggest you unset the JAVA_HOME environment variable.
+* `configure` may print a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested `configure` scripts that we call, so it doesn't mean that your options were ignored.
 * (NOT SURE IF THIS IS STILL RELEVANT) On 32-bit platforms, you should set `CXXFLAGS="-march=i486"` when running `configure` to ensure certain atomic instructions can be used.
-* (NOT SURE IF THIS IS STILL RELEVANT) `configure` prints a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested `configure` scripts that we call, so it doesn't mean that your options were ignored.
 
 # Testing the Build
 

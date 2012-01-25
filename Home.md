@@ -54,7 +54,7 @@ NOTES: The Apache SVN repository is the definitive spot for the source code now.
 
 Mesos uses the standard GNU build tools. 
 
-NOTE: Until our first Apache release, we <i>strongly</i> recommend that you continue to keep the version of Mesos that you are using up to date with the SVN trunk. <i><b>If you are using an old version of Mesos</b></i>, you may need to use [Old Mesos Build Instructions].
+NOTE: Until our first Apache release, we <i>strongly</i> recommend that you continue to keep the version of Mesos that you are using up to date with the SVN trunk. <i><b>If you are using an old version of Mesos</b></i>, you may need to build using the [[Old Mesos Build Instructions]].
 
 We migrated the Mesos build system on Jan 19th 2012 to using Autotools. If you are using an up to date version of Mesos trunk (checked out from SVN), follow these instructions:
 

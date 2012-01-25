@@ -58,9 +58,9 @@ NOTE: Until our first Apache release, we <i>strongly</i> recommend that you cont
 
 We migrated the Mesos build system on Jan 19th 2012 to using Autotools. If you are using an up-to-date version of Mesos trunk (checked out from SVN), follow these instructions:
 
-1. run `./bootstrap`
+1) run `./bootstrap`
 
-2. run `./configure --with-webui --with-included-zookeeper` (these flags are what we recommend; advanced users may want to exclude these flags or use others, see below).
+2) run `./configure --with-webui --with-included-zookeeper` (these flags are what we recommend; advanced users may want to exclude these flags or use others, see below).
 
 The configure script itself accepts the following arguments to enable various options:
 
@@ -70,7 +70,7 @@ The configure script itself accepts the following arguments to enable various op
 * `--with-java-headers=DIR`: Find Java header files (necessary for newer versions of OS X Snow Leopard).
 * `--with-zookeeper=DIR` or `--with-included-zookeeper`: Enable master fault-tolerance using an existing ZooKeeper installation or the version of ZooKeeper bundled with Mesos. For details, see [[using ZooKeeper]].
 
-3. run `make`
+3) run `make`
 
 ### NOTES:
 * In the SVN trunk branch since Jan 19 2012 (when Mesos switched fully to the GNU Autotools build system), the build process attempts to guess where your Java include directory is, but if you have set the $JAVA_HOME environment variable, it will use $JAVA_HOME/include, which may not be correct (or exist) on your machine (in which case you will see an error such as: "configure: error: failed to build against JDK (using libtool)"). If this is the case, we suggest you unset the JAVA_HOME environment variable.

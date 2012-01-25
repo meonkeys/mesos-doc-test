@@ -10,7 +10,7 @@ We recommend you use one of the configure.template scripts in the root directory
 
 These configure template scripts contain guesses for the Java and Python paths for distribution indicated in their names (e.g. Mac OS X and several Linux distributions). They assume that you have already installed the packages (i.e. `python-dev` and a JDK). You should double check the configure template script you use (they are just shell scripts, i.e. text files) to make sure the paths it is using for Python and Java match what you have installed. for example, make sure that if you have installed Sun's Java 1.6, your configure template script is not setting JAVA_HOME to be for openjdk.
 
-Advanced users may wish to run `./configure` directly with their own combination of flag options (see [[Mesos Configure Flag Options]]).
+Advanced users may wish to run `./configure` directly with their own combination of flag options (see [[Mesos Configure Command Flag Options]]).
 
 #### NOTES:
 * If you get errors with `pushd` not working on Ubuntu, this is because /bin/sh is a link to /bin/dash, not /bin/bash. To fix, do: `sudo ln -fs /bin/bash /bin/sh` (this bug has been fixed in [MESOS-50](https://issues.apache.org/jira/browse/MESOS-50), so if you are seeing it, consider upgrading to a newer version of Mesos)

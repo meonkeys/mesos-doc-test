@@ -39,6 +39,8 @@ Mesos runs on [Linux](https://github.com/mesos/mesos/wiki/Running-Mesos-On-Ubunt
 
 * g++ 4.1 or higher.
 * Python 2.6 (for the Mesos web UI). On Mac OS X 10.6 or earlier, get Python from [MacPorts](http://www.macports.org/) via `port install python26`, because OS X's version of Python is not 64-bit.
+* Python 2.6 developer packages (on red-hat - sudo yum install python26-devel python-devel)
+* cppunit (for building zookeeper) (on red-hat - sudo yum install cppunit-devel)
 * Java JDK 1.6 or higher. Mac OS X 10.6 users will need to install the JDK from http://connect.apple.com/ and set `JAVA_HEADERS=/System/Library/Frameworks/JavaVM.framework/Versions/A/Headers`.
  
 

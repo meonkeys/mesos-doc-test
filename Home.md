@@ -72,19 +72,21 @@ We migrated the Mesos build system on Jan 19th 2012 to using Autotools. If you a
 * `configure` may print a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested `configure` scripts that we call, so it doesn't mean that your options were ignored.
 * (NOT SURE IF THIS IS STILL RELEVANT) On 32-bit platforms, you should set `CXXFLAGS="-march=i486"` when running `configure` to ensure certain atomic instructions can be used.
 
-# Testing the Build
+# Running Example Frameworks and Testing the Build
 
-After you build Mesos, you can run its unit tests using the `make check` command from the directory where you ran `make`.
+Currently, in order to run the example frameworks (in src/examples), you must first build the test suite, as instructed below.
 
-You can also set up a small Mesos cluster and run a job on it as follows:
+After you build Mesos by running the `make` command, you can build and run its example frameworks and unit tests (which use the example frameworks) by issuing the `make check` command from the directory where you ran the `make` command.
+
+After you have done this, you can also set up a small Mesos cluster and run a job on it as follows:
 
 1. Go into the directory where you built Mesos.
 1. Type `bin/mesos-master.sh` to launch the master.
-1. Take note of the master URL that is printed to stdout, which will look something like <code>mesos://master@192.168.0.1:5050</code> (in this example the IP address of master is 192.168.0.1).
+1. Take note of the master URL that is printed to stdout, which will look something like <code>mesos://master@192.168.0.1:5050</code>. <i>Note: In this example the IP address of master is 192.168.0.1, and the port is 5050. We will continue to use the URL shown here for the rest of this example; however when you run the following commands replace all instances of it with the URL of your master.</i>
 1. URL of master: <code>mesos://master@192.168.0.1:5050</code>
 1. View the master's web UI at `http://[hostname of master]:8080`.
 1. Launch a slave by typing <code>bin/mesos-slave.sh --master=mesos://master@192.168.0.1:5050</code>. The slave will show up on the master's web UI if you refresh it.
-1. Run the C++ test framework (a sample that just runs five tasks on the cluster) using <code>bin/examples/cpp-test-framework mesos://master@192.168.0.1:5050</code>. It should successfully exit after running five tasks. You can also try the example python or Java frameworks.
+1. Run the C++ test framework (a sample that just runs five tasks on the cluster) using <code>src/test-framework mesos://master@192.168.0.1:5050</code>. It should successfully exit after running five tasks. You can also try the example python or Java frameworks.
 
 # Deploying to a Cluster
 

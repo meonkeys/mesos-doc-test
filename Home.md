@@ -73,7 +73,7 @@ We migrated the Mesos build system on Jan 19th 2012 to using Autotools. If you a
 
 # Testing the Build
 
-After you build Mesos, you can run its unit tests using the `mesos/bin/tests/all-tests` program located in `bin/tests`. Note that a few tests for specific platforms are disabled by default. You can run `all-tests` with `--help` to view its options.
+After you build Mesos, you can run its unit tests using the `make check` command from the directory where you ran `make`.
 
 You can also set up a small Mesos cluster and run a job on it as follows:
 

@@ -88,8 +88,8 @@ After you have done this, you can also set up a small Mesos cluster and run a jo
 1. Launch a slave by typing <code>bin/mesos-slave.sh --master=mesos://master@192.168.0.1:5050</code>. The slave will show up on the master's web UI if you refresh it.
 1. Run the C++ test framework (a sample that just runs five tasks on the cluster) using <code>src/test-framework mesos://master@192.168.0.1:5050</code>. It should successfully exit after running five tasks.
 1. You can also try the example python or Java frameworks, with commands like the following:
-2. `src/examples/java/test-framework mesos://master@128.32.44.223:5050`
-2. `src/examples/python/test-framework mesos://master@128.32.44.223:5050`
+  2. `src/examples/java/test-framework mesos://master@192.168.0.1:5050`
+  2. `src/examples/python/test-framework mesos://master@192.168.0.1:5050`
 
 # Deploying to a Cluster
 

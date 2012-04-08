@@ -27,7 +27,7 @@ Note that when you run on a cluster, Hadoop (and Mesos) should be located on the
 
 If you wish to run multiple JobTrackers, the easiest way is to give each one a different port by using a different Hadoop `conf` directory for each one and passing the `--conf` flag to `bin/hadoop` to specify which config directory to use. You can copy Hadoop's existing `conf` directory to a new location and modify it to achieve this.
 
-## Links to Other Hadoop Versions with Mesos Support Added
+## Hadoop Versions with Mesos Support Available
 
 * 0.20.205.0: Included in Mesos (as described above).
 * CDH3u3: [https://github.com/patelh/cdh3u3-with-mesos](https://github.com/patelh/cdh3u3-with-mesos)

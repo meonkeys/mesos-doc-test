@@ -1,6 +1,6 @@
 We have ported version 0.20.205.0 of Hadoop to run on Mesos. Most of the Mesos port is implemented by a pluggable Hadoop scheduler, which communicates with Mesos to receive nodes to launch tasks on. However, a few small additions to Hadoop's internal APIs are also required.
 
-You can build the ported version of Hadoop using `make hadoop`. It gets placed in the `hadoop/hadoop-0.20.205.0` directory. However, if you want to patch your own version of Hadoop to add Mesos support, you can also use .patch files located in `<Mesos directory>/hadoop`. These patches are likely to work on other Hadoop versions derived from 0.20. For example, for Cloudera's Distribution version CDH3u3, GitHub user patelh has already created a Mesos-compatible version [here](https://github.com/patelh/cdh3u3-with-mesos).
+You can build the ported version of Hadoop using `make hadoop`. It gets placed in the `hadoop/hadoop-0.20.205.0` directory. However, if you want to patch your own version of Hadoop to add Mesos support, you can also use .patch files located in `<Mesos directory>/hadoop`. These patches are likely to work on other Hadoop versions derived from 0.20. For example, for Cloudera's Distribution, GitHub user patelh has already created a [Mesos-compatible version of CDH3u3](https://github.com/patelh/cdh3u3-with-mesos).
 
 To run Hadoop on Mesos, follow these steps:
 <ol>

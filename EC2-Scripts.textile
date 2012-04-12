@@ -32,12 +32,20 @@ h1. Running Jobs
 
 If you get an "Executor on slave X disconnected" error when running your framework, you probably haven't copied your code the slaves. Use the @~/mesos-ec2/copy-dir@ script to do that. If you keep getting the error, though, look at the slave's logs for that framework using the Mesos web UI. Please see [[logging and debugging]] for details.
 
-h1. Stopping a Cluster
+h1. Terminating a Cluster
 
 _*Note that there is no way to recover data on EC2 nodes after shutting them down! Make sure you have copied everything important off the nodes before stopping them.*_
 
 * Go into the @ec2@ directory in the release of Mesos you downloaded.
-* Run @./mesos-ec2 destroy <cluster-name>@. (Or, in older versions of the script, use @shutdown@ instead of @destroy@.)
+* Run @./mesos-ec2 destroy <cluster-name>@.
+
+h1. Pausing and Restarting EBS-Backed Clusters
+
+The `mesos-ec2` script also supports pausing a cluster if you are using EBS-backed virtual machines (which all of our machine images are by default). In this case, the VMs are stopped but not terminated, so they _*lose all data on ephemeral disks (`/mnt*`, `ephemeral-hdfs`)*_ but keep the data in their root partitions and their `persistent-hdfs`. Stopped machines will not cost you any EC2 cycles, but _*will*_ continue to cost money for EBS storage.
+
+* To stop one of your clusters, go into the @ec2@ directory and run @./mesos-ec2 stop <cluster-name>@.
+* To restart it later, run @./mesos-ec2 -i <key-file> start <cluster-name>@.
+* To ultimately destroy the cluster and stop consuming EBS space, run @./mesos-ec2 destroy <cluster-name>@ as described in the previous section.
 
 h1. Limitations
 

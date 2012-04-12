@@ -41,7 +41,7 @@ _*Note that there is no way to recover data on EC2 nodes after shutting them dow
 
 h1. Pausing and Restarting EBS-Backed Clusters
 
-The @mesos-ec2@ script also supports pausing a cluster if you are using EBS-backed virtual machines (which all of our machine images are by default). In this case, the VMs are stopped but not terminated, so they _*lose all data on ephemeral disks (@/mnt*@, @ephemeral-hdfs@)*_ but keep the data in their root partitions and their @persistent-hdfs@. Stopped machines will not cost you any EC2 cycles, but _*will*_ continue to cost money for EBS storage.
+The @mesos-ec2@ script also supports pausing a cluster if you are using EBS-backed virtual machines (which all of our machine images are by default). In this case, the VMs are stopped but not terminated, so they _*lose all data on ephemeral disks (/mnt*, ephemeral-hdfs)*_ but keep the data in their root partitions and their @persistent-hdfs@. Stopped machines will not cost you any EC2 cycles, but _*will*_ continue to cost money for EBS storage.
 
 * To stop one of your clusters, go into the @ec2@ directory and run @./mesos-ec2 stop <cluster-name>@.
 * To restart it later, run @./mesos-ec2 -i <key-file> start <cluster-name>@.

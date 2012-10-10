@@ -43,34 +43,31 @@ Mesos runs on [Linux](https://github.com/mesos/mesos/wiki/Running-Mesos-On-Ubunt
 * Python 2.6 developer packages (on red-hat - sudo yum install python26-devel python-devel)
 * cppunit (for building zookeeper) (on red-hat - sudo yum install cppunit-devel)
 * Java JDK 1.6 or higher. Mac OS X 10.6 users will need to install the JDK from http://connect.apple.com/ and set `JAVA_HEADERS=/System/Library/Frameworks/JavaVM.framework/Versions/A/Headers`.
- 
 
-# Downloading Mesos
+# Downloading and Building Mesos
 
-We are actively working on our first official Apache release. Currently, you can obtain Mesos (the current development HEAD) by checking it out from either the Apache SVN or Apache Git repository (the git repo is a mirror of the SVN repo)
-* For SVN, use: `svn co https://svn.apache.org/repos/asf/incubator/mesos/trunk mesos-trunk`
-* For git, use: `git clone git://git.apache.org/mesos.git`
+Mesos uses the standard GNU build tools. See the section farther below for instructions for checking out and building the source code via source control.
 
-NOTES: The Apache SVN repository is the definitive spot for the source code now. For alpha version 0.4 and before, you can still download tagged "alpha releases" from github via the [[tags page|https://github.com/mesos/mesos/tags]]. However, we do not recommend using the Github repository hosted under the mesos user (e.g. `git://github.com/mesos/mesos.git`) any longer. Though it is a little confusing, Apache also maintains a github clone of the SVN repository at `https://github.com/apache/mesos`, which should be fine to use as an alternative to the SVN and git apache.org repositories listed above (though the committers don't recommend it).
+To get running with Mesos version 0.9.0-incubating, our most recently release:
 
-# Building Mesos
-
-Mesos uses the standard GNU build tools. 
-
-NOTE: Until our first Apache release, we <i>strongly</i> recommend that you continue to keep the version of Mesos that you are using up-to-date with the SVN trunk. <i><b>If you are using an old version of Mesos</b></i>, you may need to build using the [[Old Mesos Build Instructions]].
-
-We migrated the Mesos build system on Jan 19th 2012 to using Autotools. If you are using an up-to-date version of Mesos trunk (checked out from SVN), follow these instructions:
-
-1. run `./bootstrap`
-
-1. run `./configure --with-webui --with-included-zookeeper` (these flags are what we recommend; advanced users may want to exclude these flags or use others, see [[Mesos Configure Command Flag Options]].
-
+1. [Download Mesos 0.9.0-incubating](http://www.apache.org/dyn/closer.cgi/incubator/mesos/mesos-0.9.0-incubating/)
+1. configure
+    1. In OS X: run `./configure.macosx` ([Follow instructions here if you're running Mountain Lion](https://issues.apache.org/jira/browse/MESOS-261?))
+    1. run `./configure --with-webui --with-included-zookeeper` (these flags are what we recommend; advanced users may want to exclude these flags or use others, see [[Mesos Configure Command Flag Options]].
 1. run `make`
 
 ### NOTES:
 * In the SVN trunk branch since Jan 19 2012 (when Mesos switched fully to the GNU Autotools build system), the build process attempts to guess where your Java include directory is, but if you have set the $JAVA_HOME environment variable, it will use $JAVA_HOME/include, which may not be correct (or exist) on your machine (in which case you will see an error such as: "configure: error: failed to build against JDK (using libtool)"). If this is the case, we suggest you unset the JAVA_HOME environment variable.
 * `configure` may print a warning at the end about "unrecognized options: --with-java-home, ...". This comes from one of the nested `configure` scripts that we call, so it doesn't mean that your options were ignored.
 * (NOT SURE IF THIS IS STILL RELEVANT) On 32-bit platforms, you should set `CXXFLAGS="-march=i486"` when running `configure` to ensure certain atomic instructions can be used.
+
+# Checking Mesos Source Code out of Git or SVN
+
+Currently, you can obtain the current Mesos development HEAD by checking it out from either the Apache SVN or Apache Git repository (the git repo is a mirror of the SVN repo)
+* For SVN, use: `svn co https://svn.apache.org/repos/asf/incubator/mesos/trunk mesos-trunk`
+* For git, use: `git clone git://git.apache.org/mesos.git`
+
+NOTES: The Apache SVN repository is the definitive spot for the source code now. For alpha version 0.4 and before, you can still download tagged "alpha releases" from github via the [[tags page|https://github.com/mesos/mesos/tags]]. However, we do not recommend using the Github repository hosted under the mesos user (e.g. `git://github.com/mesos/mesos.git`) any longer. Though it is a little confusing, Apache also maintains a github clone of the SVN repository at `https://github.com/apache/mesos`, which should be fine to use as an alternative to the SVN and git apache.org repositories listed above (though the committers don't recommend it).
 
 # Running Example Frameworks and Testing the Build
 

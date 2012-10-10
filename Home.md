@@ -25,18 +25,10 @@ _**Please note that Mesos is still in beta. Though the current version is in use
 1. Testing the Build
 1. Deploying to a Cluster
 1. Where to Go From Here
-<br/>
 
-<!-- Commenting out the quickstart guides since they have instructions for building that are out of date now that we've migrated to the autotools build system.
-# Quick-Start Guides
-
-* [[Running Mesos On Ubuntu Linux (Single Node Cluster)]]
-* [[Running Mesos On Mac OS X Snow Leopard (Single Node Cluster)]]
-* [[Running Mesos On Mac OS X Lion (Single Node Cluster)]]
--->
 # System Requirements
 
-Mesos runs on [Linux](https://github.com/mesos/mesos/wiki/Running-Mesos-On-Ubuntu-Linux-(Single-Node-Cluster\)) and [Mac OS X](https://github.com/mesos/mesos/wiki/Running-Mesos-On-Mac-OS-X-Lion-(Single-Node-Cluster\)), and has previously also been tested on OpenSolaris. You will need the following packages to run it:
+Mesos runs on Linux and Mac OS X, and has previously also been tested on OpenSolaris. You will need the following packages to run it:
 
 * g++ 4.1 or higher.
 * Python 2.6 (for the Mesos web UI). On Mac OS X 10.6 or earlier, get Python from [MacPorts](http://www.macports.org/) via `port install python26`, because OS X's version of Python is not 64-bit.

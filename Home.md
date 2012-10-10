@@ -59,8 +59,6 @@ Currently, you can obtain the current Mesos development HEAD by checking it out 
 * For SVN, use: `svn co https://svn.apache.org/repos/asf/incubator/mesos/trunk mesos-trunk`
 * For git, use: `git clone git://git.apache.org/mesos.git`
 
-NOTES: The Apache SVN repository is the definitive spot for the source code now. For alpha version 0.4 and before, you can still download tagged "alpha releases" from github via the [[tags page|https://github.com/mesos/mesos/tags]]. However, we do not recommend using the Github repository hosted under the mesos user (e.g. `git://github.com/mesos/mesos.git`) any longer. Though it is a little confusing, Apache also maintains a github clone of the SVN repository at `https://github.com/apache/mesos`, which should be fine to use as an alternative to the SVN and git apache.org repositories listed above (though the committers don't recommend it).
-
 # Running Example Frameworks and Testing the Build
 
 Currently, in order to run the example frameworks (in src/examples), you must first build the test suite, as instructed below.

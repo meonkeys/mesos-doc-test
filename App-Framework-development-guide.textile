@@ -103,7 +103,7 @@ h3. Executor API (as of 2012/02/14) declared in @MESOS_HOME/include/mesos/execut
    * Invoked once the executor driver has been able to successfully
    * connect with Mesos. See mesos.proto for a description of the
    * ExecutorArgs argument. In particular, a scheduler can pass some
-   * data to it's executors through the ExecutorInfo::data field which
+   * data to its executors through the ExecutorInfo::data field which
    * gets copied into the ExecutorArgs::data field. (TODO(benh): This
    * callback will likely become two callbacks,
    * registered/reregistered, once executors can outlive slaves.)

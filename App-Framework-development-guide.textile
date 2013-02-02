@@ -8,7 +8,7 @@ h2. Create your Framework Scheduler
 
 You can write a framework scheduler in C, C++, Java/Scala, or Python. Your framework scheduler should inherit from the @Scheduler@ class (see API below). Your scheduler should create a SchedulerDriver (which will mediate communication between your scheduler and the Mesos master) and then call @SchedulerDriver.run()@
 
-h3. Scheduler API (as of 2012/02/14) declared in @MESOS_HOME/include/mesos/scheduler.hpp@
+h3. Scheduler API (as of 2013/02/01) declared in @MESOS_HOME/include/mesos/scheduler.hpp@
 
 ```c++
   /**
@@ -124,7 +124,7 @@ h2. Create your Framework Executor
 Your framework executor must inherit from the Executor class. It must override the launchTask() method. 
 You can use the $MESOS_HOME environment variable inside of your executor to determine where mesos is running from.
 
-h3. Executor API (as of 2012/02/14) declared in @MESOS_HOME/include/mesos/executor.hpp@
+h3. Executor API (as of 2013/02/01) declared in @MESOS_HOME/include/mesos/executor.hpp@
 
 ```c++
   /**

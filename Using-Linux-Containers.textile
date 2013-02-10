@@ -12,7 +12,7 @@ The current implementation enforces CPU and memory share limits on containers. C
 
 h1. Unit Tests
 
-There are three unit tests for the Linux Container isolation module. These are disabled by default, but can be enabled using the @--gtest_also_run_disabled_tests@ flag to @alltests@. Note that for these tests to run, you must be running @alltests@ as root (since they actually invoke container commands!). It is probably most convenient to do this in a VM.
+There are unit tests for the Linux Container isolation module. You must be running @make check@ as root (since they actually invoke container commands!) or they'll fail. It is probably most convenient to run these tests in a VM.
 
 h1. Limitations and Roadmap
 

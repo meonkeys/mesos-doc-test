@@ -12,7 +12,7 @@ The current implementation enforces CPU and memory share limits on containers. C
 
 h1. Unit Tests
 
-There are unit tests for the Linux Container isolation module. You must be running @make check@ as root (since they actually invoke container commands!) or they'll fail. It is probably most convenient to run these tests in a VM.
+There are unit tests for the Linux Container isolation module. They are executed by default on any Linux-based operating system. You must be running @make check@ as root (since they actually invoke container commands!) or they'll fail. It is probably most convenient to run these tests in a VM.
 
 h1. Limitations and Roadmap
 

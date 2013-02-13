@@ -98,6 +98,7 @@ language), Mesos is niche software.
   * code cleanup
   * testing
   * documentation
+  * DONE. [Vinod Kone suggests](http://mail-archives.apache.org/mod_mbox/incubator-mesos-dev/201301.mbox/%3CCAAkWvAyo6uEu76%3DPjn2ZePOy7ZG4ksHz_AG%3D9P44M2t%2BnOka6A%40mail.gmail.com%3E) perusing [issues with Minor or Trivial priority](https://issues.apache.org/jira/browse/MESOS#selectedTab=com.atlassian.jira.plugin.system.project%3Aissues-panel)
 * Idea: use a survey to measure approachability of Mesos
   * how approachable is Mesos compared to other OSS?
   * what would make Mesos more approachable to you?

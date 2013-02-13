@@ -141,9 +141,3 @@ mailing list.
 
 Goals are, ideally, SMART (specific, measurable, actionable, realistic, and
 timely). Excuse the corny acronym, it's just a useful mneumonic.
-
-# Questions
-
-* Is there any reason to use Mesos with a single cluster?
-* What makes an OSS project "successful"? What are the measures of success for the Mesos community?
-* [This wiki page](http://wiki.apache.org/incubator/MesosProposal) looks outdated, possibly superceded by [this Mesos incubation status page](http://incubator.apache.org/projects/mesos.html). Should the former be deleted?

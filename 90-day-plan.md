@@ -100,7 +100,7 @@ language), Mesos is niche software.
 * Idea: use a survey to measure approachability of Mesos
   * how approachable is Mesos compared to other OSS?
   * what would make Mesos more approachable to you?
-* mirror git repo to github
+* mirror git repo to github ([DONE](https://github.com/apache/mesos))
 * mirror mesos-dev mailing list to gmane
 * add screenshots
 * start a Mesos IRC channel

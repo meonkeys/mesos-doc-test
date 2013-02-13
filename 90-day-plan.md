@@ -9,6 +9,8 @@
 
 # Details
 
+This 90-day plan aims to bolster the Mesos community. It addresses "Growing a development community and promoting adoption" in the [[Mesos Roadmap]].
+
 Start: March 1st, 2013. End: May 30, 2013.
 
 ## Graduate from the Apache Incubator
@@ -126,6 +128,12 @@ this, we can Test, Measure, Act, and Repeat. For example:
 * Measure → track number of contributors gained
 * Act → Gained 2 contributors? Participate in other programs similar to GSoC, host a program like GSoC, plan to participate in GSoC next year.
 * Repeat → GOTO Test
+
+## See also
+
+* [The Art of Community](http://www.artofcommunityonline.org/) by Jono Bacon
+* [Producing Open Source Software](http://producingoss.com/) by Karl Fogel
+* [announcement of this plan](http://mail-archives.apache.org/mod_mbox/incubator-mesos-dev/201302.mbox/%3C511ADF8E.5080700%40gmail.com%3E)
 
 # Conventions for this page
 

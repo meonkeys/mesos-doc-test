@@ -103,6 +103,7 @@ language), Mesos is niche software.
 * mirror git repo to github
 * mirror mesos-dev mailing list to gmane
 * add screenshots
+* start a Mesos IRC channel
 
 ## Other ideas
 

@@ -77,6 +77,7 @@ language), Mesos is niche software.
   * apply for relevant competitions / awards
   * participate in the Google Summer of Code
   * get on [FLOSS Weekly](http://twit.tv/show/floss-weekly)
+  * do more meetups (mentioned in [January 2013 podling report](http://wiki.apache.org/incubator/January2013))
 * highlight contributions
   * [example from Symfony2 community](http://symfony.com/blog/new-in-symfony-2-2-autocomplete-on-the-command-line) - contributors can write these themselves!
 * organize coding / doc / testing sprints
@@ -104,9 +105,11 @@ language), Mesos is niche software.
 * mirror mesos-dev mailing list to gmane
 * add screenshots
 * start a Mesos IRC channel
+* [find a volunteer to] create a logo (see [MESOS-337](https://issues.apache.org/jira/browse/MESOS-337))
 
 ## Other ideas
 
+* do more releases (mentioned in [January 2013 podling report](http://wiki.apache.org/incubator/January2013))
 * Make Mesos compile with gcc-4.7 (see [MESOS-271](https://issues.apache.org/jira/browse/MESOS-271))
 * Improve Mesos evangelization
   * add more to https://github.com/mesos/mesos/wiki/Powered-by-Mesos (AirBnB?)

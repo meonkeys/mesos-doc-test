@@ -118,6 +118,7 @@ language), Mesos is niche software.
   * add more to https://github.com/mesos/mesos/wiki/Powered-by-Mesos (AirBnB?)
 * get Hadoop customizations upstream
 * add all goals in the 90-day plan to JIRA, track them there instead of here
+* trademark the name Mesos
 
 ## OSS marketing
 

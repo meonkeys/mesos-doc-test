@@ -113,6 +113,8 @@ language), Mesos is niche software.
 * separate automated/notification emails (from review board, jenkins, etc.) from hand-typed email discussions
 * announce supported compiler version(s), and *make sure Mesos compiles with these* (ideally with continuous integration)
 * announce supported runtime hardware/configuration(s), and *make sure Mesos runs on these* (ideally with continuous integration)
+* reduce sources of truth
+  * http://www.mesosproject.org and http://incubator.apache.org/mesos/ look identical, just make one redirect to the other.
 
 ## Other ideas
 

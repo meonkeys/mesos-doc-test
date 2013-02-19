@@ -110,6 +110,7 @@ language), Mesos is niche software.
 * add screenshots
 * start a Mesos IRC channel
 * [find a volunteer to] create a logo (see [MESOS-337](https://issues.apache.org/jira/browse/MESOS-337))
+* separate automated/notification emails (from review board, jenkins, etc.) from hand-typed email discussions
 
 ## Other ideas
 

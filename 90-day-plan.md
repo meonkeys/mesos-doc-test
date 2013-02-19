@@ -112,7 +112,7 @@ language), Mesos is niche software.
 * [find a volunteer to] create a logo (see [MESOS-337](https://issues.apache.org/jira/browse/MESOS-337))
 * separate automated/notification emails (from review board, jenkins, etc.) from hand-typed email discussions
 * announce supported compiler version(s), and *make sure Mesos compiles with these* (ideally with continuous integration)
-* announce supported runtime hardware/configuration, and *make sure Mesos runs on these* (ideally with continuous integration)
+* announce supported runtime hardware/configuration(s), and *make sure Mesos runs on these* (ideally with continuous integration)
 
 ## Other ideas
 

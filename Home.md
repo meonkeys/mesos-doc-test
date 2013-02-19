@@ -71,7 +71,7 @@ After you have done this, you can also set up a small Mesos cluster and run a jo
 1. Type `bin/mesos-master.sh` to launch the master.
 1. Take note of the IP and port that the master is running on, which will look something like <code>192.168.0.1:5050</code>. <i>Note: In this example the IP address of master is 192.168.0.1, and the port is 5050. We will continue to use the URL shown here for the rest of this example; however when you run the following commands replace all instances of it with the URL of your master.</i>
 1. URL of master: <code>192.168.0.1:5050</code>
-1. View the master's web UI at `http://[hostname of master]:8080`.
+1. View the master's web UI at `http://[hostname of master]:5050`.
 1. Launch a slave by typing <code>bin/mesos-slave.sh --master=192.168.0.1:5050</code>. The slave will show up on the master's web UI if you refresh it.
 1. Run the C++ test framework (a sample that just runs five tasks on the cluster) using <code>src/test-framework 192.168.0.1:5050</code>. It should successfully exit after running five tasks.
 1. You can also try the example python or Java frameworks, with commands like the following:

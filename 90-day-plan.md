@@ -95,6 +95,7 @@ language), Mesos is niche software.
 * What do you look for when you approach Open Source Software?
 * improve documentation
   * cull old/outdated [wiki] pages
+* screencasts/demos (especially of most exciting features)
 * curate many bite-size tasks for contributors
   * refactoring
   * code cleanup
